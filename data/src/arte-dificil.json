@@ -1,0 +1,502 @@
+[
+{
+"p": "Quem pintou \"O Nascimento de Vênus\"?",
+"c": "Sandro Botticelli",
+"e": [
+"Leonardo da Vinci",
+"Rafael Sanzio",
+"Ticiano",
+"Giotto"
+]
+},
+{
+"p": "Quem pintou \"A Ronda Noturna\"?",
+"c": "Rembrandt",
+"e": [
+"Johannes Vermeer",
+"Frans Hals",
+"Peter Paul Rubens",
+"Anthony van Dyck"
+]
+},
+{
+"p": "Quem pintou \"O Beijo\" (1907–1908), obra com fundo dourado?",
+"c": "Gustav Klimt",
+"e": [
+"Egon Schiele",
+"Edvard Munch",
+"Henri Matisse",
+"Alphonse Mucha"
+]
+},
+{
+"p": "Quem pintou o tríptico \"O Jardim das Delícias Terrenas\"?",
+"c": "Hieronymus Bosch",
+"e": [
+"Pieter Bruegel",
+"Jan van Eyck",
+"Albrecht Dürer",
+"El Greco"
+]
+},
+{
+"p": "Qual estilo arquitetônico é marcado por arcobotantes, arcos ogivais e grandes vitrais, como em Notre-Dame de Paris?",
+"c": "Gótico",
+"e": [
+"Românico",
+"Barroco",
+"Neoclássico",
+"Bizantino"
+]
+},
+{
+"p": "Quem pintou \"Moça com Brinco de Pérola\"?",
+"c": "Johannes Vermeer",
+"e": [
+"Rembrandt",
+"Frans Hals",
+"Jan van Eyck",
+"Peter Paul Rubens"
+]
+},
+{
+"p": "Quais artistas criaram juntos o Cubismo?",
+"c": "Pablo Picasso e Georges Braque",
+"e": [
+"Henri Matisse e André Derain",
+"Claude Monet e Auguste Renoir",
+"Salvador Dalí e René Magritte",
+"Paul Cézanne e Paul Gauguin"
+]
+},
+{
+"p": "Quem pintou \"A Liberdade Guiando o Povo\"?",
+"c": "Eugène Delacroix",
+"e": [
+"Théodore Géricault",
+"Gustave Courbet",
+"Jean-Auguste-Dominique Ingres",
+"Jacques-Louis David"
+]
+},
+{
+"p": "Quem pintou \"A Jangada da Medusa\"?",
+"c": "Théodore Géricault",
+"e": [
+"Eugène Delacroix",
+"Gustave Courbet",
+"Francisco de Goya",
+"Édouard Manet"
+]
+},
+{
+"p": "Quem esculpiu \"O Êxtase de Santa Teresa\"?",
+"c": "Gian Lorenzo Bernini",
+"e": [
+"Michelangelo",
+"Donatello",
+"Antonio Canova",
+"Auguste Rodin"
+]
+},
+{
+"p": "Em qual cidade italiana fica a Galeria Uffizi?",
+"c": "Florença",
+"e": [
+"Roma",
+"Veneza",
+"Milão",
+"Nápoles"
+]
+},
+{
+"p": "Em qual cidade fica o Museu do Prado?",
+"c": "Madri",
+"e": [
+"Barcelona",
+"Lisboa",
+"Sevilha",
+"Paris"
+]
+},
+{
+"p": "Em qual cidade fica o Museu Hermitage?",
+"c": "São Petersburgo",
+"e": [
+"Moscou",
+"Kiev",
+"Varsóvia",
+"Estocolmo"
+]
+},
+{
+"p": "Quem projetou o edifício do Museu Guggenheim de Nova York, em forma de espiral?",
+"c": "Frank Lloyd Wright",
+"e": [
+"Frank Gehry",
+"Mies van der Rohe",
+"Le Corbusier",
+"Louis Sullivan"
+]
+},
+{
+"p": "Quem projetou a Basílica da Sagrada Família, em Barcelona?",
+"c": "Antoni Gaudí",
+"e": [
+"Santiago Calatrava",
+"Josep Puig i Cadafalch",
+"Ricardo Bofill",
+"Rafael Moneo"
+]
+},
+{
+"p": "Quem projetou a pirâmide de vidro do Museu do Louvre?",
+"c": "I. M. Pei",
+"e": [
+"Norman Foster",
+"Renzo Piano",
+"Jean Nouvel",
+"Richard Rogers"
+]
+},
+{
+"p": "Qual era o nome verdadeiro do escultor barroco conhecido como Aleijadinho?",
+"c": "Antônio Francisco Lisboa",
+"e": [
+"Manuel da Costa Ataíde",
+"Valentim da Fonseca e Silva",
+"Francisco Xavier de Brito",
+"Aleixo Gomes de Oliveira"
+]
+},
+{
+"p": "Em qual cidade mineira estão os \"Doze Profetas\" esculpidos por Aleijadinho?",
+"c": "Congonhas",
+"e": [
+"Ouro Preto",
+"Mariana",
+"Tiradentes",
+"Diamantina"
+]
+},
+{
+"p": "Em qual cidade ocorreu a Semana de Arte Moderna de 1922?",
+"c": "São Paulo",
+"e": [
+"Rio de Janeiro",
+"Belo Horizonte",
+"Recife",
+"Salvador"
+]
+},
+{
+"p": "Quem pintou \"Samba\" (1925), um dos retratos da cultura popular brasileira?",
+"c": "Di Cavalcanti",
+"e": [
+"Candido Portinari",
+"Cícero Dias",
+"Ismael Nery",
+"Volpi"
+]
+},
+{
+"p": "Quem compôs a ópera \"O Barbeiro de Sevilha\"?",
+"c": "Gioachino Rossini",
+"e": [
+"Giuseppe Verdi",
+"Giacomo Puccini",
+"Gaetano Donizetti",
+"Vincenzo Bellini"
+]
+},
+{
+"p": "Quem compôs a ópera \"La Traviata\"?",
+"c": "Giuseppe Verdi",
+"e": [
+"Giacomo Puccini",
+"Gioachino Rossini",
+"Georges Bizet",
+"Richard Wagner"
+]
+},
+{
+"p": "Quem compôs a ópera \"Madame Butterfly\"?",
+"c": "Giacomo Puccini",
+"e": [
+"Giuseppe Verdi",
+"Pietro Mascagni",
+"Ruggero Leoncavallo",
+"Gaetano Donizetti"
+]
+},
+{
+"p": "Quem compôs o balé \"O Lago dos Cisnes\"?",
+"c": "Piotr Ilitch Tchaikovsky",
+"e": [
+"Igor Stravinsky",
+"Serguei Prokofiev",
+"Nikolai Rimsky-Korsakov",
+"Dmitri Shostakovich"
+]
+},
+{
+"p": "Quem compôs \"Boléro\" (1928), obra que repete o mesmo tema em crescendo?",
+"c": "Maurice Ravel",
+"e": [
+"Claude Debussy",
+"Erik Satie",
+"Camille Saint-Saëns",
+"Georges Bizet"
+]
+},
+{
+"p": "Qual compositor brasileiro escreveu a ópera \"O Guarani\"?",
+"c": "Carlos Gomes",
+"e": [
+"Heitor Villa-Lobos",
+"Alberto Nepomuceno",
+"Francisco Mignone",
+"Camargo Guarnieri"
+]
+},
+{
+"p": "Quem compôs as \"Bachianas Brasileiras\"?",
+"c": "Heitor Villa-Lobos",
+"e": [
+"Carlos Gomes",
+"Tom Jobim",
+"Francisco Mignone",
+"Radamés Gnattali"
+]
+},
+{
+"p": "Quem dirigiu e estrelou o filme \"Cidadão Kane\" (1941)?",
+"c": "Orson Welles",
+"e": [
+"Alfred Hitchcock",
+"John Ford",
+"Billy Wilder",
+"Charlie Chaplin"
+]
+},
+{
+"p": "Quem dirigiu o filme \"Psicose\" (1960)?",
+"c": "Alfred Hitchcock",
+"e": [
+"Stanley Kubrick",
+"Orson Welles",
+"Billy Wilder",
+"Roman Polanski"
+]
+},
+{
+"p": "Quem dirigiu o filme \"Cidade de Deus\" (2002)?",
+"c": "Fernando Meirelles",
+"e": [
+"Walter Salles",
+"José Padilha",
+"Hector Babenco",
+"Karim Aïnouz"
+]
+},
+{
+"p": "Qual foi o primeiro filme brasileiro indicado ao Oscar de Melhor Filme Estrangeiro, em 1963?",
+"c": "O Pagador de Promessas",
+"e": [
+"Central do Brasil",
+"Orfeu Negro",
+"O Quatrilho",
+"Vidas Secas"
+]
+},
+{
+"p": "Quem dirigiu o filme \"Central do Brasil\" (1998)?",
+"c": "Walter Salles",
+"e": [
+"Fernando Meirelles",
+"Bruno Barreto",
+"Kleber Mendonça Filho",
+"Hector Babenco"
+]
+},
+{
+"p": "Qual filme de Stanley Kubrick apresenta o computador HAL 9000?",
+"c": "2001: Uma Odisseia no Espaço",
+"e": [
+"Laranja Mecânica",
+"O Iluminado",
+"Nascido para Matar",
+"Dr. Fantástico"
+]
+},
+{
+"p": "Quem dirigiu o clássico do cinema mudo \"Metrópolis\" (1927)?",
+"c": "Fritz Lang",
+"e": [
+"F. W. Murnau",
+"Sergei Eisenstein",
+"Robert Wiene",
+"Charlie Chaplin"
+]
+},
+{
+"p": "Quem dirigiu o filme \"Os Sete Samurais\" (1954)?",
+"c": "Akira Kurosawa",
+"e": [
+"Yasujirō Ozu",
+"Hayao Miyazaki",
+"Kenji Mizoguchi",
+"Takeshi Kitano"
+]
+},
+{
+"p": "Quem é o autor da peça \"Esperando Godot\"?",
+"c": "Samuel Beckett",
+"e": [
+"Eugène Ionesco",
+"Harold Pinter",
+"Bertolt Brecht",
+"Tennessee Williams"
+]
+},
+{
+"p": "Qual dramaturgo brasileiro escreveu \"Vestido de Noiva\" (1943)?",
+"c": "Nelson Rodrigues",
+"e": [
+"Ariano Suassuna",
+"Plínio Marcos",
+"Gianfrancesco Guarnieri",
+"Dias Gomes"
+]
+},
+{
+"p": "Quem é o autor de \"O Auto da Compadecida\"?",
+"c": "Ariano Suassuna",
+"e": [
+"Nelson Rodrigues",
+"João Cabral de Melo Neto",
+"Dias Gomes",
+"Jorge Amado"
+]
+},
+{
+"p": "Qual escola alemã de arte e design, fundada por Walter Gropius em 1919, uniu artesanato e indústria?",
+"c": "Bauhaus",
+"e": [
+"De Stijl",
+"Wiener Werkstätte",
+"Jugendstil",
+"Construtivismo"
+]
+},
+{
+"p": "Quem apresentou, em 1917, o urinol assinado \"R. Mutt\" com o título \"Fonte\"?",
+"c": "Marcel Duchamp",
+"e": [
+"Man Ray",
+"Max Ernst",
+"Kurt Schwitters",
+"Francis Picabia"
+]
+},
+{
+"p": "Qual pintor holandês é famoso por composições de linhas pretas e retângulos nas cores primárias?",
+"c": "Piet Mondrian",
+"e": [
+"Theo van Doesburg",
+"Kazimir Malevich",
+"Wassily Kandinsky",
+"Paul Klee"
+]
+},
+{
+"p": "Quem pintou \"Quadrado Negro sobre Fundo Branco\" (1915)?",
+"c": "Kazimir Malevich",
+"e": [
+"Wassily Kandinsky",
+"El Lissitzky",
+"Piet Mondrian",
+"Alexander Rodchenko"
+]
+},
+{
+"p": "Em qual cidade espanhola fica o Museu Guggenheim projetado por Frank Gehry?",
+"c": "Bilbao",
+"e": [
+"Barcelona",
+"Valência",
+"Madri",
+"Sevilha"
+]
+},
+{
+"p": "Qual banda lançou, em 1973, o álbum \"The Dark Side of the Moon\"?",
+"c": "Pink Floyd",
+"e": [
+"Led Zeppelin",
+"Genesis",
+"Yes",
+"The Doors"
+]
+},
+{
+"p": "Quem compôs a canção \"Construção\" (1971)?",
+"c": "Chico Buarque",
+"e": [
+"Caetano Veloso",
+"Milton Nascimento",
+"Geraldo Vandré",
+"Gilberto Gil"
+]
+},
+{
+"p": "Qual movimento cultural brasileiro de 1967–1968 reuniu Caetano Veloso, Gilberto Gil e Os Mutantes?",
+"c": "Tropicália",
+"e": [
+"Bossa Nova",
+"Jovem Guarda",
+"Clube da Esquina",
+"Manguebit"
+]
+},
+{
+"p": "Quem ficou conhecido como o \"Rei do Baião\"?",
+"c": "Luiz Gonzaga",
+"e": [
+"Jackson do Pandeiro",
+"Dominguinhos",
+"Gonzaguinha",
+"Waldick Soriano"
+]
+},
+{
+"p": "Qual cantora brasileira ficou conhecida como a \"Pequena Notável\"?",
+"c": "Carmen Miranda",
+"e": [
+"Dalva de Oliveira",
+"Elis Regina",
+"Aracy de Almeida",
+"Clara Nunes"
+]
+},
+{
+"p": "Quem compôs \"Aquarela do Brasil\" (1939)?",
+"c": "Ary Barroso",
+"e": [
+"Noel Rosa",
+"Pixinguinha",
+"Dorival Caymmi",
+"Cartola"
+]
+},
+{
+"p": "Qual destes instrumentos de sopro usa palheta dupla?",
+"c": "Oboé",
+"e": [
+"Clarinete",
+"Saxofone",
+"Flauta transversal",
+"Trompete"
+]
+}
+]

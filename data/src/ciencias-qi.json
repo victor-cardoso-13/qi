@@ -1,0 +1,372 @@
+[
+{
+"p": "Qual é a partícula elementar mediadora da força eletromagnética?",
+"c": "Fóton",
+"e": [
+"Glúon",
+"Bóson W",
+"Gráviton",
+"Neutrino"
+]
+},
+{
+"p": "Qual partícula, descoberta no CERN em 2012, está associada ao mecanismo que dá massa às outras partículas?",
+"c": "Bóson de Higgs",
+"e": [
+"Múon",
+"Quark top",
+"Bóson Z",
+"Píon"
+]
+},
+{
+"p": "Quais são os três quarks que formam um próton?",
+"c": "Dois up e um down",
+"e": [
+"Dois down e um up",
+"Três up",
+"Um up, um down e um strange",
+"Dois up e um strange"
+]
+},
+{
+"p": "Qual princípio da mecânica quântica afirma que não se pode conhecer com precisão simultânea a posição e o momento de uma partícula?",
+"c": "Princípio da incerteza de Heisenberg",
+"e": [
+"Princípio de exclusão de Pauli",
+"Princípio da complementaridade de Bohr",
+"Princípio da equivalência",
+"Princípio de Fermat"
+]
+},
+{
+"p": "Qual é a equação que expressa a equivalência entre massa e energia?",
+"c": "E = mc²",
+"e": [
+"F = ma",
+"E = hf",
+"PV = nRT",
+"V = RI"
+]
+},
+{
+"p": "Como se chama a fronteira de um buraco negro a partir da qual nem a luz consegue escapar?",
+"c": "Horizonte de eventos",
+"e": [
+"Singularidade",
+"Limite de Roche",
+"Ergosfera",
+"Limite de Chandrasekhar"
+]
+},
+{
+"p": "Qual é a massa-limite acima da qual uma anã branca colapsa e pode explodir como supernova do tipo Ia?",
+"c": "Limite de Chandrasekhar",
+"e": [
+"Limite de Roche",
+"Limite de Eddington",
+"Limite de Schwarzschild",
+"Limite de Hubble"
+]
+},
+{
+"p": "Qual cientista descobriu a radioatividade natural, em 1896?",
+"c": "Henri Becquerel",
+"e": [
+"Marie Curie",
+"Ernest Rutherford",
+"Wilhelm Röntgen",
+"Niels Bohr"
+]
+},
+{
+"p": "Qual cientista é a única pessoa a ter recebido Prêmios Nobel em duas áreas científicas diferentes (Física e Química)?",
+"c": "Marie Curie",
+"e": [
+"Linus Pauling",
+"Albert Einstein",
+"Frederick Sanger",
+"Irène Joliot-Curie"
+]
+},
+{
+"p": "Qual estrutura do DNA foi proposta, em 1953, por Watson e Crick?",
+"c": "Dupla hélice",
+"e": [
+"Hélice tripla",
+"Fita simples",
+"Estrutura em folha beta",
+"Anel circular"
+]
+},
+{
+"p": "Quais são as quatro bases nitrogenadas do DNA?",
+"c": "Adenina, timina, citosina e guanina",
+"e": [
+"Adenina, uracila, citosina e guanina",
+"Adenina, timina, citosina e uracila",
+"Timina, uracila, citosina e guanina",
+"Adenina, timina, uracila e guanina"
+]
+},
+{
+"p": "Qual enzima copia o DNA para RNA mensageiro durante a transcrição?",
+"c": "RNA polimerase",
+"e": [
+"DNA polimerase",
+"Helicase",
+"Ligase",
+"Transcriptase reversa"
+]
+},
+{
+"p": "Qual organela contém enzimas digestivas e é conhecida como o \"estômago\" da célula?",
+"c": "Lisossomo",
+"e": [
+"Peroxissomo",
+"Complexo de Golgi",
+"Retículo rugoso",
+"Centríolo"
+]
+},
+{
+"p": "Qual é o nome do ciclo bioquímico que ocorre na matriz mitocondrial e gera NADH e FADH₂?",
+"c": "Ciclo de Krebs",
+"e": [
+"Ciclo de Calvin",
+"Glicólise",
+"Ciclo da ureia",
+"Via das pentoses"
+]
+},
+{
+"p": "Qual é o produto final da glicólise, por molécula de glicose?",
+"c": "Duas moléculas de piruvato",
+"e": [
+"Duas moléculas de lactato",
+"Uma molécula de acetil-CoA",
+"Quatro moléculas de CO₂",
+"Uma molécula de frutose"
+]
+},
+{
+"p": "Qual é o único mamífero que põe ovos entre os listados?",
+"c": "Ornitorrinco",
+"e": [
+"Pangolim",
+"Tamanduá-bandeira",
+"Tatu-canastra",
+"Gambá"
+]
+},
+{
+"p": "Quantos corações tem um polvo?",
+"c": "3",
+"e": [
+"1",
+"2",
+"4",
+"8"
+]
+},
+{
+"p": "Qual é o único elemento químico que, à pressão normal, não solidifica mesmo perto do zero absoluto?",
+"c": "Hélio",
+"e": [
+"Hidrogênio",
+"Neônio",
+"Nitrogênio",
+"Argônio"
+]
+},
+{
+"p": "Qual é o número de Avogadro, aproximadamente?",
+"c": "6,02 × 10²³",
+"e": [
+"3,00 × 10⁸",
+"6,67 × 10⁻¹¹",
+"1,38 × 10⁻²³",
+"9,81 × 10⁰"
+]
+},
+{
+"p": "Qual é o elemento químico mais abundante na crosta terrestre, em massa?",
+"c": "Oxigênio",
+"e": [
+"Silício",
+"Alumínio",
+"Ferro",
+"Cálcio"
+]
+},
+{
+"p": "Qual lei dos gases afirma que, a temperatura constante, o volume de um gás é inversamente proporcional à pressão?",
+"c": "Lei de Boyle",
+"e": [
+"Lei de Charles",
+"Lei de Gay-Lussac",
+"Lei de Avogadro",
+"Lei de Dalton"
+]
+},
+{
+"p": "Qual é a segunda lei da termodinâmica, em essência?",
+"c": "A entropia de um sistema isolado tende a aumentar",
+"e": [
+"A energia não pode ser criada nem destruída",
+"A temperatura do zero absoluto é inatingível",
+"Todo corpo permanece em repouso se nenhuma força atuar",
+"A pressão de um gás é inversamente proporcional ao volume"
+]
+},
+{
+"p": "Qual astrônomo propôs que os planetas se movem em órbitas elípticas, com o Sol em um dos focos?",
+"c": "Johannes Kepler",
+"e": [
+"Nicolau Copérnico",
+"Tycho Brahe",
+"Galileu Galilei",
+"Isaac Newton"
+]
+},
+{
+"p": "Quais são as duas luas de Marte?",
+"c": "Fobos e Deimos",
+"e": [
+"Io e Europa",
+"Titã e Reia",
+"Tritão e Nereida",
+"Ariel e Miranda"
+]
+},
+{
+"p": "Qual é a maior lua de Saturno?",
+"c": "Titã",
+"e": [
+"Europa",
+"Ganimedes",
+"Tritão",
+"Encélado"
+]
+},
+{
+"p": "Qual lua de Júpiter possui um oceano subterrâneo e é alvo de busca por vida?",
+"c": "Europa",
+"e": [
+"Himalia",
+"Dione",
+"Mimas",
+"Io"
+]
+},
+{
+"p": "Como se chama o ponto da órbita da Terra mais distante do Sol?",
+"c": "Afélio",
+"e": [
+"Periélio",
+"Apogeu",
+"Perigeu",
+"Equinócio"
+]
+},
+{
+"p": "Quem calculou, por volta de 240 a.C., a circunferência da Terra com notável precisão usando a sombra de varas em duas cidades?",
+"c": "Eratóstenes",
+"e": [
+"Ptolomeu",
+"Aristarco",
+"Hiparco",
+"Arquimedes"
+]
+},
+{
+"p": "Qual é o nome do fenômeno em que a luz muda de direção ao passar de um meio para outro?",
+"c": "Refração",
+"e": [
+"Difração",
+"Reflexão",
+"Polarização",
+"Interferência"
+]
+},
+{
+"p": "Qual a cor da luz visível com menor comprimento de onda?",
+"c": "Violeta",
+"e": [
+"Vermelha",
+"Verde",
+"Azul",
+"Amarela"
+]
+},
+{
+"p": "Qual é a quantidade de calor necessária para elevar em 1 °C a temperatura de 1 g de água, aproximadamente?",
+"c": "1 caloria",
+"e": [
+"1 joule",
+"1 quilocaloria",
+"1 watt",
+"1 BTU"
+]
+},
+{
+"p": "Qual é o nome do tipo de reação nuclear que ocorre no interior do Sol?",
+"c": "Fusão nuclear",
+"e": [
+"Fissão nuclear",
+"Decaimento beta",
+"Reação em cadeia",
+"Captura eletrônica"
+]
+},
+{
+"p": "Qual a meia-vida aproximada do carbono-14, usada na datação de fósseis recentes?",
+"c": "5.730 anos",
+"e": [
+"573 anos",
+"57.300 anos",
+"1.600 anos",
+"4,5 bilhões de anos"
+]
+},
+{
+"p": "Qual é o nome do cientista brasileiro que descobriu a doença de Chagas?",
+"c": "Carlos Chagas",
+"e": [
+"Oswaldo Cruz",
+"Vital Brazil",
+"Adolfo Lutz",
+"Emílio Ribas"
+]
+},
+{
+"p": "Quantos elementos químicos tem a tabela periódica após a nomeação do oganessônio, em 2016?",
+"c": "118",
+"e": [
+"92",
+"108",
+"112",
+"126"
+]
+},
+{
+"p": "Qual é a probabilidade de, ao lançar dois dados honestos, a soma ser 7?",
+"c": "1/6",
+"e": [
+"1/12",
+"1/9",
+"7/36",
+"1/4"
+]
+},
+{
+"p": "Quanto vale a soma dos números inteiros de 1 a 100?",
+"c": "5050",
+"e": [
+"5000",
+"5100",
+"4950",
+"10100"
+]
+}
+]

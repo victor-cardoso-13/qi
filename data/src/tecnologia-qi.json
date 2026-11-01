@@ -1,0 +1,372 @@
+[
+{
+"p": "Qual é a complexidade de tempo típica da busca binária em uma lista ordenada com n elementos?",
+"c": "Logarítmica, O(log n)",
+"e": [
+"Linear, O(n)",
+"Quadrática, O(n²)",
+"Constante, O(1)",
+"Linearítmica, O(n log n)"
+]
+},
+{
+"p": "Qual estrutura de dados segue a regra FIFO (first in, first out)?",
+"c": "Fila",
+"e": [
+"Pilha",
+"Árvore binária",
+"Tabela hash",
+"Grafo"
+]
+},
+{
+"p": "Qual estrutura de dados segue a regra LIFO (last in, first out)?",
+"c": "Pilha",
+"e": [
+"Fila",
+"Lista circular",
+"Heap",
+"Árvore B"
+]
+},
+{
+"p": "Qual algoritmo de ordenação costuma ser O(n log n) em média, mas pode chegar a O(n²) no pior caso?",
+"c": "Quicksort",
+"e": [
+"Mergesort",
+"Heapsort",
+"Bubble sort",
+"Counting sort"
+]
+},
+{
+"p": "Quanto vale o número binário 1010 em decimal?",
+"c": "10",
+"e": [
+"8",
+"12",
+"5",
+"6"
+]
+},
+{
+"p": "Como o número decimal 255 é escrito em hexadecimal?",
+"c": "FF",
+"e": [
+"EE",
+"FA",
+"1F",
+"100"
+]
+},
+{
+"p": "Quanto vale 2 elevado a 16?",
+"c": "65.536",
+"e": [
+"32.768",
+"16.384",
+"131.072",
+"4.096"
+]
+},
+{
+"p": "Qual é o maior número inteiro sem sinal que cabe em 8 bits?",
+"c": "255",
+"e": [
+"127",
+"256",
+"128",
+"511"
+]
+},
+{
+"p": "Quantos valores distintos um byte pode representar?",
+"c": "256",
+"e": [
+"128",
+"255",
+"512",
+"1024"
+]
+},
+{
+"p": "Qual porta lógica retorna verdadeiro somente quando as duas entradas são diferentes?",
+"c": "XOR",
+"e": [
+"AND",
+"OR",
+"NAND",
+"XNOR"
+]
+},
+{
+"p": "Qual porta lógica é considerada universal, pois todas as outras podem ser construídas apenas com ela, entre as opções?",
+"c": "NAND",
+"e": [
+"AND",
+"OR",
+"XOR",
+"NOT"
+]
+},
+{
+"p": "Quem propôs, em 1945, a arquitetura de computadores com programa armazenado na memória?",
+"c": "John von Neumann",
+"e": [
+"Alan Turing",
+"Charles Babbage",
+"Claude Shannon",
+"Konrad Zuse"
+]
+},
+{
+"p": "Qual almirante da Marinha dos EUA foi pioneira dos compiladores e uma das mentes por trás da linguagem COBOL?",
+"c": "Grace Hopper",
+"e": [
+"Ada Lovelace",
+"Margaret Hamilton",
+"Radia Perlman",
+"Katherine Johnson"
+]
+},
+{
+"p": "Qual cientista dinamarquês criou a linguagem C++, no início dos anos 1980?",
+"c": "Bjarne Stroustrup",
+"e": [
+"Dennis Ritchie",
+"James Gosling",
+"Guido van Rossum",
+"Anders Hejlsberg"
+]
+},
+{
+"p": "Quem criou a linguagem de programação Java?",
+"c": "James Gosling",
+"e": [
+"Bjarne Stroustrup",
+"Brendan Eich",
+"Dennis Ritchie",
+"Rasmus Lerdorf"
+]
+},
+{
+"p": "Quem cofundou a Intel e deu nome à lei que prevê o crescimento exponencial de transistores em chips?",
+"c": "Gordon Moore",
+"e": [
+"Robert Noyce",
+"Andy Grove",
+"Gene Amdahl",
+"Jack Kilby"
+]
+},
+{
+"p": "O que afirma, em essência, a Lei de Moore?",
+"c": "O número de transistores em um chip dobra aproximadamente a cada dois anos",
+"e": [
+"A velocidade da internet dobra a cada ano",
+"O preço dos computadores cai pela metade a cada ano",
+"A capacidade das baterias dobra a cada dois anos",
+"O tamanho dos monitores dobra a cada década"
+]
+},
+{
+"p": "Qual foi o primeiro microprocessador comercial, lançado pela Intel em 1971?",
+"c": "Intel 4004",
+"e": [
+"Intel 8086",
+"Intel 8080",
+"Motorola 68000",
+"Zilog Z80"
+]
+},
+{
+"p": "Quantos bits tem um endereço IPv6?",
+"c": "128",
+"e": [
+"32",
+"64",
+"256",
+"48"
+]
+},
+{
+"p": "Qual é a porta padrão usada pelo protocolo HTTP?",
+"c": "80",
+"e": [
+"21",
+"25",
+"443",
+"8080"
+]
+},
+{
+"p": "Qual protocolo da camada de transporte é orientado à conexão e garante a entrega ordenada dos dados?",
+"c": "TCP",
+"e": [
+"UDP",
+"IP",
+"ICMP",
+"ARP"
+]
+},
+{
+"p": "O que significa o código de status HTTP 404?",
+"c": "Página ou recurso não encontrado",
+"e": [
+"Acesso proibido",
+"Erro interno do servidor",
+"Requisição bem-sucedida",
+"Redirecionamento permanente"
+]
+},
+{
+"p": "O que é um ataque de \"SQL injection\"?",
+"c": "Inserir comandos SQL maliciosos em campos de entrada de um sistema",
+"e": [
+"Derrubar um servidor com excesso de acessos",
+"Interceptar mensagens de e-mail",
+"Enganar usuários com e-mails falsos",
+"Quebrar senhas por força bruta"
+]
+},
+{
+"p": "Qual algoritmo de criptografia de chave pública, criado em 1977, leva as iniciais de seus três autores?",
+"c": "RSA",
+"e": [
+"AES",
+"DES",
+"SHA",
+"MD5"
+]
+},
+{
+"p": "O que significa a sigla ASCII?",
+"c": "American Standard Code for Information Interchange",
+"e": [
+"Advanced System Code for International Interfaces",
+"American Standard Compression for Internet Images",
+"Automated Symbol Code for Information Interface",
+"Applied Standard Character Index Interface"
+]
+},
+{
+"p": "Qual padrão de codificação procura representar caracteres de praticamente todos os idiomas, sendo UTF-8 uma de suas formas?",
+"c": "Unicode",
+"e": [
+"ASCII",
+"EBCDIC",
+"ISO 8601",
+"Base64"
+]
+},
+{
+"p": "Qual matemático provou, em 1936, que o problema da parada é indecidível?",
+"c": "Alan Turing",
+"e": [
+"Kurt Gödel",
+"John von Neumann",
+"Alonzo Church",
+"Claude Shannon"
+]
+},
+{
+"p": "Qual computador da IBM derrotou o campeão mundial de xadrez Garry Kasparov, em 1997?",
+"c": "Deep Blue",
+"e": [
+"Watson",
+"Deep Thought",
+"Blue Gene",
+"AlphaZero"
+]
+},
+{
+"p": "Qual programa de inteligência artificial da DeepMind derrotou o campeão de Go Lee Sedol, em 2016?",
+"c": "AlphaGo",
+"e": [
+"Deep Blue",
+"Watson",
+"Stockfish",
+"Libratus"
+]
+},
+{
+"p": "Qual instituição criou o sistema operacional UNIX, no final dos anos 1960?",
+"c": "Bell Labs",
+"e": [
+"MIT",
+"IBM",
+"Xerox PARC",
+"Microsoft"
+]
+},
+{
+"p": "Qual é a capacidade típica de um CD-ROM comum?",
+"c": "700 MB",
+"e": [
+"4,7 GB",
+"1,44 MB",
+"8,5 GB",
+"25 GB"
+]
+},
+{
+"p": "Qual é a capacidade típica de um DVD de camada simples?",
+"c": "4,7 GB",
+"e": [
+"700 MB",
+"8,5 GB",
+"25 GB",
+"1,44 MB"
+]
+},
+{
+"p": "O que significa a sigla GUI?",
+"c": "Interface gráfica do usuário",
+"e": [
+"Guia universal de instalação",
+"Gerenciador unificado de internet",
+"Grupo de usuários independentes",
+"Gateway de utilidades integradas"
+]
+},
+{
+"p": "Quem criou o jogo Tetris, em 1984?",
+"c": "Alexey Pajitnov",
+"e": [
+"Shigeru Miyamoto",
+"Nolan Bushnell",
+"Toru Iwatani",
+"Satoru Iwata"
+]
+},
+{
+"p": "Quem criou, em 1971, o primeiro e-mail em rede e adotou o símbolo @ nos endereços?",
+"c": "Ray Tomlinson",
+"e": [
+"Vint Cerf",
+"Tim Berners-Lee",
+"Bob Kahn",
+"Paul Baran"
+]
+},
+{
+"p": "Qual padrão do IEEE define as redes sem fio conhecidas como Wi-Fi?",
+"c": "802.11",
+"e": [
+"802.3",
+"802.15",
+"802.16",
+"802.1"
+]
+},
+{
+"p": "Qual é o nome do algoritmo de classificação de páginas criado por Larry Page e Sergey Brin?",
+"c": "PageRank",
+"e": [
+"HITS",
+"TF-IDF",
+"Hummingbird",
+"RankBrain"
+]
+}
+]

@@ -1,0 +1,382 @@
+[
+{
+"p": "Qual é a capital da Argentina?",
+"c": "Buenos Aires",
+"e": [
+"Montevidéu",
+"Santiago",
+"Lima",
+"Assunção"
+]
+},
+{
+"p": "Qual é a capital do Brasil?",
+"c": "Brasília",
+"e": [
+"Rio de Janeiro",
+"São Paulo",
+"Salvador",
+"Belo Horizonte"
+]
+},
+{
+"p": "Qual é o maior oceano do planeta?",
+"c": "Pacífico",
+"e": [
+"Atlântico",
+"Índico",
+"Ártico",
+"Antártico"
+]
+},
+{
+"p": "Qual é o maior país do mundo em área territorial?",
+"c": "Rússia",
+"e": [
+"Canadá",
+"China",
+"Estados Unidos",
+"Brasil"
+]
+},
+{
+"p": "Qual é o rio de maior volume de água do mundo?",
+"c": "Amazonas",
+"e": [
+"Nilo",
+"Mississippi",
+"Yangtzé",
+"Congo"
+]
+},
+{
+"p": "Qual é o maior deserto quente do mundo?",
+"c": "Saara",
+"e": [
+"Gobi",
+"Atacama",
+"Kalahari",
+"Arábico"
+]
+},
+{
+"p": "Qual é a capital da França?",
+"c": "Paris",
+"e": [
+"Lyon",
+"Marselha",
+"Bruxelas",
+"Genebra"
+]
+},
+{
+"p": "Qual é a capital da Itália?",
+"c": "Roma",
+"e": [
+"Milão",
+"Veneza",
+"Florença",
+"Nápoles"
+]
+},
+{
+"p": "Qual é a capital do Japão?",
+"c": "Tóquio",
+"e": [
+"Quioto",
+"Osaka",
+"Seul",
+"Pequim"
+]
+},
+{
+"p": "Em qual país fica a cidade de Veneza, famosa por seus canais?",
+"c": "Itália",
+"e": [
+"França",
+"Grécia",
+"Espanha",
+"Holanda"
+]
+},
+{
+"p": "Qual é a montanha mais alta do mundo acima do nível do mar?",
+"c": "Monte Everest",
+"e": [
+"K2",
+"Aconcágua",
+"Monte Kilimanjaro",
+"Mont Blanc"
+]
+},
+{
+"p": "Em qual país fica o Taj Mahal?",
+"c": "Índia",
+"e": [
+"Paquistão",
+"Irã",
+"Bangladesh",
+"Nepal"
+]
+},
+{
+"p": "Qual é o maior continente em área?",
+"c": "Ásia",
+"e": [
+"África",
+"América do Norte",
+"Europa",
+"Oceania"
+]
+},
+{
+"p": "Qual é o estado mais populoso do Brasil?",
+"c": "São Paulo",
+"e": [
+"Rio de Janeiro",
+"Minas Gerais",
+"Bahia",
+"Paraná"
+]
+},
+{
+"p": "Qual é a capital do Rio Grande do Sul?",
+"c": "Porto Alegre",
+"e": [
+"Florianópolis",
+"Curitiba",
+"Caxias do Sul",
+"Pelotas"
+]
+},
+{
+"p": "Em qual cidade brasileira fica a estátua do Cristo Redentor?",
+"c": "Rio de Janeiro",
+"e": [
+"São Paulo",
+"Salvador",
+"Brasília",
+"Recife"
+]
+},
+{
+"p": "Qual é a capital de Portugal?",
+"c": "Lisboa",
+"e": [
+"Porto",
+"Coimbra",
+"Madri",
+"Faro"
+]
+},
+{
+"p": "Qual é a capital dos Estados Unidos?",
+"c": "Washington, D.C.",
+"e": [
+"Nova York",
+"Los Angeles",
+"Chicago",
+"Filadélfia"
+]
+},
+{
+"p": "Qual é a capital do Canadá?",
+"c": "Ottawa",
+"e": [
+"Toronto",
+"Vancouver",
+"Montreal",
+"Quebec"
+]
+},
+{
+"p": "Qual é a capital da Austrália?",
+"c": "Camberra",
+"e": [
+"Sydney",
+"Melbourne",
+"Brisbane",
+"Perth"
+]
+},
+{
+"p": "Qual é a maior ilha do mundo?",
+"c": "Groenlândia",
+"e": [
+"Madagascar",
+"Bornéu",
+"Nova Guiné",
+"Islândia"
+]
+},
+{
+"p": "Qual é a capital da Espanha?",
+"c": "Madri",
+"e": [
+"Barcelona",
+"Sevilha",
+"Valência",
+"Lisboa"
+]
+},
+{
+"p": "Qual oceano banha a costa leste do Brasil?",
+"c": "Atlântico",
+"e": [
+"Pacífico",
+"Índico",
+"Ártico",
+"Antártico"
+]
+},
+{
+"p": "Qual é o maior estado do Brasil em área territorial?",
+"c": "Amazonas",
+"e": [
+"Pará",
+"Mato Grosso",
+"Minas Gerais",
+"Bahia"
+]
+},
+{
+"p": "Qual é o menor estado do Brasil em área territorial?",
+"c": "Sergipe",
+"e": [
+"Alagoas",
+"Rio de Janeiro",
+"Espírito Santo",
+"Distrito Federal"
+]
+},
+{
+"p": "Qual é a capital do México?",
+"c": "Cidade do México",
+"e": [
+"Guadalajara",
+"Monterrey",
+"Cancún",
+"Tijuana"
+]
+},
+{
+"p": "Qual é a capital do Chile?",
+"c": "Santiago",
+"e": [
+"Valparaíso",
+"Lima",
+"Bogotá",
+"La Paz"
+]
+},
+{
+"p": "Em qual cidade fica o famoso relógio Big Ben?",
+"c": "Londres",
+"e": [
+"Dublin",
+"Edimburgo",
+"Manchester",
+"Liverpool"
+]
+},
+{
+"p": "Quais são os dois países que ocupam a Península Ibérica?",
+"c": "Espanha e Portugal",
+"e": [
+"Espanha e França",
+"Portugal e Itália",
+"França e Andorra",
+"Itália e Espanha"
+]
+},
+{
+"p": "Em qual país está a Grande Muralha?",
+"c": "China",
+"e": [
+"Japão",
+"Mongólia",
+"Coreia do Sul",
+"Índia"
+]
+},
+{
+"p": "Com qual país o Brasil divide as Cataratas do Iguaçu?",
+"c": "Argentina",
+"e": [
+"Paraguai",
+"Uruguai",
+"Bolívia",
+"Chile"
+]
+},
+{
+"p": "Qual é a capital da Bahia?",
+"c": "Salvador",
+"e": [
+"Feira de Santana",
+"Ilhéus",
+"Porto Seguro",
+"Aracaju"
+]
+},
+{
+"p": "Qual é a capital de Minas Gerais?",
+"c": "Belo Horizonte",
+"e": [
+"Uberlândia",
+"Ouro Preto",
+"Juiz de Fora",
+"Contagem"
+]
+},
+{
+"p": "Qual rio atravessa a cidade de Paris?",
+"c": "Sena",
+"e": [
+"Reno",
+"Loire",
+"Ródano",
+"Danúbio"
+]
+},
+{
+"p": "Qual rio atravessa a cidade de Londres?",
+"c": "Tâmisa",
+"e": [
+"Tejo",
+"Sena",
+"Tâmega",
+"Severn"
+]
+},
+{
+"p": "Em qual país estão as pirâmides de Gizé?",
+"c": "Egito",
+"e": [
+"Sudão",
+"Líbia",
+"Jordânia",
+"Marrocos"
+]
+},
+{
+"p": "Qual é o menor país do mundo em área?",
+"c": "Vaticano",
+"e": [
+"Mônaco",
+"San Marino",
+"Liechtenstein",
+"Malta"
+]
+},
+{
+"p": "Qual é o maior país da América do Sul em área territorial?",
+"c": "Brasil",
+"e": [
+"Argentina",
+"Peru",
+"Colômbia",
+"Bolívia"
+]
+}
+]

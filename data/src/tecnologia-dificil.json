@@ -1,0 +1,502 @@
+[
+{
+"p": "Quem é considerado o criador da World Wide Web, em 1989?",
+"c": "Tim Berners-Lee",
+"e": [
+"Vint Cerf",
+"Bill Gates",
+"Steve Jobs",
+"Marc Andreessen"
+]
+},
+{
+"p": "Qual linguagem é usada para definir o estilo e a aparência de páginas web?",
+"c": "CSS",
+"e": [
+"SQL",
+"PHP",
+"Java",
+"XML"
+]
+},
+{
+"p": "Qual protocolo adiciona criptografia à navegação na web, indicado pelo cadeado no navegador?",
+"c": "HTTPS",
+"e": [
+"FTP",
+"SMTP",
+"DNS",
+"DHCP"
+]
+},
+{
+"p": "O que significa a sigla SQL?",
+"c": "Structured Query Language",
+"e": [
+"Simple Question Language",
+"System Quality Layer",
+"Standard Quantum Logic",
+"Sequential Query Link"
+]
+},
+{
+"p": "Quem criou o núcleo do sistema operacional Linux, em 1991?",
+"c": "Linus Torvalds",
+"e": [
+"Richard Stallman",
+"Dennis Ritchie",
+"Ken Thompson",
+"Andrew Tanenbaum"
+]
+},
+{
+"p": "Quem criou a linguagem de programação Python?",
+"c": "Guido van Rossum",
+"e": [
+"James Gosling",
+"Bjarne Stroustrup",
+"Brendan Eich",
+"Larry Wall"
+]
+},
+{
+"p": "Qual linguagem de programação foi criada por Brendan Eich, em 1995, para o navegador?",
+"c": "JavaScript",
+"e": [
+"Java",
+"Python",
+"PHP",
+"Ruby"
+]
+},
+{
+"p": "Quem criou a linguagem de programação C?",
+"c": "Dennis Ritchie",
+"e": [
+"Bjarne Stroustrup",
+"James Gosling",
+"Niklaus Wirth",
+"Guido van Rossum"
+]
+},
+{
+"p": "O que significa a sigla DNS?",
+"c": "Sistema de Nomes de Domínio",
+"e": [
+"Dados de Navegação Segura",
+"Distribuição Nacional de Sinal",
+"Diretório de Nós de Servidor",
+"Domínio de Navegação Simples"
+]
+},
+{
+"p": "O que significa o \"IP\" em \"endereço IP\"?",
+"c": "Internet Protocol",
+"e": [
+"Internal Port",
+"Information Packet",
+"Interface Program",
+"Internet Provider"
+]
+},
+{
+"p": "Quantos bits tem um endereço IPv4?",
+"c": "32",
+"e": [
+"16",
+"64",
+"128",
+"8"
+]
+},
+{
+"p": "Qual sistema de numeração é a base do funcionamento dos computadores digitais?",
+"c": "Binário",
+"e": [
+"Decimal",
+"Octal",
+"Romano",
+"Duodecimal"
+]
+},
+{
+"p": "Qual computador eletrônico de uso geral, apresentado em 1946, ocupava uma sala inteira?",
+"c": "ENIAC",
+"e": [
+"UNIVAC",
+"Colossus",
+"EDVAC",
+"Altair 8800"
+]
+},
+{
+"p": "Quem é considerada a primeira programadora da história, por seus escritos sobre a Máquina Analítica?",
+"c": "Ada Lovelace",
+"e": [
+"Grace Hopper",
+"Margaret Hamilton",
+"Hedy Lamarr",
+"Radia Perlman"
+]
+},
+{
+"p": "Quem projetou a Máquina Analítica, no século XIX?",
+"c": "Charles Babbage",
+"e": [
+"Alan Turing",
+"John von Neumann",
+"Blaise Pascal",
+"Konrad Zuse"
+]
+},
+{
+"p": "Quem propôs o famoso teste para avaliar se uma máquina pode exibir comportamento inteligente, em 1950?",
+"c": "Alan Turing",
+"e": [
+"John McCarthy",
+"Marvin Minsky",
+"Claude Shannon",
+"Norbert Wiener"
+]
+},
+{
+"p": "Qual rede, criada em 1969, é considerada a precursora da internet?",
+"c": "ARPANET",
+"e": [
+"Ethernet",
+"Usenet",
+"Bitnet",
+"Compuserve"
+]
+},
+{
+"p": "Em que ano foi lançado o primeiro iPhone?",
+"c": "2007",
+"e": [
+"2005",
+"2008",
+"2010",
+"2003"
+]
+},
+{
+"p": "Qual empresa criou a linguagem Java, na década de 1990?",
+"c": "Sun Microsystems",
+"e": [
+"Microsoft",
+"IBM",
+"Oracle",
+"Netscape"
+]
+},
+{
+"p": "Qual empresa criou o programa de edição de imagens Photoshop?",
+"c": "Adobe",
+"e": [
+"Corel",
+"Autodesk",
+"Apple",
+"Microsoft"
+]
+},
+{
+"p": "Qual é a extensão padrão dos arquivos de planilha do Excel atual?",
+"c": ".xlsx",
+"e": [
+".docx",
+".pptx",
+".csv",
+".txt"
+]
+},
+{
+"p": "Qual protocolo é tradicionalmente usado para a transferência de arquivos entre computadores?",
+"c": "FTP",
+"e": [
+"SMTP",
+"HTTP",
+"SSH",
+"POP3"
+]
+},
+{
+"p": "Qual protocolo é usado principalmente para o envio de e-mails?",
+"c": "SMTP",
+"e": [
+"FTP",
+"HTTP",
+"DNS",
+"SNMP"
+]
+},
+{
+"p": "O que é \"phishing\"?",
+"c": "Golpe que tenta enganar a vítima para roubar dados",
+"e": [
+"Um tipo de antivírus",
+"Um sistema de backup",
+"Um programa de edição",
+"Um protocolo de e-mail"
+]
+},
+{
+"p": "O que é um \"ransomware\"?",
+"c": "Programa que sequestra dados e exige resgate",
+"e": [
+"Programa que acelera o computador",
+"Um tipo de firewall",
+"Um sistema operacional",
+"Um app de mensagens"
+]
+},
+{
+"p": "Qual é a função de um firewall?",
+"c": "Filtrar o tráfego de rede e bloquear acessos não autorizados",
+"e": [
+"Resfriar o processador",
+"Armazenar senhas",
+"Comprimir arquivos",
+"Aumentar a velocidade do Wi-Fi"
+]
+},
+{
+"p": "O que é um algoritmo?",
+"c": "Uma sequência finita de passos para resolver um problema",
+"e": [
+"Um tipo de vírus",
+"Um circuito integrado",
+"Um formato de imagem",
+"Uma linguagem de marcação"
+]
+},
+{
+"p": "O que significa dizer que um software é \"open source\"?",
+"c": "Seu código-fonte está disponível para ser visto e modificado",
+"e": [
+"Ele é totalmente gratuito e sem anúncios",
+"Ele só roda na internet",
+"Ele não precisa de instalação",
+"Ele não tem direitos autorais"
+]
+},
+{
+"p": "Qual é a ideia central de um blockchain?",
+"c": "Um registro distribuído em blocos encadeados e verificáveis",
+"e": [
+"Uma rede social descentralizada",
+"Um tipo de memória RAM",
+"Uma linguagem de programação",
+"Um protocolo de e-mail"
+]
+},
+{
+"p": "Qual criptomoeda foi criada em 2009 por uma pessoa (ou grupo) sob o pseudônimo Satoshi Nakamoto?",
+"c": "Bitcoin",
+"e": [
+"Ethereum",
+"Litecoin",
+"Dogecoin",
+"Ripple"
+]
+},
+{
+"p": "Qual é o nome do sistema operacional dos computadores da Apple?",
+"c": "macOS",
+"e": [
+"iOS",
+"Linux",
+"Chrome OS",
+"Unix Mac"
+]
+},
+{
+"p": "O que é um pixel?",
+"c": "O menor elemento de uma imagem digital",
+"e": [
+"Uma unidade de som",
+"Um tipo de cabo",
+"Um formato de vídeo",
+"Um protocolo de rede"
+]
+},
+{
+"p": "Qual é a resolução da tela Full HD?",
+"c": "1920 × 1080",
+"e": [
+"1280 × 720",
+"2560 × 1440",
+"3840 × 2160",
+"1024 × 768"
+]
+},
+{
+"p": "O que significa a sigla SSD?",
+"c": "Solid State Drive",
+"e": [
+"Super Speed Disk",
+"System Storage Device",
+"Secure Software Drive",
+"Serial Storage Disk"
+]
+},
+{
+"p": "O que significa a sigla LED?",
+"c": "Diodo emissor de luz",
+"e": [
+"Lâmpada eletrônica digital",
+"Linha de energia direta",
+"Luz de efeito dinâmico",
+"Leitor eletrônico de dados"
+]
+},
+{
+"p": "No sistema de cores RGB, quais são as três cores básicas?",
+"c": "Vermelho, verde e azul",
+"e": [
+"Vermelho, amarelo e azul",
+"Ciano, magenta e amarelo",
+"Vermelho, verde e amarelo",
+"Branco, preto e cinza"
+]
+},
+{
+"p": "Qual navegador, lançado em 1994, dominou a internet comercial em meados dos anos 1990?",
+"c": "Netscape Navigator",
+"e": [
+"Internet Explorer",
+"Mosaic",
+"Opera",
+"Firefox"
+]
+},
+{
+"p": "Qual empresa fabrica o leitor de livros digitais Kindle?",
+"c": "Amazon",
+"e": [
+"Apple",
+"Google",
+"Sony",
+"Kobo"
+]
+},
+{
+"p": "Qual empresa é a criadora do console Switch e do personagem Mario?",
+"c": "Nintendo",
+"e": [
+"Sega",
+"Sony",
+"Microsoft",
+"Atari"
+]
+},
+{
+"p": "Qual jogo da Atari foi um dos primeiros grandes sucessos de fliperama, em 1972?",
+"c": "Pong",
+"e": [
+"Pac-Man",
+"Space Invaders",
+"Tetris",
+"Asteroids"
+]
+},
+{
+"p": "Quem criou o jogo Minecraft?",
+"c": "Markus \"Notch\" Persson",
+"e": [
+"Gabe Newell",
+"Hideo Kojima",
+"Shigeru Miyamoto",
+"John Carmack"
+]
+},
+{
+"p": "Para que serve a memória cache em um computador?",
+"c": "Guardar dados usados com frequência para acesso mais rápido",
+"e": [
+"Armazenar arquivos permanentemente",
+"Ligar o computador",
+"Conectar à internet",
+"Refrigerar o processador"
+]
+},
+{
+"p": "Quem cofundou o Instagram, vendido ao Facebook em 2012?",
+"c": "Kevin Systrom",
+"e": [
+"Evan Spiegel",
+"Jack Dorsey",
+"Reid Hoffman",
+"Jan Koum"
+]
+},
+{
+"p": "Qual empresa comprou o YouTube em 2006?",
+"c": "Google",
+"e": [
+"Microsoft",
+"Yahoo",
+"Facebook",
+"Apple"
+]
+},
+{
+"p": "Qual empresa comprou a rede profissional LinkedIn em 2016?",
+"c": "Microsoft",
+"e": [
+"Google",
+"Facebook",
+"Amazon",
+"Oracle"
+]
+},
+{
+"p": "Qual empresa comprou o WhatsApp, em 2014?",
+"c": "Facebook",
+"e": [
+"Google",
+"Microsoft",
+"Apple",
+"Amazon"
+]
+},
+{
+"p": "O que significa a sigla LAN, em redes de computadores?",
+"c": "Rede de área local",
+"e": [
+"Rede de acesso nacional",
+"Linha de acesso notável",
+"Link de alta navegação",
+"Rede de acesso nuvem"
+]
+},
+{
+"p": "O que significa a sigla VPN?",
+"c": "Rede Privada Virtual",
+"e": [
+"Verificador de Protocolo de Navegação",
+"Via de Pacotes Numéricos",
+"Rede Pública Virtual",
+"Vetor de Processamento Numérico"
+]
+},
+{
+"p": "Qual unidade é usada para expressar a frequência de funcionamento de um processador?",
+"c": "Gigahertz",
+"e": [
+"Gigabyte",
+"Megapixel",
+"Watt",
+"Decibel"
+]
+},
+{
+"p": "Qual empresa lançou o primeiro iPod, em 2001?",
+"c": "Apple",
+"e": [
+"Sony",
+"Microsoft",
+"Samsung",
+"Creative"
+]
+}
+]

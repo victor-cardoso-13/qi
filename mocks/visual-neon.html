@@ -1,0 +1,111 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>QI — Opção 1 · Neon sobre escuro</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;padding:28px;font-family:var(--f);color:var(--tx);background:var(--page)}
+h1{font:700 20px var(--f);margin-bottom:6px}.note{font-size:13px;opacity:.7;max-width:900px;margin-bottom:22px;line-height:1.5}
+.row{display:flex;flex-wrap:wrap;gap:26px;align-items:flex-start}
+.cap{font:600 12px var(--f);letter-spacing:.06em;text-transform:uppercase;opacity:.65;margin:0 0 8px 4px}
+.fr{width:390px;height:844px;border-radius:44px;position:relative;overflow:hidden;background:var(--bg);border:9px solid #000;box-shadow:0 20px 60px rgba(0,0,0,.35);isolation:isolate}
+.fr.ls{width:956px;height:360px;border-radius:36px}
+.sb{position:absolute;top:0;left:0;right:0;height:54px;display:flex;justify-content:space-between;align-items:center;padding:6px 30px 0;font-size:14px;z-index:5;color:var(--tx)}
+.scr{position:absolute;inset:54px 0 30px;padding:6px 16px 0;display:flex;flex-direction:column;gap:10px}
+.land{inset:0;flex-direction:row;padding:14px 22px;gap:22px}.land .lcol{flex:0 0 38%;display:flex;flex-direction:column;gap:10px}.land .opts{flex:1;align-content:center}.land h2{font-size:15px!important}
+button{font:inherit;color:inherit;border:0;background:none;text-align:left}
+.dot{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--c);color:#0b0f1a;font:700 11px var(--f);font-style:normal;flex:none}
+.meDot{box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--tx)}
+.rail{position:relative;height:6px;margin:16px 6px 0;border-radius:9px;background:var(--line)}
+.rz{position:absolute;inset:0;display:flex;border-radius:9px;overflow:hidden;opacity:.5}.rz i{display:block;height:100%}.z1{width:32.5%;background:var(--m)}.z2{width:35%;background:var(--d)}.z3{width:32.5%;background:var(--q)}
+.fill{position:absolute;left:0;top:0;height:100%;border-radius:9px;background:var(--fill)}
+.pin{position:absolute;top:-8px;transform:translateX(-50%)}.pin.me{z-index:3}.fl{position:absolute;right:-5px;top:-9px;width:12px;height:22px;border-left:2px solid var(--tx);background:linear-gradient(var(--tx),var(--tx)) 0 0/10px 8px no-repeat;opacity:.9}
+.rl{display:flex;margin:6px 6px 0;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mu)}.rl span{flex:1}.rl span:nth-child(2){text-align:center}.rl span:last-child{text-align:right}
+.bar{display:flex;align-items:center;gap:10px;min-height:44px}
+.ib{width:44px;height:44px;display:grid;place-items:center;font-size:13px;letter-spacing:-2px;flex:none}
+.streak{display:flex;flex-direction:column;line-height:1}.streak small{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}.streak b{font-size:30px;margin-top:2px}
+.help{margin-left:auto;display:flex;gap:8px}.help button{white-space:nowrap;display:flex;align-items:center;gap:7px;height:44px;padding:0 12px;font-size:12px;font-weight:600}.help b{font-size:15px}
+.room{font-size:13px;color:var(--mu)}.room b{color:var(--tx);letter-spacing:.1em}.out{margin-left:auto;height:44px;padding:0 14px;font-size:13px;font-weight:600;color:var(--bad)}
+.meta{display:flex;align-items:center;gap:12px}.mi{display:flex;flex-direction:column;gap:2px}.tier{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--d)}.cat{font-size:16px;font-weight:600}
+.tm{position:relative;display:flex;align-items:center;flex:none}.t-ring,.t-seg,.t-bar{display:none}.tn{font-weight:800;font-variant-numeric:tabular-nums}.tn.low{color:var(--bad)}
+h2{font-size:18.5px;line-height:1.3;font-weight:650;letter-spacing:-.005em}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;min-height:52px;padding:8px 12px}
+.lt{flex:none;width:30px;height:30px;display:grid;place-items:center;font-weight:700;font-size:13px}
+.ot{font-size:15px;line-height:1.28}
+.pick{outline:2px solid var(--a1)}
+.verdict{display:flex;flex-direction:column;gap:2px;padding:12px 14px}.verdict b{font-size:17px}.verdict span{font-size:13px;color:var(--mu)}
+.ans small,.lost small,.rank small,.rec small,.stats small,.next small{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mu);margin-bottom:6px}
+.opt.right{outline:2px solid var(--ok)}.opt.right .lt{background:var(--ok)!important;color:#04140c!important;border-color:var(--ok)!important}
+.moves{list-style:none;display:flex;flex-direction:column}.moves li{display:flex;align-items:center;gap:10px;padding:9px 4px;border-bottom:1px solid var(--line);font-size:15px}.moves li span{flex:1}.moves em{font-style:normal;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--mu);margin-left:6px}.up{color:var(--ok)}.flat{color:var(--mu);font-weight:500}
+.next{margin-top:auto;padding-bottom:6px}.next i{display:block;height:4px;border-radius:4px;background:var(--fill);width:55%}
+.logo{text-align:center;padding:26px 0 6px}.logo span{display:block;font-size:92px;font-weight:800;line-height:1}.logo small{display:block;margin-top:8px;font-size:14px;color:var(--mu)}
+.acc{display:flex;align-items:center;gap:12px;padding:10px 12px}.av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:var(--a1);color:var(--onA)}.ai{flex:1;display:flex;flex-direction:column}.ai small{color:var(--mu);font-size:12px}.acc a{font-size:13px;color:var(--mu)}
+.who2{display:flex;gap:6px;padding:4px}.sg{flex:1;height:38px;text-align:center;font-size:13px;font-weight:600;color:var(--mu)}.sg.on{color:var(--tx)}
+.cta{display:flex;flex-direction:column;justify-content:center;gap:2px;width:100%;min-height:58px;padding:10px 16px;font-weight:700;font-size:17px}.cta small{font-weight:500;font-size:12px;color:var(--mu)}.cta.big{min-height:74px;font-size:20px}.cta.sm{min-height:50px;font-size:15px;align-items:center;margin-top:8px}
+.join input{width:100%;height:54px;text-align:center;letter-spacing:.5em;font:700 20px var(--f);padding-left:.5em;color:var(--tx)}.join input::placeholder{color:var(--mu);opacity:.7}
+.foot{margin-top:auto;text-align:center;font-size:12px;color:var(--mu)}
+.pausedbg{filter:blur(14px) saturate(.6);opacity:.8}.ov{position:absolute;inset:0;display:grid;place-items:center;padding:24px;z-index:6}.ovc{width:100%;display:flex;flex-direction:column;gap:10px;text-align:center;padding:26px 20px}.ovc h3{font-size:28px}.ovc p{color:var(--mu);font-size:14px;margin-bottom:8px}.pic{font-size:22px;letter-spacing:-3px;margin-bottom:2px}.ovc .cta{align-items:center}
+.end{gap:12px}.lbl{text-align:center;margin-top:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mu)}
+.big14{text-align:center}.big14 b{display:block;font-size:112px;line-height:1;font-weight:800}.big14 span{font-size:15px;color:var(--mu)}
+.rank,.rec{display:flex;flex-direction:column;align-items:center;text-align:center}.rank b{font-size:22px}.rec{flex-direction:row;justify-content:space-between;align-items:center;padding:12px 16px;text-align:left}.rec b{font-size:26px}.rec small{margin:0 0 2px}.newrec{font-weight:700;font-size:13px;color:var(--a2)}
+.stats{display:flex}.stats div{flex:1;text-align:center;padding:10px 0}.stats b{font-size:20px;display:block}.stats small{margin:2px 0 0}
+
+:root{--f:-apple-system,"SF Pro Rounded","SF Pro Display",system-ui,sans-serif;--page:#03050f;--bg:#070b1a;--tx:#eef3ff;--mu:#a3b2d4;--line:rgba(255,255,255,.13);--a1:#22d3ee;--a2:#a78bfa;--m:#34d399;--d:#fbbf24;--q:#c4b5fd;--ok:#34d399;--bad:#ff7a8a;--me:#22d3ee;--fill:linear-gradient(90deg,#22d3ee,#a78bfa);--onA:#04121a;--glass:rgba(255,255,255,.07)}
+.fr{background:radial-gradient(420px 320px at 90% -4%,rgba(139,92,246,.45),transparent 70%),radial-gradient(380px 300px at -10% 40%,rgba(34,211,238,.22),transparent 70%),radial-gradient(400px 300px at 90% 105%,rgba(139,92,246,.25),transparent 70%),#070b1a}
+.opt,.cta,.ib,.help button,.acc,.verdict,.rec,.ovc,.join input,.who2{background:var(--glass);border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(12px)}
+.cta.big{background:linear-gradient(120deg,#0e9fc0,#6d4de0);border-color:rgba(255,255,255,.3);box-shadow:0 8px 28px rgba(80,90,240,.45);color:#fff}.cta.big small{color:rgba(255,255,255,.8)}
+.logo span{background:linear-gradient(120deg,#22d3ee,#a78bfa);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 24px rgba(139,92,246,.6));letter-spacing:.06em}
+.who2{border-radius:14px}.sg{border-radius:11px}.sg.on{background:rgba(255,255,255,.12)}
+.lt{border-radius:10px;background:rgba(255,255,255,.1);border:1px solid var(--line);color:#cfe0ff}
+.pick{outline:0;border-color:#22d3ee;background:rgba(34,211,238,.14);box-shadow:0 0 0 1px #22d3ee,0 0 22px rgba(34,211,238,.35)}.pick .lt{background:#22d3ee;color:#04121a;border-color:#22d3ee}
+.opt.right{background:rgba(52,211,153,.15);outline:0;border-color:var(--ok);box-shadow:0 0 18px rgba(52,211,153,.3)}
+.tm{width:60px;height:60px;justify-content:center}.t-ring{display:block;width:60px;height:60px;transform:rotate(-90deg)}.rb,.rf{fill:none;stroke-width:3.5}.rb{stroke:rgba(255,255,255,.12)}.rf{stroke-linecap:round;filter:drop-shadow(0 0 4px #22d3ee)}.tn{position:absolute;font-size:19px}
+.fill{box-shadow:0 0 12px #22d3ee}.meDot{box-shadow:0 0 0 2px #070b1a,0 0 12px 2px #22d3ee}
+.streak b{background:linear-gradient(120deg,#22d3ee,#a78bfa);-webkit-background-clip:text;color:transparent}
+.verdict.ok{border-color:var(--ok);background:rgba(52,211,153,.12)}.verdict b{color:var(--ok)}
+.big14 b{background:linear-gradient(120deg,#22d3ee,#a78bfa);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 28px rgba(139,92,246,.55))}
+.ovc{background:rgba(10,14,34,.7)}.pausedbg{filter:blur(14px)}.rank b{color:#c4b5fd}
+</style></head><body>
+<h1>Opção 1 · Neon sobre escuro</h1>
+<p class="note">Mock estático (nada funciona ao tocar). A tela "pergunta" usa o <b>pior caso real do banco</b>: a pergunta mais longa (142 letras) com a alternativa mais longa (74 letras) — montagem só para provar que cabe tudo em 390×844 sem rolagem. No app de verdade as fontes serão embutidas.</p>
+<div class="row"><div><p class="cap">Início (conta ou convidado)</p><div class="fr"><div class="sb"><b>9:41</b><span>●●● ▮</span></div><div class="scr home">
+    <div class="logo"><span>QI</span><small>Quiz de conhecimentos</small></div>
+    <div class="acc"><div class="av">V</div><div class="ai"><b>Victor</b><small>12 vitórias · recorde solo 14</small></div><a>Sair</a></div>
+    <div class="who2"><button class="sg on">Com conta</button><button class="sg">Convidado</button></div>
+    <button class="cta big"><span>Jogar sozinho</span><small>Sequência: erre e acabou</small></button>
+    <button class="cta"><span>Criar sala</span><small>Até 10 amigos, cada um no seu celular</small></button>
+    <div class="join"><input value="" placeholder="CÓDIGO"><button class="cta sm">Entrar numa sala</button></div>
+    <p class="foot">Sem conta você joga igual, só não guarda recordes.</p></div></div></div><div><p class="cap">Solo · pergunta (pior caso de texto)</p><div class="fr"><div class="sb"><b>9:41</b><span>●●● ▮</span></div><div class="scr q">
+    <div class="bar"><button class="ib" aria-label="Pausar">❚❚</button><div class="streak"><small>Sequência</small><b>9</b></div><div class="help"><button><b>2</b>Pular</button><button><b>1</b>Eliminar 2</button></div></div>
+    <div class="rail"><div class="rz"><i class="z1"></i><i class="z2"></i><i class="z3"></i></div><i class="fill" style="width:45%"></i>
+<span class="pin me" style="left:45%"><i class="dot meDot" style="--c:var(--me)">V</i></span><em class="fl"></em></div>
+<div class="rl"><span>Médio</span><span>Difícil</span><span>QI</span></div>
+    <div class="meta"><div class="tm"><svg class="t-ring" viewBox="0 0 44 44"><defs><linearGradient id="gs" x1="0" x2="1"><stop offset="0" stop-color="var(--a1)"/><stop offset="1" stop-color="var(--a2)"/></linearGradient></defs><circle cx="22" cy="22" r="19" class="rb"/><circle cx="22" cy="22" r="19" class="rf" stroke="url(#gs)" style="stroke-dasharray:74.028 119.4"/></svg>
+<div class="t-seg"><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b></div>
+<div class="t-bar"><i style="width:62%"></i></div><span class="tn ">25</span></div><div class="mi"><span class="tier">● Difícil</span><span class="cat">História</span></div></div>
+    <h2>Qual tratado de 1750, entre Portugal e Espanha, substituiu Tordesilhas e fixou os limites do Brasil colonial com base no uso efetivo da terra?</h2><div class="opts"><button class="opt "><span class="lt">A</span><span class="ot">A capacidade das baterias dobra a cada dois anos</span></button><button class="opt "><span class="lt">B</span><span class="ot">A velocidade da internet dobra a cada ano</span></button><button class="opt pick"><span class="lt">C</span><span class="ot">O número de transistores em um chip dobra aproximadamente a cada dois anos</span></button><button class="opt "><span class="lt">D</span><span class="ot">O preço dos computadores cai pela metade a cada ano</span></button><button class="opt "><span class="lt">E</span><span class="ot">O tamanho dos monitores dobra a cada década</span></button></div></div></div></div><div><p class="cap">Solo · pausado (pergunta escondida)</p><div class="fr"><div class="sb"><b>9:41</b><span>●●● ▮</span></div><div class="scr q pausedbg">
+    <div class="bar"><button class="ib">❚❚</button><div class="streak"><small>Sequência</small><b>9</b></div><div class="help"><button><b>2</b>Pular</button><button><b>1</b>Eliminar 2</button></div></div>
+    <div class="rail"><div class="rz"><i class="z1"></i><i class="z2"></i><i class="z3"></i></div><i class="fill" style="width:45%"></i>
+<span class="pin me" style="left:45%"><i class="dot meDot" style="--c:var(--me)">V</i></span><em class="fl"></em></div>
+<div class="rl"><span>Médio</span><span>Difícil</span><span>QI</span></div><div class="meta"><div class="tm"><svg class="t-ring" viewBox="0 0 44 44"><defs><linearGradient id="gp" x1="0" x2="1"><stop offset="0" stop-color="var(--a1)"/><stop offset="1" stop-color="var(--a2)"/></linearGradient></defs><circle cx="22" cy="22" r="19" class="rb"/><circle cx="22" cy="22" r="19" class="rf" stroke="url(#gp)" style="stroke-dasharray:74.028 119.4"/></svg>
+<div class="t-seg"><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b></div>
+<div class="t-bar"><i style="width:62%"></i></div><span class="tn ">25</span></div></div><h2>Qual tratado de 1750, entre Portugal e Espanha, substituiu Tordesilhas e fixou os limites do Brasil colonial com base no uso efetivo da terra?</h2><div class="opts"><button class="opt "><span class="lt">A</span><span class="ot">A capacidade das baterias dobra a cada dois anos</span></button><button class="opt "><span class="lt">B</span><span class="ot">A velocidade da internet dobra a cada ano</span></button><button class="opt "><span class="lt">C</span><span class="ot">O número de transistores em um chip dobra aproximadamente a cada dois anos</span></button><button class="opt "><span class="lt">D</span><span class="ot">O preço dos computadores cai pela metade a cada ano</span></button><button class="opt "><span class="lt">E</span><span class="ot">O tamanho dos monitores dobra a cada década</span></button></div></div>
+    <div class="ov"><div class="ovc"><div class="pic">❚❚</div><h3>Pausado</h3><p>O tempo parou e a pergunta fica escondida.</p><button class="cta big"><span>Continuar</span></button><button class="cta"><span>Desistir e ver o resultado</span></button></div></div></div></div><div><p class="cap">Sala · resultado da rodada</p><div class="fr"><div class="sb"><b>9:41</b><span>●●● ▮</span></div><div class="scr q">
+    <div class="bar"><span class="room">Sala <b>KQRT</b> · Partida 2</span><button class="out">Sair da sala</button></div>
+    <div class="rail"><div class="rz"><i class="z1"></i><i class="z2"></i><i class="z3"></i></div><i class="fill" style="width:55.00000000000001%"></i>
+<span class="pin" style="left:45%"><i class="dot " style="--c:#ffa94d">M</i></span><span class="pin" style="left:55.00000000000001%"><i class="dot " style="--c:#69db7c">L</i></span><span class="pin" style="left:35%"><i class="dot " style="--c:#f783ac">B</i></span><span class="pin me" style="left:55.00000000000001%"><i class="dot meDot" style="--c:var(--me)">V</i></span><em class="fl"></em></div>
+<div class="rl"><span>Médio</span><span>Difícil</span><span>QI</span></div>
+    <div class="verdict ok"><b>Resposta certa</b><span>Você avançou 1 casa · foi o mais rápido: +1</span></div>
+    <div class="ans"><small>Resposta certa</small><div class="opt right"><span class="lt">C</span><span class="ot">O número de transistores em um chip dobra aproximadamente a cada dois anos</span></div></div>
+    <ul class="moves"><li><i class="dot " style="--c:var(--me)">V</i><span>Victor <em>você</em></span><b class="up">+2</b></li><li><i class="dot " style="--c:#69db7c">L</i><span>Lúcia</span><b class="up">+1</b></li><li><i class="dot " style="--c:#ffa94d">M</i><span>Marcos</span><b class="up">+1</b></li><li><i class="dot " style="--c:#f783ac">B</i><span>Bia</span><b class="flat">errou</b></li></ul>
+    <div class="next"><small>Próxima pergunta em 3 s</small><i></i></div></div></div></div><div><p class="cap">Solo · fim da sequência</p><div class="fr"><div class="sb"><b>9:41</b><span>●●● ▮</span></div><div class="scr end">
+    <div class="lbl">Fim da sequência</div>
+    <div class="big14"><b>14</b><span>acertos seguidos</span></div>
+    <div class="rank"><small>Seu título</small><b>Mente Brilhante</b></div>
+    <div class="rec"><div><small>Recorde</small><b>14</b></div><span class="newrec">Novo recorde!</span></div>
+    <div class="lost"><small>A resposta era</small><div class="opt right"><span class="lt">C</span><span class="ot">Tratado de Madri</span></div></div>
+    <div class="stats"><div><b>11</b><small>sem ajuda</small></div><div><b>2</b><small>puladas</small></div><div><b>6m 40s</b><small>tempo</small></div></div>
+    <button class="cta big"><span>Jogar de novo</span></button><button class="cta"><span>Voltar ao início</span></button></div></div></div>
+<div><p class="cap">Solo · pergunta deitado (956×360)</p><div class="fr ls"><div class="scr q land">
+  <div class="lcol"><div class="bar"><button class="ib">❚❚</button><div class="streak"><small>Sequência</small><b>9</b></div><div class="help"><button><b>2</b>Pular</button><button><b>1</b>Eliminar 2</button></div></div>
+  <div class="meta"><div class="tm"><svg class="t-ring" viewBox="0 0 44 44"><defs><linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="var(--a1)"/><stop offset="1" stop-color="var(--a2)"/></linearGradient></defs><circle cx="22" cy="22" r="19" class="rb"/><circle cx="22" cy="22" r="19" class="rf" stroke="url(#gl)" style="stroke-dasharray:74.028 119.4"/></svg>
+<div class="t-seg"><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b></div>
+<div class="t-bar"><i style="width:62%"></i></div><span class="tn ">25</span></div><div class="mi"><span class="tier">● Difícil</span><span class="cat">História</span></div></div><h2>Qual tratado de 1750, entre Portugal e Espanha, substituiu Tordesilhas e fixou os limites do Brasil colonial com base no uso efetivo da terra?</h2></div>
+  <div class="opts"><button class="opt "><span class="lt">A</span><span class="ot">A capacidade das baterias dobra a cada dois anos</span></button><button class="opt "><span class="lt">B</span><span class="ot">A velocidade da internet dobra a cada ano</span></button><button class="opt pick"><span class="lt">C</span><span class="ot">O número de transistores em um chip dobra aproximadamente a cada dois anos</span></button><button class="opt "><span class="lt">D</span><span class="ot">O preço dos computadores cai pela metade a cada ano</span></button><button class="opt "><span class="lt">E</span><span class="ot">O tamanho dos monitores dobra a cada década</span></button></div></div></div></div></div></body></html>

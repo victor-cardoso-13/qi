@@ -1,0 +1,382 @@
+[
+{
+"p": "Quantos dias tem um ano bissexto?",
+"c": "366",
+"e": [
+"365",
+"364",
+"367",
+"360"
+]
+},
+{
+"p": "Quantos dias tem o mês de fevereiro em um ano comum?",
+"c": "28",
+"e": [
+"29",
+"30",
+"31",
+"27"
+]
+},
+{
+"p": "Misturando tinta vermelha e tinta azul, qual cor se obtém?",
+"c": "Roxo",
+"e": [
+"Verde",
+"Laranja",
+"Marrom",
+"Rosa"
+]
+},
+{
+"p": "Quantos lados tem um hexágono?",
+"c": "6",
+"e": [
+"5",
+"7",
+"8",
+"4"
+]
+},
+{
+"p": "Qual é o animal terrestre mais rápido do mundo?",
+"c": "Guepardo",
+"e": [
+"Leão",
+"Antílope",
+"Cavalo",
+"Leopardo"
+]
+},
+{
+"p": "Qual é o maior animal do planeta?",
+"c": "Baleia-azul",
+"e": [
+"Elefante-africano",
+"Tubarão-baleia",
+"Cachalote",
+"Girafa"
+]
+},
+{
+"p": "Qual é o ingrediente principal do guacamole?",
+"c": "Abacate",
+"e": [
+"Tomate",
+"Pepino",
+"Banana",
+"Pimentão"
+]
+},
+{
+"p": "Qual fruta é matéria-prima do vinho?",
+"c": "Uva",
+"e": [
+"Maçã",
+"Laranja",
+"Pêssego",
+"Morango"
+]
+},
+{
+"p": "De qual país é originário o sushi?",
+"c": "Japão",
+"e": [
+"China",
+"Coreia do Sul",
+"Tailândia",
+"Vietnã"
+]
+},
+{
+"p": "Em qual país nasceu a pizza?",
+"c": "Itália",
+"e": [
+"França",
+"Grécia",
+"Espanha",
+"Estados Unidos"
+]
+},
+{
+"p": "Em que dia se comemora o Natal?",
+"c": "25 de dezembro",
+"e": [
+"24 de dezembro",
+"1º de janeiro",
+"6 de janeiro",
+"31 de dezembro"
+]
+},
+{
+"p": "Quantas horas tem um dia?",
+"c": "24",
+"e": [
+"12",
+"36",
+"48",
+"20"
+]
+},
+{
+"p": "Quantos minutos tem uma hora?",
+"c": "60",
+"e": [
+"30",
+"100",
+"90",
+"120"
+]
+},
+{
+"p": "Qual é o primeiro mês do ano?",
+"c": "Janeiro",
+"e": [
+"Fevereiro",
+"Dezembro",
+"Março",
+"Junho"
+]
+},
+{
+"p": "Qual é a moeda oficial do Brasil?",
+"c": "Real",
+"e": [
+"Cruzeiro",
+"Peso",
+"Dólar",
+"Escudo"
+]
+},
+{
+"p": "Qual é a moeda oficial do Japão?",
+"c": "Iene",
+"e": [
+"Yuan",
+"Won",
+"Rupia",
+"Baht"
+]
+},
+{
+"p": "Qual é a moeda oficial dos Estados Unidos?",
+"c": "Dólar",
+"e": [
+"Libra",
+"Euro",
+"Peso",
+"Franco"
+]
+},
+{
+"p": "Qual é o idioma mais falado no Brasil?",
+"c": "Português",
+"e": [
+"Espanhol",
+"Inglês",
+"Tupi",
+"Italiano"
+]
+},
+{
+"p": "Quantas cores são tradicionalmente reconhecidas no arco-íris?",
+"c": "7",
+"e": [
+"5",
+"6",
+"8",
+"9"
+]
+},
+{
+"p": "Qual animal é conhecido como o \"rei da selva\"?",
+"c": "Leão",
+"e": [
+"Tigre",
+"Urso",
+"Elefante",
+"Gorila"
+]
+},
+{
+"p": "Quem escreveu a série de livros \"Harry Potter\"?",
+"c": "J. K. Rowling",
+"e": [
+"J. R. R. Tolkien",
+"C. S. Lewis",
+"Stephenie Meyer",
+"Suzanne Collins"
+]
+},
+{
+"p": "Qual personagem de madeira tem o nariz que cresce quando mente?",
+"c": "Pinóquio",
+"e": [
+"Peter Pan",
+"Pequeno Polegar",
+"Gepeto",
+"Mogli"
+]
+},
+{
+"p": "Quantas peças tem cada jogador no início de uma partida de xadrez?",
+"c": "16",
+"e": [
+"12",
+"14",
+"18",
+"32"
+]
+},
+{
+"p": "Quantas casas tem um tabuleiro de xadrez?",
+"c": "64",
+"e": [
+"32",
+"49",
+"72",
+"81"
+]
+},
+{
+"p": "Quantos graus tem uma circunferência completa?",
+"c": "360",
+"e": [
+"180",
+"270",
+"90",
+"400"
+]
+},
+{
+"p": "O que significa a luz vermelha em um semáforo para os veículos?",
+"c": "Parar",
+"e": [
+"Reduzir",
+"Seguir com cuidado",
+"Virar à direita",
+"Acelerar"
+]
+},
+{
+"p": "Qual instrumento é usado para medir a temperatura?",
+"c": "Termômetro",
+"e": [
+"Barômetro",
+"Higrômetro",
+"Anemômetro",
+"Dinamômetro"
+]
+},
+{
+"p": "Quantas estações do ano existem?",
+"c": "4",
+"e": [
+"3",
+"5",
+"6",
+"2"
+]
+},
+{
+"p": "Qual é o maior mamífero terrestre?",
+"c": "Elefante-africano",
+"e": [
+"Rinoceronte-branco",
+"Hipopótamo",
+"Girafa",
+"Urso-polar"
+]
+},
+{
+"p": "Qual ave não voa e vive em regiões geladas do hemisfério sul?",
+"c": "Pinguim",
+"e": [
+"Avestruz",
+"Emu",
+"Kiwi",
+"Albatroz"
+]
+},
+{
+"p": "Qual doce brasileiro é feito de leite condensado, chocolate e manteiga, enrolado em bolinhas?",
+"c": "Brigadeiro",
+"e": [
+"Beijinho",
+"Cocada",
+"Quindim",
+"Pé de moleque"
+]
+},
+{
+"p": "Qual é o principal ingrediente do pão tradicional?",
+"c": "Farinha de trigo",
+"e": [
+"Farinha de milho",
+"Amido de batata",
+"Arroz",
+"Aveia"
+]
+},
+{
+"p": "Qual animal é símbolo da Austrália?",
+"c": "Canguru",
+"e": [
+"Coala",
+"Ornitorrinco",
+"Diabo-da-tasmânia",
+"Emu"
+]
+},
+{
+"p": "Quantas patas tem um inseto?",
+"c": "6",
+"e": [
+"4",
+"8",
+"10",
+"12"
+]
+},
+{
+"p": "Quantos dentes permanentes tem um adulto, incluindo os sisos?",
+"c": "32",
+"e": [
+"28",
+"30",
+"36",
+"24"
+]
+},
+{
+"p": "Em que dia se comemora o Dia do Trabalhador no Brasil?",
+"c": "1º de maio",
+"e": [
+"1º de janeiro",
+"21 de abril",
+"7 de setembro",
+"12 de outubro"
+]
+},
+{
+"p": "Qual é a cor principal da camisa da seleção brasileira de futebol?",
+"c": "Amarela",
+"e": [
+"Azul",
+"Verde",
+"Branca",
+"Vermelha"
+]
+},
+{
+"p": "Quantos dias tem uma semana?",
+"c": "7",
+"e": [
+"5",
+"6",
+"8",
+"10"
+]
+}
+]

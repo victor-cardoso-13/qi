@@ -1,0 +1,372 @@
+[
+{
+"p": "Quem pintou \"As Meninas\" (Las Meninas), de 1656?",
+"c": "Diego Velázquez",
+"e": [
+"Francisco de Goya",
+"El Greco",
+"Bartolomé Murillo",
+"Francisco de Zurbarán"
+]
+},
+{
+"p": "Quem pintou \"O Casal Arnolfini\" (1434)?",
+"c": "Jan van Eyck",
+"e": [
+"Rogier van der Weyden",
+"Hans Memling",
+"Hieronymus Bosch",
+"Albrecht Dürer"
+]
+},
+{
+"p": "Quem pintou \"A Escola de Atenas\", afresco nos aposentos do Vaticano?",
+"c": "Rafael Sanzio",
+"e": [
+"Michelangelo",
+"Leonardo da Vinci",
+"Ticiano",
+"Andrea Mantegna"
+]
+},
+{
+"p": "Quem pintou \"O Triunfo da Morte\", tela hoje no Museu do Prado?",
+"c": "Pieter Bruegel, o Velho",
+"e": [
+"Hieronymus Bosch",
+"Jan van Eyck",
+"Hans Holbein",
+"Lucas Cranach"
+]
+},
+{
+"p": "Qual das \"Pinturas Negras\" de Goya mostra um titã devorando um de seus filhos?",
+"c": "Saturno devorando seu filho",
+"e": [
+"O Grande Bode",
+"Duelo a Garrotadas",
+"Cabeça de Cão",
+"A Romaria de Santo Isidoro"
+]
+},
+{
+"p": "Quem pintou \"A Vocação de São Mateus\", exemplo do jogo dramático de luz e sombra?",
+"c": "Caravaggio",
+"e": [
+"Ticiano",
+"Tintoretto",
+"Annibale Carracci",
+"Guido Reni"
+]
+},
+{
+"p": "Qual pintor, nascido em Creta, é conhecido pelas figuras alongadas e atuou principalmente na Espanha?",
+"c": "El Greco",
+"e": [
+"Ticiano",
+"Tintoretto",
+"Juan de Juanes",
+"Pontormo"
+]
+},
+{
+"p": "Quem escreveu \"As Vidas dos Mais Excelentes Pintores, Escultores e Arquitetos\" (1550), considerada a primeira história da arte?",
+"c": "Giorgio Vasari",
+"e": [
+"Leon Battista Alberti",
+"Cennino Cennini",
+"Giorgio de Chirico",
+"Lorenzo Ghiberti"
+]
+},
+{
+"p": "Como se chama a técnica de contornos suavemente esfumados usada por Leonardo da Vinci na Mona Lisa?",
+"c": "Sfumato",
+"e": [
+"Craquelê",
+"Impasto",
+"Pontilhismo",
+"Grisaille"
+]
+},
+{
+"p": "Quem foi o primeiro presidente da Secessão de Viena, fundada em 1897?",
+"c": "Gustav Klimt",
+"e": [
+"Egon Schiele",
+"Otto Wagner",
+"Koloman Moser",
+"Oskar Kokoschka"
+]
+},
+{
+"p": "Quem projetou a Casa da Cascata (Fallingwater), na Pensilvânia?",
+"c": "Frank Lloyd Wright",
+"e": [
+"Mies van der Rohe",
+"Le Corbusier",
+"Walter Gropius",
+"Richard Neutra"
+]
+},
+{
+"p": "Quem projetou a Villa Savoye, em Poissy, ícone da arquitetura moderna?",
+"c": "Le Corbusier",
+"e": [
+"Walter Gropius",
+"Alvar Aalto",
+"Adolf Loos",
+"Auguste Perret"
+]
+},
+{
+"p": "Qual arquiteto dinamarquês projetou a Ópera de Sydney?",
+"c": "Jørn Utzon",
+"e": [
+"Arne Jacobsen",
+"Alvar Aalto",
+"Eero Saarinen",
+"Henning Larsen"
+]
+},
+{
+"p": "Quem projetou o edifício do Museu de Arte de São Paulo (MASP), na Avenida Paulista?",
+"c": "Lina Bo Bardi",
+"e": [
+"Oscar Niemeyer",
+"Vilanova Artigas",
+"Paulo Mendes da Rocha",
+"Affonso Eduardo Reidy"
+]
+},
+{
+"p": "Quem projetou o Pavilhão de Barcelona, na Exposição Internacional de 1929?",
+"c": "Ludwig Mies van der Rohe",
+"e": [
+"Walter Gropius",
+"Le Corbusier",
+"Antoni Gaudí",
+"Josep Lluís Sert"
+]
+},
+{
+"p": "Quem foi o paisagista responsável pelo projeto dos jardins do Aterro do Flamengo, no Rio de Janeiro?",
+"c": "Roberto Burle Marx",
+"e": [
+"Lúcio Costa",
+"Oscar Niemeyer",
+"Affonso Eduardo Reidy",
+"Joaquim Cardozo"
+]
+},
+{
+"p": "Qual artista criou \"Maman\", a escultura de uma aranha gigante?",
+"c": "Louise Bourgeois",
+"e": [
+"Louise Nevelson",
+"Yayoi Kusama",
+"Barbara Hepworth",
+"Niki de Saint Phalle"
+]
+},
+{
+"p": "Qual pintor ficou conhecido pela técnica de gotejamento (dripping), como em \"Número 5, 1948\"?",
+"c": "Jackson Pollock",
+"e": [
+"Willem de Kooning",
+"Mark Rothko",
+"Franz Kline",
+"Robert Motherwell"
+]
+},
+{
+"p": "Qual pintor do Expressionismo Abstrato é conhecido pelas grandes telas de campos de cor, como \"Nº 61 (Ferrugem e Azul)\"?",
+"c": "Mark Rothko",
+"e": [
+"Jackson Pollock",
+"Barnett Newman",
+"Clyfford Still",
+"Cy Twombly"
+]
+},
+{
+"p": "Quem esculpiu \"O Homem que Caminha\" (L'Homme qui marche)?",
+"c": "Alberto Giacometti",
+"e": [
+"Henry Moore",
+"Constantin Brâncuși",
+"Jean Arp",
+"Auguste Rodin"
+]
+},
+{
+"p": "Como é chamado o canto litúrgico medieval em uníssono, sem acompanhamento instrumental?",
+"c": "Canto gregoriano",
+"e": [
+"Madrigal",
+"Moteto",
+"Cantata",
+"Oratório"
+]
+},
+{
+"p": "Qual obra de Johann Sebastian Bach explora, de forma inacabada, a técnica da fuga em torno de um único tema?",
+"c": "A Arte da Fuga",
+"e": [
+"O Cravo Bem Temperado",
+"Variações Goldberg",
+"Paixão segundo São Mateus",
+"Oferenda Musical"
+]
+},
+{
+"p": "Quem compôs \"A Sagração da Primavera\", cuja estreia em 1913 causou tumulto em Paris?",
+"c": "Igor Stravinsky",
+"e": [
+"Claude Debussy",
+"Serguei Prokofiev",
+"Maurice Ravel",
+"Béla Bartók"
+]
+},
+{
+"p": "Quem compôs \"Quadros de uma Exposição\" (1874)?",
+"c": "Modest Mussorgsky",
+"e": [
+"Nikolai Rimsky-Korsakov",
+"Alexander Borodin",
+"Piotr Tchaikovsky",
+"Serguei Rachmaninov"
+]
+},
+{
+"p": "Qual compositor deixou inacabado o \"Réquiem\" de 1791, concluído por seu aluno Süssmayr?",
+"c": "Wolfgang Amadeus Mozart",
+"e": [
+"Joseph Haydn",
+"Franz Schubert",
+"Ludwig van Beethoven",
+"Antonio Salieri"
+]
+},
+{
+"p": "Qual compositor escreveu o ciclo de quatro óperas \"O Anel do Nibelungo\"?",
+"c": "Richard Wagner",
+"e": [
+"Giuseppe Verdi",
+"Richard Strauss",
+"Carl Maria von Weber",
+"Franz Liszt"
+]
+},
+{
+"p": "Quem compôs \"Pierrot Lunaire\" (1912), obra marcante da música atonal?",
+"c": "Arnold Schoenberg",
+"e": [
+"Alban Berg",
+"Anton Webern",
+"Paul Hindemith",
+"Gustav Mahler"
+]
+},
+{
+"p": "Qual cidade italiana ficou mundialmente famosa pelos luthiers Stradivari e Guarneri?",
+"c": "Cremona",
+"e": [
+"Florença",
+"Veneza",
+"Turim",
+"Bolonha"
+]
+},
+{
+"p": "Quem dirigiu \"Acossado\" (1960), marco da Nouvelle Vague francesa?",
+"c": "Jean-Luc Godard",
+"e": [
+"François Truffaut",
+"Éric Rohmer",
+"Alain Resnais",
+"Claude Chabrol"
+]
+},
+{
+"p": "Quem dirigiu o filme \"Stalker\" (1979)?",
+"c": "Andrei Tarkovski",
+"e": [
+"Sergei Eisenstein",
+"Nikita Mikhalkov",
+"Elem Klimov",
+"Aleksandr Sokurov"
+]
+},
+{
+"p": "Quem dirigiu \"O Sétimo Selo\" (1957), em que um cavaleiro joga xadrez com a Morte?",
+"c": "Ingmar Bergman",
+"e": [
+"Carl Theodor Dreyer",
+"Lars von Trier",
+"Roy Andersson",
+"Federico Fellini"
+]
+},
+{
+"p": "Quem dirigiu \"Deus e o Diabo na Terra do Sol\" (1964)?",
+"c": "Glauber Rocha",
+"e": [
+"Nelson Pereira dos Santos",
+"Ruy Guerra",
+"Joaquim Pedro de Andrade",
+"Leon Hirszman"
+]
+},
+{
+"p": "Quem dirigiu o filme mudo brasileiro \"Limite\" (1931), tido como um dos melhores da história do cinema nacional?",
+"c": "Mário Peixoto",
+"e": [
+"Humberto Mauro",
+"Adhemar Gonzaga",
+"Lima Barreto",
+"Alberto Cavalcanti"
+]
+},
+{
+"p": "Quem dirigiu \"Vidas Secas\" (1963), adaptação do romance de Graciliano Ramos?",
+"c": "Nelson Pereira dos Santos",
+"e": [
+"Glauber Rocha",
+"Cacá Diegues",
+"Leon Hirszman",
+"Anselmo Duarte"
+]
+},
+{
+"p": "Quem dirigiu o filme \"Casablanca\" (1942)?",
+"c": "Michael Curtiz",
+"e": [
+"Howard Hawks",
+"John Huston",
+"Orson Welles",
+"Victor Fleming"
+]
+},
+{
+"p": "Quem dirigiu \"O Nascimento de uma Nação\" (1915), marco da linguagem do cinema narrativo?",
+"c": "D. W. Griffith",
+"e": [
+"Cecil B. DeMille",
+"Charlie Chaplin",
+"Thomas Ince",
+"Erich von Stroheim"
+]
+},
+{
+"p": "Qual obra de Van Gogh, de 1885, retrata camponeses holandeses reunidos em volta de uma mesa?",
+"c": "Os Comedores de Batatas",
+"e": [
+"A Noite Estrelada",
+"Os Girassóis",
+"O Café à Noite",
+"O Quarto em Arles"
+]
+}
+]
