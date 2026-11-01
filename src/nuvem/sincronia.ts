@@ -33,7 +33,8 @@ async function enviarAgora() {
 async function sincronizar(u: Usuario) {
   try {
     const c = await carregarConta();
-    const junto = mesclar(ler(), await c.baixar(u.uid) as Partial<Dados> | null);
+    const daNuvem = await c.baixar(u.uid) as Partial<Dados> | null;
+    const junto = mesclar(ler(), daNuvem); // lê o aparelho DEPOIS de baixar (a pessoa pode ter jogado nesse meio tempo)
     if (usuario?.uid !== u.uid) return; // saiu ou trocou de conta enquanto baixava
     gravar(junto, false);
     await c.enviar(u.uid, { ...junto });
