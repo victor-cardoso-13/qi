@@ -221,8 +221,8 @@ const pinos = () => players().map((p) => ({ cor: p.color, nome: p.name, pos: p.p
 const respondidos = () => players().filter((p) => S!.in?.[p.id]?.n === cur()!.n && typeof S!.in![p.id].choice === 'number').length;
 const seg = (ms: number) => (ms / 1000).toFixed(1).replace('.', ',') + ' s';
 
-function barra(centro: string, direita = '') {
-  return `<div class="bar"><button class="ib" data-act="sair" aria-label="Sair da sala">${SAIR_ICONE}</button><div class="streak"><small>Sala ${code}</small><b>${centro}</b></div><div class="help">${direita}</div></div>`;
+function barra(centro: string) {
+  return `<div class="bar"><button class="ib" data-act="sair" aria-label="Sair da sala">${SAIR_ICONE}</button><div class="streak"><small>Sala ${code}</small><b>${centro}</b></div></div>`;
 }
 
 function confirmarSair() {
@@ -250,11 +250,11 @@ function perguntaHTML() {
   if (!b) return '<main class="inicio"><p class="dica">Carregando pergunta…</p></main>';
   const pode = p && !p.h5 && !mine?.h5 && mine?.choice === undefined;
   const usado = p && (p.h5 || mine?.h5);
-  const ajuda = isTV ? '' : `<button data-act="eliminar" ${pode ? '' : 'disabled'}><b>${usado ? 0 : 1}</b>Eliminar 2</button>`;
-  return `<main class="qscr"><div class="qleft">${barra(`${respondidos()}/${players().length}`, ajuda)}
+  const ajuda = isTV ? '' : `<div class="ajudas"><button data-act="eliminar" ${pode ? '' : 'disabled'}><b>${usado ? 0 : 1}</b><span>Eliminar 2<small>tira 2 erradas (1 por partida)</small></span></button></div>`;
+  return `<main class="qscr"><div class="qleft">${barra(`${respondidos()}/${players().length}`)}
   ${pistaHTML(casas(), pinos())}
   <div class="meta">${cronometroHTML()}<div class="mi"><span class="tier t-${c.tier}">● ${NIVEL_NOME[c.tier!]}</span><span class="cat">${esc(CATEGORIAS[c.cat!])}</span></div></div>
-  <h2 class="q">${esc(b.q.pergunta)}</h2></div><div class="opts">${isTV ? '' : b.opts}</div>${confirmarSair()}</main>`;
+  <h2 class="q">${esc(b.q.pergunta)}</h2></div><div class="opts">${isTV ? '' : b.opts}</div>${ajuda}${confirmarSair()}</main>`;
 }
 
 function revelaHTML() {
