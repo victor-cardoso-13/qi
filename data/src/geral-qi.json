@@ -1,0 +1,372 @@
+[
+{
+"p": "Qual é o próximo número da sequência: 2, 3, 5, 7, 11, 13, ...?",
+"c": "17",
+"e": [
+"15",
+"19",
+"18",
+"21"
+]
+},
+{
+"p": "Qual é o próximo número da sequência: 1, 1, 2, 3, 5, 8, 13, ...?",
+"c": "21",
+"e": [
+"18",
+"20",
+"24",
+"26"
+]
+},
+{
+"p": "Qual é o próximo número da sequência: 2, 6, 12, 20, 30, ...?",
+"c": "42",
+"e": [
+"36",
+"40",
+"44",
+"48"
+]
+},
+{
+"p": "Qual é o próximo número da sequência: 1, 4, 9, 16, 25, ...?",
+"c": "36",
+"e": [
+"30",
+"34",
+"42",
+"49"
+]
+},
+{
+"p": "Qual é o próximo número da sequência: 3, 6, 11, 18, 27, ...?",
+"c": "38",
+"e": [
+"36",
+"39",
+"40",
+"45"
+]
+},
+{
+"p": "Qual número completa a sequência: 100, 50, 25, 12,5, ...?",
+"c": "6,25",
+"e": [
+"6",
+"7,5",
+"5",
+"3,125"
+]
+},
+{
+"p": "Se 5 máquinas levam 5 minutos para fazer 5 peças, quanto tempo 100 máquinas levam para fazer 100 peças?",
+"c": "5 minutos",
+"e": [
+"100 minutos",
+"20 minutos",
+"1 minuto",
+"50 minutos"
+]
+},
+{
+"p": "Um taco e uma bola custam, juntos, R$ 1,10. O taco custa R$ 1,00 a mais que a bola. Quanto custa a bola?",
+"c": "R$ 0,05",
+"e": [
+"R$ 0,10",
+"R$ 0,15",
+"R$ 0,01",
+"R$ 0,50"
+]
+},
+{
+"p": "Em um lago, uma vitória-régia dobra de tamanho a cada dia e cobre todo o lago em 48 dias. Em quantos dias ela cobre metade do lago?",
+"c": "47",
+"e": [
+"24",
+"46",
+"40",
+"36"
+]
+},
+{
+"p": "Qual palavra NÃO combina com as demais: maçã, banana, cenoura, laranja, uva?",
+"c": "Cenoura",
+"e": [
+"Banana",
+"Uva",
+"Maçã",
+"Laranja"
+]
+},
+{
+"p": "Cachorro está para latido assim como gato está para...",
+"c": "miado",
+"e": [
+"relincho",
+"pelo",
+"rugido",
+"zurro"
+]
+},
+{
+"p": "Livro está para leitor assim como música está para...",
+"c": "ouvinte",
+"e": [
+"cantor",
+"violão",
+"rádio",
+"partitura"
+]
+},
+{
+"p": "Nenhum réptil é mamífero. Todo crocodilo é réptil. Qual conclusão é logicamente necessária?",
+"c": "Nenhum crocodilo é mamífero",
+"e": [
+"Todo crocodilo é mamífero",
+"Alguns crocodilos são mamíferos",
+"Todo réptil é crocodilo",
+"Alguns répteis são mamíferos"
+]
+},
+{
+"p": "Um pai tem 40 anos e seu filho tem 10. Em quantos anos o pai terá exatamente o triplo da idade do filho?",
+"c": "5 anos",
+"e": [
+"10 anos",
+"15 anos",
+"20 anos",
+"3 anos"
+]
+},
+{
+"p": "Se hoje é quarta-feira, que dia da semana será daqui a 100 dias?",
+"c": "Sexta-feira",
+"e": [
+"Quinta-feira",
+"Sábado",
+"Quarta-feira",
+"Domingo"
+]
+},
+{
+"p": "Quantos triângulos de qualquer tamanho há em um triângulo dividido por uma linha que sai de um vértice até o lado oposto?",
+"c": "3",
+"e": [
+"2",
+"4",
+"5",
+"6"
+]
+},
+{
+"p": "Quantas diagonais tem um hexágono?",
+"c": "9",
+"e": [
+"6",
+"8",
+"12",
+"15"
+]
+},
+{
+"p": "Qual a soma dos ângulos internos de um quadrilátero qualquer?",
+"c": "360°",
+"e": [
+"180°",
+"270°",
+"540°",
+"720°"
+]
+},
+{
+"p": "Qual é o resultado de 0,1 × 0,1?",
+"c": "0,01",
+"e": [
+"0,1",
+"0,001",
+"1",
+"0,11"
+]
+},
+{
+"p": "Qual a porcentagem de 25% de 25% de um valor?",
+"c": "6,25%",
+"e": [
+"50%",
+"12,5%",
+"5%",
+"625%"
+]
+},
+{
+"p": "Se você dobra uma folha de papel ao meio 3 vezes, em quantas camadas ela fica?",
+"c": "8",
+"e": [
+"6",
+"9",
+"4",
+"16"
+]
+},
+{
+"p": "Quantas vezes por dia os ponteiros de um relógio analógico (horas e minutos) se sobrepõem?",
+"c": "22",
+"e": [
+"12",
+"24",
+"11",
+"44"
+]
+},
+{
+"p": "Quanto é 2 elevado a 8?",
+"c": "256",
+"e": [
+"128",
+"512",
+"64",
+"216"
+]
+},
+{
+"p": "Quantas faces tem um cubo?",
+"c": "6",
+"e": [
+"4",
+"8",
+"12",
+"5"
+]
+},
+{
+"p": "Quantas arestas tem um cubo?",
+"c": "12",
+"e": [
+"8",
+"6",
+"10",
+"16"
+]
+},
+{
+"p": "Quantos vértices tem um cubo?",
+"c": "8",
+"e": [
+"6",
+"12",
+"4",
+"10"
+]
+},
+{
+"p": "Em um grupo de 23 pessoas, a probabilidade de duas fazerem aniversário no mesmo dia é de cerca de...",
+"c": "50%",
+"e": [
+"6%",
+"25%",
+"75%",
+"95%"
+]
+},
+{
+"p": "Qual é o menor número de cores necessárias para colorir qualquer mapa plano sem que regiões vizinhas tenham a mesma cor?",
+"c": "4",
+"e": [
+"3",
+"5",
+"6",
+"2"
+]
+},
+{
+"p": "Quantos zeros tem um bilhão, na escala usada no Brasil (1 seguido de zeros)?",
+"c": "9",
+"e": [
+"6",
+"8",
+"10",
+"12"
+]
+},
+{
+"p": "Quantos minutos há em uma semana?",
+"c": "10.080",
+"e": [
+"7.200",
+"8.640",
+"14.400",
+"1.440"
+]
+},
+{
+"p": "Quantos segundos há em um dia?",
+"c": "86.400",
+"e": [
+"3.600",
+"14.400",
+"43.200",
+"864.000"
+]
+},
+{
+"p": "Que figura geométrica tem todos os lados iguais e todos os ângulos de 90°?",
+"c": "Quadrado",
+"e": [
+"Retângulo",
+"Losango",
+"Trapézio",
+"Paralelogramo"
+]
+},
+{
+"p": "Em uma corrida, você ultrapassa o segundo colocado. Em que posição você está agora?",
+"c": "Segundo",
+"e": [
+"Primeiro",
+"Terceiro",
+"Último",
+"Quarto"
+]
+},
+{
+"p": "Quantos meses do ano têm 28 dias, ao menos em algum ano?",
+"c": "12",
+"e": [
+"1",
+"2",
+"6",
+"7"
+]
+},
+{
+"p": "Se um galo põe um ovo no topo de um telhado inclinado, para qual lado o ovo cai?",
+"c": "Galos não põem ovos",
+"e": [
+"Para o lado mais baixo",
+"Para o lado do vento",
+"Fica no topo",
+"Para o lado leste"
+]
+},
+{
+"p": "Qual é o resultado de 8 ÷ ½ + 3?",
+"c": "19",
+"e": [
+"7",
+"4",
+"11",
+"16"
+]
+},
+{
+"p": "Qual é o maior número possível de sextas-feiras 13 em um mesmo ano?",
+"c": "3",
+"e": [
+"1",
+"2",
+"4",
+"5"
+]
+}
+]

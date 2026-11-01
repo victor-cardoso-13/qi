@@ -26,7 +26,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,png,woff2}'],
+        globPatterns: ['**/*.{js,css,html,png,woff2,json}'],
         maximumFileSizeToCacheInBytes: 3_000_000, // a parte do Firebase passa do limite padrão
       },
     }),

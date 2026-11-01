@@ -1,0 +1,382 @@
+[
+{
+"p": "Quem escreveu o romance \"Dom Casmurro\"?",
+"c": "Machado de Assis",
+"e": [
+"José de Alencar",
+"Graciliano Ramos",
+"Aluísio Azevedo",
+"Lima Barreto"
+]
+},
+{
+"p": "Quem escreveu o romance \"O Guarani\"?",
+"c": "José de Alencar",
+"e": [
+"Machado de Assis",
+"Gonçalves Dias",
+"Castro Alves",
+"Aluísio Azevedo"
+]
+},
+{
+"p": "Quem escreveu \"Vidas Secas\"?",
+"c": "Graciliano Ramos",
+"e": [
+"José Lins do Rego",
+"Rachel de Queiroz",
+"Jorge Amado",
+"Érico Veríssimo"
+]
+},
+{
+"p": "Quem escreveu \"Capitães da Areia\"?",
+"c": "Jorge Amado",
+"e": [
+"Graciliano Ramos",
+"Érico Veríssimo",
+"José Lins do Rego",
+"Guimarães Rosa"
+]
+},
+{
+"p": "Quem escreveu o poema épico \"Os Lusíadas\"?",
+"c": "Luís de Camões",
+"e": [
+"Fernando Pessoa",
+"Eça de Queirós",
+"Gil Vicente",
+"Almeida Garrett"
+]
+},
+{
+"p": "Quem escreveu \"O Pequeno Príncipe\"?",
+"c": "Antoine de Saint-Exupéry",
+"e": [
+"Jules Verne",
+"Victor Hugo",
+"Albert Camus",
+"Júlio Dinis"
+]
+},
+{
+"p": "Quem escreveu \"Dom Quixote\"?",
+"c": "Miguel de Cervantes",
+"e": [
+"Lope de Vega",
+"Federico García Lorca",
+"Gabriel García Márquez",
+"Luís de Camões"
+]
+},
+{
+"p": "Quem escreveu o romance \"1984\"?",
+"c": "George Orwell",
+"e": [
+"Aldous Huxley",
+"Ray Bradbury",
+"H. G. Wells",
+"Isaac Asimov"
+]
+},
+{
+"p": "Quem escreveu \"A Metamorfose\", em que um homem acorda transformado em inseto?",
+"c": "Franz Kafka",
+"e": [
+"Thomas Mann",
+"Albert Camus",
+"Hermann Hesse",
+"Fiódor Dostoiévski"
+]
+},
+{
+"p": "Quem escreveu o romance \"O Cortiço\"?",
+"c": "Aluísio Azevedo",
+"e": [
+"Machado de Assis",
+"Raul Pompeia",
+"Lima Barreto",
+"Visconde de Taunay"
+]
+},
+{
+"p": "Quem escreveu \"Memórias Póstumas de Brás Cubas\"?",
+"c": "Machado de Assis",
+"e": [
+"José de Alencar",
+"Eça de Queirós",
+"Aluísio Azevedo",
+"Euclides da Cunha"
+]
+},
+{
+"p": "Quem escreveu o romance indianista \"Iracema\"?",
+"c": "José de Alencar",
+"e": [
+"Gonçalves Dias",
+"Machado de Assis",
+"Bernardo Guimarães",
+"Castro Alves"
+]
+},
+{
+"p": "Quem criou o universo do \"Sítio do Picapau Amarelo\"?",
+"c": "Monteiro Lobato",
+"e": [
+"Ziraldo",
+"Ruth Rocha",
+"Maurício de Sousa",
+"Cecília Meireles"
+]
+},
+{
+"p": "Qual poeta escreveu a \"Canção do Exílio\", que começa com \"Minha terra tem palmeiras\"?",
+"c": "Gonçalves Dias",
+"e": [
+"Castro Alves",
+"Casimiro de Abreu",
+"Álvares de Azevedo",
+"Olavo Bilac"
+]
+},
+{
+"p": "Qual é a classe gramatical da palavra \"rapidamente\"?",
+"c": "Advérbio",
+"e": [
+"Adjetivo",
+"Substantivo",
+"Verbo",
+"Preposição"
+]
+},
+{
+"p": "Qual é o plural de \"pão\"?",
+"c": "Pães",
+"e": [
+"Pãos",
+"Pões",
+"Pãoes",
+"Pãs"
+]
+},
+{
+"p": "Qual é o feminino de \"ator\"?",
+"c": "Atriz",
+"e": [
+"Atora",
+"Atrisa",
+"Atriza",
+"Atoria"
+]
+},
+{
+"p": "Qual destas palavras é um substantivo abstrato?",
+"c": "Felicidade",
+"e": [
+"Rapidamente",
+"Bonito",
+"Correr",
+"Muito"
+]
+},
+{
+"p": "Qual é o antônimo de \"generoso\"?",
+"c": "Mesquinho",
+"e": [
+"Bondoso",
+"Gentil",
+"Nobre",
+"Solícito"
+]
+},
+{
+"p": "Qual palavra é sinônimo de \"feliz\"?",
+"c": "Contente",
+"e": [
+"Triste",
+"Cansado",
+"Sério",
+"Calmo"
+]
+},
+{
+"p": "Escolha a grafia correta da palavra que designa algo que foge à regra:",
+"c": "Exceção",
+"e": [
+"Excessão",
+"Exeção",
+"Esceção",
+"Exessão"
+]
+},
+{
+"p": "Escolha a grafia correta da palavra que designa uma vantagem especial concedida a alguém:",
+"c": "Privilégio",
+"e": [
+"Previlégio",
+"Privilegio",
+"Priveligio",
+"Previlegio"
+]
+},
+{
+"p": "Quantas letras tem o alfabeto da língua portuguesa atual?",
+"c": "26",
+"e": [
+"23",
+"24",
+"25",
+"28"
+]
+},
+{
+"p": "Qual é a sílaba tônica da palavra \"café\"?",
+"c": "fé",
+"e": [
+"ca",
+"As duas igualmente",
+"Não tem sílaba tônica",
+"A primeira"
+]
+},
+{
+"p": "Quantas sílabas tem a palavra \"borboleta\"?",
+"c": "4",
+"e": [
+"3",
+"5",
+"6",
+"2"
+]
+},
+{
+"p": "Qual é o coletivo de \"cães\"?",
+"c": "Matilha",
+"e": [
+"Manada",
+"Cardume",
+"Rebanho",
+"Bando"
+]
+},
+{
+"p": "Qual é o coletivo de \"abelhas\"?",
+"c": "Enxame",
+"e": [
+"Colmeia",
+"Cardume",
+"Bando",
+"Alcateia"
+]
+},
+{
+"p": "Qual é o coletivo de \"peixes\"?",
+"c": "Cardume",
+"e": [
+"Bando",
+"Enxame",
+"Manada",
+"Alcateia"
+]
+},
+{
+"p": "Qual é o aumentativo de \"casa\"?",
+"c": "Casarão",
+"e": [
+"Casinha",
+"Casebre",
+"Casota",
+"Casinhola"
+]
+},
+{
+"p": "Qual é o verbo no infinitivo da forma \"comeu\"?",
+"c": "Comer",
+"e": [
+"Comir",
+"Comar",
+"Comeu",
+"Comido"
+]
+},
+{
+"p": "Qual destas palavras é oxítona?",
+"c": "Sofá",
+"e": [
+"Mesa",
+"Árvore",
+"Médico",
+"Lâmpada"
+]
+},
+{
+"p": "Qual destas palavras é paroxítona?",
+"c": "Mesa",
+"e": [
+"Sofá",
+"Café",
+"Lâmpada",
+"Árvore"
+]
+},
+{
+"p": "Qual destas palavras é proparoxítona?",
+"c": "Lâmpada",
+"e": [
+"Mesa",
+"Sofá",
+"Café",
+"Amor"
+]
+},
+{
+"p": "Qual é o significado da palavra \"efêmero\"?",
+"c": "Passageiro, de curta duração",
+"e": [
+"Eterno",
+"Muito grande",
+"Delicado",
+"Secreto"
+]
+},
+{
+"p": "Como se chama o texto escrito em versos?",
+"c": "Poema",
+"e": [
+"Crônica",
+"Romance",
+"Notícia",
+"Fábula"
+]
+},
+{
+"p": "Qual é o plural de \"cidadão\"?",
+"c": "Cidadãos",
+"e": [
+"Cidadões",
+"Cidadães",
+"Cidadãoes",
+"Cidadans"
+]
+},
+{
+"p": "Qual é o plural de \"mal\"?",
+"c": "Males",
+"e": [
+"Mals",
+"Mãos",
+"Maus",
+"Mais"
+]
+},
+{
+"p": "Como se chama o sinal de pontuação representado por \":\"?",
+"c": "Dois-pontos",
+"e": [
+"Ponto e vírgula",
+"Reticências",
+"Travessão",
+"Aspas"
+]
+}
+]

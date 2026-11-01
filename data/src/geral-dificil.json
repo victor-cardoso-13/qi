@@ -1,0 +1,502 @@
+[
+{
+"p": "Qual é o idioma com mais falantes nativos no mundo?",
+"c": "Mandarim",
+"e": [
+"Inglês",
+"Espanhol",
+"Hindi",
+"Árabe"
+]
+},
+{
+"p": "Qual é a língua oficial da Áustria?",
+"c": "Alemão",
+"e": [
+"Húngaro",
+"Italiano",
+"Tcheco",
+"Esloveno"
+]
+},
+{
+"p": "Qual é a língua mais falada na Índia, como língua materna?",
+"c": "Hindi",
+"e": [
+"Inglês",
+"Bengali",
+"Tâmil",
+"Urdu"
+]
+},
+{
+"p": "Quantos países têm o português como língua oficial?",
+"c": "9",
+"e": [
+"5",
+"7",
+"12",
+"15"
+]
+},
+{
+"p": "Em qual cidade fica a sede da Organização das Nações Unidas (ONU)?",
+"c": "Nova York",
+"e": [
+"Genebra",
+"Washington",
+"Paris",
+"Bruxelas"
+]
+},
+{
+"p": "Em qual cidade ficam as principais instituições da União Europeia, como a Comissão Europeia?",
+"c": "Bruxelas",
+"e": [
+"Paris",
+"Berlim",
+"Haia",
+"Viena"
+]
+},
+{
+"p": "Qual destes países integra o G7?",
+"c": "Japão",
+"e": [
+"Brasil",
+"China",
+"Índia",
+"Coreia do Sul"
+]
+},
+{
+"p": "Qual é a moeda oficial do Reino Unido?",
+"c": "Libra esterlina",
+"e": [
+"Euro",
+"Dólar britânico",
+"Franco",
+"Coroa"
+]
+},
+{
+"p": "Qual é a moeda oficial da Suíça?",
+"c": "Franco suíço",
+"e": [
+"Euro",
+"Coroa suíça",
+"Marco",
+"Libra"
+]
+},
+{
+"p": "Qual é a moeda oficial da Índia?",
+"c": "Rupia",
+"e": [
+"Rial",
+"Taka",
+"Dinar",
+"Baht"
+]
+},
+{
+"p": "Qual é a moeda oficial da Rússia?",
+"c": "Rublo",
+"e": [
+"Zloty",
+"Hryvnia",
+"Lei",
+"Coroa"
+]
+},
+{
+"p": "Qual é a moeda oficial da China?",
+"c": "Yuan (renminbi)",
+"e": [
+"Iene",
+"Won",
+"Dólar de Hong Kong",
+"Rupia"
+]
+},
+{
+"p": "Quantos anos dura um mandato de presidente da República no Brasil?",
+"c": "4 anos",
+"e": [
+"5 anos",
+"6 anos",
+"8 anos",
+"3 anos"
+]
+},
+{
+"p": "Quantos senadores cada estado elege para o Senado Federal do Brasil?",
+"c": "3",
+"e": [
+"2",
+"4",
+"5",
+"1"
+]
+},
+{
+"p": "Quantos estados tem o Brasil, sem contar o Distrito Federal?",
+"c": "26",
+"e": [
+"25",
+"27",
+"24",
+"28"
+]
+},
+{
+"p": "Como se chama o medo irracional de altura?",
+"c": "Acrofobia",
+"e": [
+"Claustrofobia",
+"Agorafobia",
+"Hidrofobia",
+"Aracnofobia"
+]
+},
+{
+"p": "Como se chama o medo de lugares fechados?",
+"c": "Claustrofobia",
+"e": [
+"Acrofobia",
+"Agorafobia",
+"Nictofobia",
+"Xenofobia"
+]
+},
+{
+"p": "Qual animal terrestre tem a maior gestação, de cerca de 22 meses?",
+"c": "Elefante",
+"e": [
+"Girafa",
+"Rinoceronte",
+"Baleia",
+"Hipopótamo"
+]
+},
+{
+"p": "Qual é o único mamífero capaz de voar de verdade?",
+"c": "Morcego",
+"e": [
+"Esquilo-voador",
+"Colugo",
+"Gambá",
+"Pangolim"
+]
+},
+{
+"p": "Qual ave é o símbolo nacional dos Estados Unidos?",
+"c": "Águia-careca",
+"e": [
+"Peru",
+"Falcão",
+"Condor",
+"Coruja"
+]
+},
+{
+"p": "Qual flor é o grande símbolo da primavera no Japão, celebrada em festivais?",
+"c": "Cerejeira (sakura)",
+"e": [
+"Crisântemo",
+"Lótus",
+"Orquídea",
+"Rosa"
+]
+},
+{
+"p": "Qual é a matéria-prima principal do tofu?",
+"c": "Soja",
+"e": [
+"Arroz",
+"Milho",
+"Grão-de-bico",
+"Trigo"
+]
+},
+{
+"p": "Qual é considerada a especiaria mais cara do mundo?",
+"c": "Açafrão",
+"e": [
+"Canela",
+"Pimenta-do-reino",
+"Cravo",
+"Cúrcuma"
+]
+},
+{
+"p": "Qual país é o maior produtor mundial de café?",
+"c": "Brasil",
+"e": [
+"Colômbia",
+"Vietnã",
+"Etiópia",
+"Indonésia"
+]
+},
+{
+"p": "Qual foi a principal invenção de Johannes Gutenberg, por volta de 1450?",
+"c": "A prensa de tipos móveis",
+"e": [
+"O relógio mecânico",
+"A bússola magnética",
+"O telescópio",
+"A máquina a vapor"
+]
+},
+{
+"p": "Qual inventor é tradicionalmente creditado pela lâmpada elétrica incandescente comercial?",
+"c": "Thomas Edison",
+"e": [
+"Nikola Tesla",
+"Alexander Graham Bell",
+"Samuel Morse",
+"Michael Faraday"
+]
+},
+{
+"p": "Quem patenteou o telefone, em 1876?",
+"c": "Alexander Graham Bell",
+"e": [
+"Thomas Edison",
+"Samuel Morse",
+"Guglielmo Marconi",
+"Antonio Meucci"
+]
+},
+{
+"p": "Qual brasileiro realizou, em 1906, o primeiro voo público de um avião a motor na Europa, com o 14-Bis?",
+"c": "Santos Dumont",
+"e": [
+"Bartolomeu de Gusmão",
+"Marechal Rondon",
+"Eduardo Gomes",
+"Casimiro de Abreu"
+]
+},
+{
+"p": "Quem é considerado o criador da psicanálise?",
+"c": "Sigmund Freud",
+"e": [
+"Carl Jung",
+"Ivan Pavlov",
+"B. F. Skinner",
+"Jean Piaget"
+]
+},
+{
+"p": "Quem é o autor de \"A Origem das Espécies\", publicado em 1859?",
+"c": "Charles Darwin",
+"e": [
+"Gregor Mendel",
+"Alfred Wallace",
+"Thomas Huxley",
+"Jean-Baptiste Lamarck"
+]
+},
+{
+"p": "A qual filósofo grego se atribui a frase \"Só sei que nada sei\"?",
+"c": "Sócrates",
+"e": [
+"Platão",
+"Aristóteles",
+"Heráclito",
+"Epicuro"
+]
+},
+{
+"p": "Quem escreveu \"O Capital\", obra publicada a partir de 1867?",
+"c": "Karl Marx",
+"e": [
+"Friedrich Engels",
+"Adam Smith",
+"Max Weber",
+"John Maynard Keynes"
+]
+},
+{
+"p": "Qual filósofo grego foi tutor de Alexandre, o Grande?",
+"c": "Aristóteles",
+"e": [
+"Platão",
+"Sócrates",
+"Pitágoras",
+"Diógenes"
+]
+},
+{
+"p": "Qual destes números é primo?",
+"c": "17",
+"e": [
+"15",
+"21",
+"27",
+"33"
+]
+},
+{
+"p": "Quantos lados tem um dodecágono?",
+"c": "12",
+"e": [
+"10",
+"8",
+"14",
+"9"
+]
+},
+{
+"p": "Qual é o número romano que representa 50?",
+"c": "L",
+"e": [
+"X",
+"C",
+"D",
+"V"
+]
+},
+{
+"p": "Qual é o número romano que representa 1000?",
+"c": "M",
+"e": [
+"D",
+"C",
+"L",
+"X"
+]
+},
+{
+"p": "Quanto é 15% de 200?",
+"c": "30",
+"e": [
+"15",
+"20",
+"25",
+"35"
+]
+},
+{
+"p": "Quantas notas musicais compõem a escala diatônica (dó, ré, mi...)?",
+"c": "7",
+"e": [
+"5",
+"6",
+"8",
+"12"
+]
+},
+{
+"p": "Qual é o menor número primo?",
+"c": "2",
+"e": [
+"1",
+"3",
+"0",
+"5"
+]
+},
+{
+"p": "Qual é o continente mais frio do planeta?",
+"c": "Antártida",
+"e": [
+"Ásia",
+"América do Norte",
+"Europa",
+"Oceania"
+]
+},
+{
+"p": "Quantas vértebras cervicais tem uma girafa?",
+"c": "7",
+"e": [
+"14",
+"12",
+"9",
+"21"
+]
+},
+{
+"p": "Qual é a única ave capaz de voar para trás?",
+"c": "Beija-flor",
+"e": [
+"Andorinha",
+"Pardal",
+"Falcão",
+"Pombo"
+]
+},
+{
+"p": "Qual animal tem o maior cérebro do reino animal?",
+"c": "Cachalote",
+"e": [
+"Elefante",
+"Baleia-azul",
+"Golfinho",
+"Orca"
+]
+},
+{
+"p": "O que significa a sigla PIB?",
+"c": "Produto Interno Bruto",
+"e": [
+"Produto Industrial Brasileiro",
+"Plano de Investimento Básico",
+"Padrão Interno de Balanço",
+"Produção Interna Bruta"
+]
+},
+{
+"p": "O que significa a sigla IBGE?",
+"c": "Instituto Brasileiro de Geografia e Estatística",
+"e": [
+"Instituto Brasileiro de Governo e Economia",
+"Instituto Brasileiro de Gestão Ambiental",
+"Instituto Básico de Geografia e Educação",
+"Instituto Brasileiro de Geologia e Estudos"
+]
+},
+{
+"p": "Quanto é 1/2 + 1/4?",
+"c": "3/4",
+"e": [
+"2/6",
+"1/6",
+"2/4",
+"1/3"
+]
+},
+{
+"p": "Quantos anos tem um lustro?",
+"c": "5",
+"e": [
+"10",
+"4",
+"2",
+"12"
+]
+},
+{
+"p": "Como se chama o profissional que estuda os fósseis?",
+"c": "Paleontólogo",
+"e": [
+"Arqueólogo",
+"Geólogo",
+"Antropólogo",
+"Biólogo marinho"
+]
+},
+{
+"p": "Quantas cordas tem um violino?",
+"c": "4",
+"e": [
+"5",
+"6",
+"3",
+"7"
+]
+}
+]

@@ -1,0 +1,382 @@
+[
+{
+"p": "Quantos jogadores de cada time ficam em quadra numa partida de vôlei?",
+"c": "6",
+"e": [
+"5",
+"7",
+"8",
+"4"
+]
+},
+{
+"p": "Quantos jogadores de cada time ficam em quadra numa partida de basquete?",
+"c": "5",
+"e": [
+"6",
+"7",
+"4",
+"8"
+]
+},
+{
+"p": "Quantos jogadores de cada time ficam em campo, incluindo o goleiro, numa partida de futebol?",
+"c": "11",
+"e": [
+"9",
+"10",
+"12",
+"13"
+]
+},
+{
+"p": "Qual país venceu a Copa do Mundo de futebol de 2002?",
+"c": "Brasil",
+"e": [
+"Alemanha",
+"França",
+"Itália",
+"Argentina"
+]
+},
+{
+"p": "Quantas Copas do Mundo masculinas de futebol o Brasil conquistou?",
+"c": "5",
+"e": [
+"4",
+"6",
+"3",
+"7"
+]
+},
+{
+"p": "Em qual esporte se usa uma raquete e uma peteca ou \"shuttlecock\"?",
+"c": "Badminton",
+"e": [
+"Squash",
+"Tênis de mesa",
+"Tênis",
+"Beach tennis"
+]
+},
+{
+"p": "Quantos pontos vale uma cesta convertida de fora da linha de três pontos, no basquete?",
+"c": "3",
+"e": [
+"2",
+"1",
+"4",
+"5"
+]
+},
+{
+"p": "Em qual esporte o jogador faz um \"ace\"?",
+"c": "Tênis",
+"e": [
+"Boxe",
+"Judô",
+"Natação",
+"Esgrima"
+]
+},
+{
+"p": "Qual é a distância oficial de uma maratona?",
+"c": "42,195 km",
+"e": [
+"21,097 km",
+"35 km",
+"50 km",
+"40 km"
+]
+},
+{
+"p": "Quantos anéis tem a bandeira olímpica?",
+"c": "5",
+"e": [
+"4",
+"6",
+"7",
+"3"
+]
+},
+{
+"p": "Qual jogador brasileiro é conhecido como \"Rei do Futebol\"?",
+"c": "Pelé",
+"e": [
+"Garrincha",
+"Zico",
+"Romário",
+"Ronaldo"
+]
+},
+{
+"p": "Em qual esporte Michael Phelps ficou famoso?",
+"c": "Natação",
+"e": [
+"Atletismo",
+"Remo",
+"Ciclismo",
+"Esgrima"
+]
+},
+{
+"p": "Em qual esporte Usain Bolt é recordista mundial?",
+"c": "Atletismo (corrida de velocidade)",
+"e": [
+"Natação",
+"Ciclismo",
+"Salto em altura",
+"Triatlo"
+]
+},
+{
+"p": "Qual país sediou a Copa do Mundo de futebol de 2014?",
+"c": "Brasil",
+"e": [
+"África do Sul",
+"Rússia",
+"Alemanha",
+"Catar"
+]
+},
+{
+"p": "Em qual cidade foram realizados os Jogos Olímpicos de 2016?",
+"c": "Rio de Janeiro",
+"e": [
+"Londres",
+"Pequim",
+"Tóquio",
+"São Paulo"
+]
+},
+{
+"p": "Quantos tempos de 45 minutos tem uma partida regulamentar de futebol, sem prorrogação?",
+"c": "2",
+"e": [
+"3",
+"4",
+"1",
+"5"
+]
+},
+{
+"p": "Qual esporte nacional do Japão tem lutadores de grande porte que tentam empurrar o rival para fora de um círculo?",
+"c": "Sumô",
+"e": [
+"Judô",
+"Caratê",
+"Aikidô",
+"Kendô"
+]
+},
+{
+"p": "Qual é a cor da faixa usada pelos mestres a partir do 1º dan no judô?",
+"c": "Preta",
+"e": [
+"Marrom",
+"Roxa",
+"Branca",
+"Azul"
+]
+},
+{
+"p": "Qual seleção venceu a Copa do Mundo masculina de 2022, no Catar?",
+"c": "Argentina",
+"e": [
+"França",
+"Brasil",
+"Croácia",
+"Marrocos"
+]
+},
+{
+"p": "Qual jogador foi eleito o melhor do mundo (Bola de Ouro) em 2009, 2010, 2011 e 2012?",
+"c": "Lionel Messi",
+"e": [
+"Cristiano Ronaldo",
+"Andrés Iniesta",
+"Xavi",
+"Kaká"
+]
+},
+{
+"p": "Em qual esporte se disputa o Grand Slam de Roland Garros?",
+"c": "Tênis",
+"e": [
+"Golfe",
+"Boxe",
+"Automobilismo",
+"Vôlei"
+]
+},
+{
+"p": "Qual esporte usa tacos e é disputado em percursos com 18 buracos?",
+"c": "Golfe",
+"e": [
+"Hóquei",
+"Críquete",
+"Beisebol",
+"Polo"
+]
+},
+{
+"p": "Qual cor de cartão o árbitro de futebol mostra para expulsar um jogador?",
+"c": "Vermelho",
+"e": [
+"Amarelo",
+"Azul",
+"Verde",
+"Laranja"
+]
+},
+{
+"p": "Qual piloto brasileiro foi tricampeão mundial de Fórmula 1 (1988, 1990 e 1991)?",
+"c": "Ayrton Senna",
+"e": [
+"Nelson Piquet",
+"Emerson Fittipaldi",
+"Rubens Barrichello",
+"Felipe Massa"
+]
+},
+{
+"p": "Qual é o apelido do lutador brasileiro de MMA Anderson Silva?",
+"c": "Spider",
+"e": [
+"Anjo",
+"Pitbull",
+"Cigano",
+"Demolidor"
+]
+},
+{
+"p": "Qual seleção é conhecida por seu uniforme preto e pela dança \"haka\" antes dos jogos?",
+"c": "Nova Zelândia (All Blacks)",
+"e": [
+"África do Sul",
+"Austrália",
+"Inglaterra",
+"Fiji"
+]
+},
+{
+"p": "Quantas pessoas formam um time de revezamento 4x100 metros no atletismo?",
+"c": "4",
+"e": [
+"3",
+"5",
+"6",
+"2"
+]
+},
+{
+"p": "Em qual esporte é usada a expressão \"strike\"?",
+"c": "Boliche",
+"e": [
+"Golfe",
+"Tênis",
+"Natação",
+"Remo"
+]
+},
+{
+"p": "Qual o nome do estilo de natação em que o nadador fica de costas?",
+"c": "Costas",
+"e": [
+"Peito",
+"Borboleta",
+"Crawl",
+"Medley"
+]
+},
+{
+"p": "Qual seleção conquistou a Copa do Mundo de 1994, nos Estados Unidos?",
+"c": "Brasil",
+"e": [
+"Itália",
+"Alemanha",
+"Argentina",
+"Holanda"
+]
+},
+{
+"p": "Qual estádio carioca sediou a decisão da Copa do Mundo de 1950?",
+"c": "Maracanã",
+"e": [
+"Morumbi",
+"Mineirão",
+"Pacaembu",
+"Beira-Rio"
+]
+},
+{
+"p": "Em qual esporte o termo \"home run\" é utilizado?",
+"c": "Beisebol",
+"e": [
+"Críquete",
+"Softbol",
+"Futebol americano",
+"Rúgbi"
+]
+},
+{
+"p": "Quantos jogadores um time de vôlei de praia tem em quadra?",
+"c": "2",
+"e": [
+"3",
+"4",
+"5",
+"6"
+]
+},
+{
+"p": "Em qual país nasceu o judô?",
+"c": "Japão",
+"e": [
+"China",
+"Coreia do Sul",
+"Brasil",
+"Tailândia"
+]
+},
+{
+"p": "Em qual esporte as equipes disputam o \"Super Bowl\"?",
+"c": "Futebol americano",
+"e": [
+"Basquete",
+"Beisebol",
+"Hóquei no gelo",
+"Rúgbi"
+]
+},
+{
+"p": "Em qual esporte o jogador pode marcar um \"touchdown\"?",
+"c": "Futebol americano",
+"e": [
+"Rúgbi",
+"Beisebol",
+"Basquete",
+"Hóquei"
+]
+},
+{
+"p": "Qual seleção masculina foi campeã mundial de vôlei em 2002, 2006 e 2010?",
+"c": "Brasil",
+"e": [
+"Itália",
+"Rússia",
+"Estados Unidos",
+"Polônia"
+]
+},
+{
+"p": "Quantos jogadores tem um time de futebol de salão (futsal) em quadra?",
+"c": "5",
+"e": [
+"6",
+"7",
+"4",
+"11"
+]
+}
+]

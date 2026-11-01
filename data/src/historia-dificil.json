@@ -1,0 +1,502 @@
+[
+{
+"p": "Em que ano foi assinado o Tratado de Tordesilhas, que dividiu as terras do Novo Mundo entre Portugal e Espanha?",
+"c": "1494",
+"e": [
+"1492",
+"1500",
+"1530",
+"1580"
+]
+},
+{
+"p": "Em qual país teve início a Revolução Industrial, no século XVIII?",
+"c": "Inglaterra",
+"e": [
+"França",
+"Alemanha",
+"Estados Unidos",
+"Holanda"
+]
+},
+{
+"p": "Qual líder fundou o Império Mongol, no início do século XIII?",
+"c": "Gengis Khan",
+"e": [
+"Kublai Khan",
+"Tamerlão",
+"Átila",
+"Alexandre, o Grande"
+]
+},
+{
+"p": "Quem liderou o arraial de Canudos, na Bahia, no final do século XIX?",
+"c": "Antônio Conselheiro",
+"e": [
+"Padre Cícero",
+"Lampião",
+"Zumbi dos Palmares",
+"Frei Caneca"
+]
+},
+{
+"p": "Em que ano foi assinada a Magna Carta, na Inglaterra?",
+"c": "1215",
+"e": [
+"1066",
+"1189",
+"1348",
+"1485"
+]
+},
+{
+"p": "Quais países formaram a Tríplice Aliança contra o Paraguai na guerra de 1864–1870?",
+"c": "Brasil, Argentina e Uruguai",
+"e": [
+"Brasil, Chile e Bolívia",
+"Brasil, Argentina e Chile",
+"Argentina, Uruguai e Peru",
+"Brasil, Uruguai e Bolívia"
+]
+},
+{
+"p": "Qual presidente brasileiro se suicidou no Palácio do Catete, em 1954?",
+"c": "Getúlio Vargas",
+"e": [
+"Jânio Quadros",
+"Café Filho",
+"Juscelino Kubitschek",
+"Eurico Gaspar Dutra"
+]
+},
+{
+"p": "Em qual estado brasileiro eclodiu a Revolução Constitucionalista de 1932?",
+"c": "São Paulo",
+"e": [
+"Minas Gerais",
+"Rio Grande do Sul",
+"Rio de Janeiro",
+"Bahia"
+]
+},
+{
+"p": "Quem foi o primeiro presidente civil do Brasil, eleito em 1894?",
+"c": "Prudente de Morais",
+"e": [
+"Campos Sales",
+"Rodrigues Alves",
+"Floriano Peixoto",
+"Afonso Pena"
+]
+},
+{
+"p": "Qual rei francês ficou conhecido como \"Rei Sol\" e mandou construir o Palácio de Versalhes?",
+"c": "Luís XIV",
+"e": [
+"Luís XIII",
+"Luís XV",
+"Luís XVI",
+"Henrique IV"
+]
+},
+{
+"p": "Quem liderava a União Soviética durante a Crise dos Mísseis de Cuba, em 1962?",
+"c": "Nikita Khrushchov",
+"e": [
+"Leonid Brejnev",
+"Joseph Stalin",
+"Gueorgui Malenkov",
+"Mikhail Gorbachev"
+]
+},
+{
+"p": "Qual tratado, assinado em 1919, encerrou oficialmente a Primeira Guerra Mundial com a Alemanha?",
+"c": "Tratado de Versalhes",
+"e": [
+"Tratado de Brest-Litovsk",
+"Tratado de Trianon",
+"Tratado de Locarno",
+"Tratado de Sèvres"
+]
+},
+{
+"p": "Quem era o primeiro-ministro britânico durante a maior parte da Segunda Guerra Mundial?",
+"c": "Winston Churchill",
+"e": [
+"Neville Chamberlain",
+"Clement Attlee",
+"Anthony Eden",
+"David Lloyd George"
+]
+},
+{
+"p": "Qual episódio, em 1914, desencadeou a Primeira Guerra Mundial?",
+"c": "O assassinato do arquiduque Francisco Ferdinando, em Sarajevo",
+"e": [
+"A invasão da Polônia pela Alemanha",
+"O naufrágio do Lusitânia",
+"A queda do czar Nicolau II",
+"A anexação da Alsácia-Lorena"
+]
+},
+{
+"p": "Qual era a capital do Império Inca?",
+"c": "Cusco",
+"e": [
+"Machu Picchu",
+"Quito",
+"Lima",
+"Tiahuanaco"
+]
+},
+{
+"p": "Qual governante asteca encontrou Hernán Cortés quando os espanhóis chegaram a Tenochtitlán, em 1519?",
+"c": "Montezuma II",
+"e": [
+"Atahualpa",
+"Cuauhtémoc",
+"Pachacútec",
+"Tupac Amaru"
+]
+},
+{
+"p": "Qual governante unificou a China em 221 a.C. e se tornou seu primeiro imperador?",
+"c": "Qin Shi Huang",
+"e": [
+"Han Wudi",
+"Kublai Khan",
+"Sun Yat-sen",
+"Confúcio"
+]
+},
+{
+"p": "Qual libertador, nascido em Caracas, liderou a independência de vários países sul-americanos e é chamado de \"El Libertador\"?",
+"c": "Simón Bolívar",
+"e": [
+"José de San Martín",
+"Bernardo O'Higgins",
+"Francisco de Miranda",
+"Antonio José de Sucre"
+]
+},
+{
+"p": "Qual general argentino liderou a libertação do Chile e do Peru do domínio espanhol?",
+"c": "José de San Martín",
+"e": [
+"Simón Bolívar",
+"Manuel Belgrano",
+"Juan Manuel de Rosas",
+"Bernardino Rivadavia"
+]
+},
+{
+"p": "Em qual estado brasileiro ocorreu a Revolução Farroupilha (1835–1845)?",
+"c": "Rio Grande do Sul",
+"e": [
+"Santa Catarina",
+"Paraná",
+"São Paulo",
+"Bahia"
+]
+},
+{
+"p": "A corte portuguesa se mudou para o Brasil, em 1808, por causa de qual ameaça?",
+"c": "A invasão das tropas de Napoleão",
+"e": [
+"Uma epidemia em Lisboa",
+"A guerra com a Espanha",
+"Uma revolta liberal no Porto",
+"O bloqueio holandês"
+]
+},
+{
+"p": "Qual foi a primeira capital do Brasil?",
+"c": "Salvador",
+"e": [
+"Rio de Janeiro",
+"São Vicente",
+"Olinda",
+"Recife"
+]
+},
+{
+"p": "Qual povo da antiga Mesopotâmia criou a escrita cuneiforme?",
+"c": "Sumérios",
+"e": [
+"Acádios",
+"Babilônios",
+"Assírios",
+"Hititas"
+]
+},
+{
+"p": "Qual imperador romano concedeu liberdade de culto aos cristãos pelo Édito de Milão, em 313?",
+"c": "Constantino",
+"e": [
+"Nero",
+"Diocleciano",
+"Teodósio",
+"Marco Aurélio"
+]
+},
+{
+"p": "Qual evento ocorreu em 14 de julho de 1789, em Paris?",
+"c": "A tomada da Bastilha",
+"e": [
+"A execução de Luís XVI",
+"A coroação de Napoleão",
+"O Juramento do Jogo da Péla",
+"A Marcha sobre Versalhes"
+]
+},
+{
+"p": "Quem liderou a Revolução Cubana, vitoriosa em 1959?",
+"c": "Fidel Castro",
+"e": [
+"Che Guevara",
+"Fulgencio Batista",
+"Camilo Cienfuegos",
+"Raúl Castro"
+]
+},
+{
+"p": "Em que ano a Força Expedicionária Brasileira (FEB) chegou à Itália para lutar na Segunda Guerra?",
+"c": "1944",
+"e": [
+"1941",
+"1942",
+"1943",
+"1945"
+]
+},
+{
+"p": "Qual presidente estava no cargo quando o Plano Real foi lançado, em 1994?",
+"c": "Itamar Franco",
+"e": [
+"Fernando Collor",
+"Fernando Henrique Cardoso",
+"José Sarney",
+"Tancredo Neves"
+]
+},
+{
+"p": "Em que ano foi promulgada a Constituição brasileira conhecida como \"Constituição Cidadã\"?",
+"c": "1988",
+"e": [
+"1967",
+"1979",
+"1985",
+"1992"
+]
+},
+{
+"p": "Em que ano a Revolução dos Cravos derrubou a ditadura em Portugal?",
+"c": "1974",
+"e": [
+"1968",
+"1970",
+"1976",
+"1982"
+]
+},
+{
+"p": "Quem foi o primeiro imperador de Roma?",
+"c": "Augusto",
+"e": [
+"Júlio César",
+"Nero",
+"Calígula",
+"Tibério"
+]
+},
+{
+"p": "Qual conflito foi encerrado pela Paz de Westfália, em 1648?",
+"c": "Guerra dos Trinta Anos",
+"e": [
+"Guerra dos Cem Anos",
+"Guerra das Duas Rosas",
+"Guerra dos Sete Anos",
+"Guerra de Sucessão Espanhola"
+]
+},
+{
+"p": "Quem foi o primeiro primeiro-ministro da Índia independente?",
+"c": "Jawaharlal Nehru",
+"e": [
+"Mahatma Gandhi",
+"Indira Gandhi",
+"Sardar Patel",
+"Muhammad Ali Jinnah"
+]
+},
+{
+"p": "Qual rei da Inglaterra rompeu com a Igreja Católica para poder se casar com Ana Bolena?",
+"c": "Henrique VIII",
+"e": [
+"Eduardo VI",
+"Henrique VII",
+"Ricardo III",
+"Jaime I"
+]
+},
+{
+"p": "Qual povo era liderado por Átila, que ameaçou o Império Romano no século V?",
+"c": "Hunos",
+"e": [
+"Vândalos",
+"Visigodos",
+"Mongóis",
+"Francos"
+]
+},
+{
+"p": "Quem foi coroado imperador pelo papa no ano 800?",
+"c": "Carlos Magno",
+"e": [
+"Clóvis",
+"Otão I",
+"Carlos Martel",
+"Pepino, o Breve"
+]
+},
+{
+"p": "Além de Pompeia, qual cidade romana foi soterrada pela erupção do Vesúvio em 79 d.C.?",
+"c": "Herculano",
+"e": [
+"Cápua",
+"Óstia",
+"Paestum",
+"Taormina"
+]
+},
+{
+"p": "Quem escreveu \"O Príncipe\", tratado político de 1513?",
+"c": "Nicolau Maquiavel",
+"e": [
+"Thomas Hobbes",
+"Tomás Morus",
+"Jean Bodin",
+"Erasmo de Roterdã"
+]
+},
+{
+"p": "Quem liderou a Revolta da Chibata, em 1910, no Rio de Janeiro?",
+"c": "João Cândido",
+"e": [
+"Zumbi",
+"Luís Gama",
+"Cândido Rondon",
+"Marcílio Dias"
+]
+},
+{
+"p": "Qual guerra durou de 1337 a 1453, entre Inglaterra e França?",
+"c": "Guerra dos Cem Anos",
+"e": [
+"Guerra das Duas Rosas",
+"Guerra dos Trinta Anos",
+"Guerra de Sucessão Espanhola",
+"Guerra dos Sete Anos"
+]
+},
+{
+"p": "Quem foi o primeiro ser humano a viajar ao espaço, em 1961?",
+"c": "Yuri Gagarin",
+"e": [
+"Alan Shepard",
+"Valentina Tereshkova",
+"Alexei Leonov",
+"John Glenn"
+]
+},
+{
+"p": "Qual foi o primeiro satélite artificial da história, lançado em 1957?",
+"c": "Sputnik 1",
+"e": [
+"Explorer 1",
+"Vostok 1",
+"Luna 1",
+"Telstar"
+]
+},
+{
+"p": "Qual foi o nome da operação aliada de desembarque na Normandia, em 6 de junho de 1944?",
+"c": "Operação Overlord",
+"e": [
+"Operação Barbarossa",
+"Operação Torch",
+"Operação Market Garden",
+"Operação Husky"
+]
+},
+{
+"p": "Qual país iniciou a Segunda Guerra Mundial ao invadir a Polônia, em 1939?",
+"c": "Alemanha",
+"e": [
+"União Soviética",
+"Itália",
+"Japão",
+"Áustria"
+]
+},
+{
+"p": "Em qual cidade alemã foram julgados os principais criminosos de guerra nazistas, após 1945?",
+"c": "Nuremberg",
+"e": [
+"Berlim",
+"Munique",
+"Frankfurt",
+"Hamburgo"
+]
+},
+{
+"p": "Em que data se comemora a Proclamação da República no Brasil?",
+"c": "15 de novembro",
+"e": [
+"7 de setembro",
+"21 de abril",
+"13 de maio",
+"1º de maio"
+]
+},
+{
+"p": "Qual movimento pela independência dos Estados Unidos teve como lema \"Sem representação, não há tributação\"?",
+"c": "A Revolução Americana",
+"e": [
+"A Guerra de Secessão",
+"A Guerra dos Sete Anos",
+"A Doutrina Monroe",
+"A Guerra de 1812"
+]
+},
+{
+"p": "Qual foi o nome do navio em que os Pais Peregrinos chegaram à América do Norte, em 1620?",
+"c": "Mayflower",
+"e": [
+"Santa Maria",
+"Beagle",
+"Endeavour",
+"Bounty"
+]
+},
+{
+"p": "Qual imperador francês foi exilado na ilha de Santa Helena, onde morreu em 1821?",
+"c": "Napoleão Bonaparte",
+"e": [
+"Luís XVI",
+"Carlos X",
+"Napoleão III",
+"Luís Filipe"
+]
+},
+{
+"p": "Qual presidente norte-americano criou o New Deal para enfrentar a Grande Depressão?",
+"c": "Franklin D. Roosevelt",
+"e": [
+"Herbert Hoover",
+"Harry Truman",
+"Theodore Roosevelt",
+"Woodrow Wilson"
+]
+}
+]

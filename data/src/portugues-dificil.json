@@ -1,0 +1,502 @@
+[
+{
+"p": "Quem escreveu \"Grande Sertão: Veredas\"?",
+"c": "Guimarães Rosa",
+"e": [
+"Graciliano Ramos",
+"Ariano Suassuna",
+"José Lins do Rego",
+"Euclides da Cunha"
+]
+},
+{
+"p": "Quem escreveu \"A Hora da Estrela\"?",
+"c": "Clarice Lispector",
+"e": [
+"Lygia Fagundes Telles",
+"Rachel de Queiroz",
+"Cecília Meireles",
+"Hilda Hilst"
+]
+},
+{
+"p": "Quem escreveu \"Macunaíma\", rapsódia modernista de 1928?",
+"c": "Mário de Andrade",
+"e": [
+"Oswald de Andrade",
+"Manuel Bandeira",
+"Carlos Drummond de Andrade",
+"Raul Bopp"
+]
+},
+{
+"p": "Quem escreveu \"Quincas Borba\"?",
+"c": "Machado de Assis",
+"e": [
+"Aluísio Azevedo",
+"Raul Pompeia",
+"Lima Barreto",
+"José de Alencar"
+]
+},
+{
+"p": "Quem escreveu o romance \"O Ateneu\"?",
+"c": "Raul Pompeia",
+"e": [
+"Aluísio Azevedo",
+"Machado de Assis",
+"Lima Barreto",
+"Adolfo Caminha"
+]
+},
+{
+"p": "Quem escreveu o romance \"São Bernardo\"?",
+"c": "Graciliano Ramos",
+"e": [
+"José Lins do Rego",
+"Jorge Amado",
+"Rachel de Queiroz",
+"Érico Veríssimo"
+]
+},
+{
+"p": "Quem escreveu \"Menino de Engenho\"?",
+"c": "José Lins do Rego",
+"e": [
+"Graciliano Ramos",
+"Jorge Amado",
+"Raul Pompeia",
+"Rachel de Queiroz"
+]
+},
+{
+"p": "Quem escreveu \"O Quinze\", romance sobre a seca de 1915?",
+"c": "Rachel de Queiroz",
+"e": [
+"Clarice Lispector",
+"Lygia Fagundes Telles",
+"Adélia Prado",
+"Cecília Meireles"
+]
+},
+{
+"p": "Quem escreveu \"Os Sertões\", sobre a Guerra de Canudos?",
+"c": "Euclides da Cunha",
+"e": [
+"Graciliano Ramos",
+"Guimarães Rosa",
+"Machado de Assis",
+"Afonso Arinos"
+]
+},
+{
+"p": "Quem escreveu a trilogia \"O Tempo e o Vento\"?",
+"c": "Érico Veríssimo",
+"e": [
+"Jorge Amado",
+"José Lins do Rego",
+"Josué Montello",
+"Dyonélio Machado"
+]
+},
+{
+"p": "Quem escreveu \"Triste Fim de Policarpo Quaresma\"?",
+"c": "Lima Barreto",
+"e": [
+"Machado de Assis",
+"Aluísio Azevedo",
+"Raul Pompeia",
+"Euclides da Cunha"
+]
+},
+{
+"p": "Quem escreveu \"Memórias de um Sargento de Milícias\"?",
+"c": "Manuel Antônio de Almeida",
+"e": [
+"José de Alencar",
+"Joaquim Manuel de Macedo",
+"Bernardo Guimarães",
+"Machado de Assis"
+]
+},
+{
+"p": "Quem escreveu o romance \"A Moreninha\"?",
+"c": "Joaquim Manuel de Macedo",
+"e": [
+"José de Alencar",
+"Bernardo Guimarães",
+"Manuel Antônio de Almeida",
+"Machado de Assis"
+]
+},
+{
+"p": "Quem escreveu o poema \"O Navio Negreiro\"?",
+"c": "Castro Alves",
+"e": [
+"Gonçalves Dias",
+"Álvares de Azevedo",
+"Casimiro de Abreu",
+"Fagundes Varela"
+]
+},
+{
+"p": "Quem escreveu \"Lira dos Vinte Anos\"?",
+"c": "Álvares de Azevedo",
+"e": [
+"Castro Alves",
+"Gonçalves Dias",
+"Casimiro de Abreu",
+"Junqueira Freire"
+]
+},
+{
+"p": "Qual poeta é um dos principais nomes do Parnasianismo brasileiro e autor de \"Via Láctea\"?",
+"c": "Olavo Bilac",
+"e": [
+"Cruz e Sousa",
+"Alphonsus de Guimaraens",
+"Augusto dos Anjos",
+"Raimundo Correia"
+]
+},
+{
+"p": "Qual poeta é considerado o maior nome do Simbolismo brasileiro?",
+"c": "Cruz e Sousa",
+"e": [
+"Olavo Bilac",
+"Raimundo Correia",
+"Alberto de Oliveira",
+"Augusto dos Anjos"
+]
+},
+{
+"p": "Qual poeta escreveu \"No meio do caminho tinha uma pedra\"?",
+"c": "Carlos Drummond de Andrade",
+"e": [
+"Manuel Bandeira",
+"Vinicius de Moraes",
+"João Cabral de Melo Neto",
+"Mário Quintana"
+]
+},
+{
+"p": "Qual poeta escreveu \"Vou-me embora pra Pasárgada\"?",
+"c": "Manuel Bandeira",
+"e": [
+"Carlos Drummond de Andrade",
+"Mário Quintana",
+"Cecília Meireles",
+"Murilo Mendes"
+]
+},
+{
+"p": "Quem escreveu o \"Romanceiro da Inconfidência\"?",
+"c": "Cecília Meireles",
+"e": [
+"Clarice Lispector",
+"Adélia Prado",
+"Hilda Hilst",
+"Henriqueta Lisboa"
+]
+},
+{
+"p": "Quem escreveu o poema dramático \"Morte e Vida Severina\"?",
+"c": "João Cabral de Melo Neto",
+"e": [
+"Carlos Drummond de Andrade",
+"Ferreira Gullar",
+"Manuel Bandeira",
+"Murilo Mendes"
+]
+},
+{
+"p": "Quem escreveu o \"Soneto de Fidelidade\", com o verso \"que seja infinito enquanto dure\"?",
+"c": "Vinicius de Moraes",
+"e": [
+"Carlos Drummond de Andrade",
+"Manuel Bandeira",
+"Mário Quintana",
+"Paulo Leminski"
+]
+},
+{
+"p": "Qual destes nomes é um heterônimo de Fernando Pessoa?",
+"c": "Álvaro de Campos",
+"e": [
+"Mário de Sá-Carneiro",
+"Antero de Quental",
+"Eugénio de Andrade",
+"José Régio"
+]
+},
+{
+"p": "Quem escreveu o romance \"O Primo Basílio\"?",
+"c": "Eça de Queirós",
+"e": [
+"Camilo Castelo Branco",
+"José Saramago",
+"Almeida Garrett",
+"Machado de Assis"
+]
+},
+{
+"p": "Qual escritor português recebeu o Prêmio Nobel de Literatura, em 1998?",
+"c": "José Saramago",
+"e": [
+"Fernando Pessoa",
+"Eça de Queirós",
+"António Lobo Antunes",
+"Miguel Torga"
+]
+},
+{
+"p": "Quem escreveu \"Cem Anos de Solidão\"?",
+"c": "Gabriel García Márquez",
+"e": [
+"Mario Vargas Llosa",
+"Jorge Luis Borges",
+"Julio Cortázar",
+"Pablo Neruda"
+]
+},
+{
+"p": "Quem escreveu \"A Divina Comédia\"?",
+"c": "Dante Alighieri",
+"e": [
+"Giovanni Boccaccio",
+"Francesco Petrarca",
+"Nicolau Maquiavel",
+"Virgílio"
+]
+},
+{
+"p": "Qual poeta grego é tradicionalmente apontado como autor da \"Odisseia\"?",
+"c": "Homero",
+"e": [
+"Hesíodo",
+"Sófocles",
+"Virgílio",
+"Eurípides"
+]
+},
+{
+"p": "Quem escreveu \"Os Miseráveis\"?",
+"c": "Victor Hugo",
+"e": [
+"Alexandre Dumas",
+"Honoré de Balzac",
+"Gustave Flaubert",
+"Émile Zola"
+]
+},
+{
+"p": "Quem escreveu \"Guerra e Paz\"?",
+"c": "Liev Tolstói",
+"e": [
+"Fiódor Dostoiévski",
+"Anton Tchekhov",
+"Ivan Turguêniev",
+"Nikolai Gógol"
+]
+},
+{
+"p": "Quem escreveu \"Crime e Castigo\"?",
+"c": "Fiódor Dostoiévski",
+"e": [
+"Liev Tolstói",
+"Anton Tchekhov",
+"Maksim Górki",
+"Boris Pasternak"
+]
+},
+{
+"p": "Quem escreveu \"Orgulho e Preconceito\"?",
+"c": "Jane Austen",
+"e": [
+"Charlotte Brontë",
+"Emily Brontë",
+"Mary Shelley",
+"George Eliot"
+]
+},
+{
+"p": "Quem escreveu \"Oliver Twist\"?",
+"c": "Charles Dickens",
+"e": [
+"Thomas Hardy",
+"William Thackeray",
+"Oscar Wilde",
+"Rudyard Kipling"
+]
+},
+{
+"p": "Quem escreveu \"Frankenstein\", publicado em 1818?",
+"c": "Mary Shelley",
+"e": [
+"Jane Austen",
+"Bram Stoker",
+"Emily Brontë",
+"Edgar Allan Poe"
+]
+},
+{
+"p": "Quem escreveu o romance \"Drácula\"?",
+"c": "Bram Stoker",
+"e": [
+"Mary Shelley",
+"Edgar Allan Poe",
+"H. P. Lovecraft",
+"Robert Louis Stevenson"
+]
+},
+{
+"p": "Qual autor criou o detetive Sherlock Holmes?",
+"c": "Arthur Conan Doyle",
+"e": [
+"Agatha Christie",
+"Edgar Allan Poe",
+"G. K. Chesterton",
+"Raymond Chandler"
+]
+},
+{
+"p": "Qual autora escreveu \"Assassinato no Expresso do Oriente\"?",
+"c": "Agatha Christie",
+"e": [
+"Dorothy L. Sayers",
+"Patricia Highsmith",
+"Daphne du Maurier",
+"P. D. James"
+]
+},
+{
+"p": "Na frase \"Os alunos estudaram para a prova\", qual é o sujeito?",
+"c": "Os alunos",
+"e": [
+"A prova",
+"Estudaram",
+"Para a prova",
+"Alunos estudaram"
+]
+},
+{
+"p": "Qual figura de linguagem aparece em \"Seus olhos são duas estrelas\"?",
+"c": "Metáfora",
+"e": [
+"Comparação",
+"Hipérbole",
+"Ironia",
+"Eufemismo"
+]
+},
+{
+"p": "Qual figura de linguagem aparece em \"Chorei rios de lágrimas\"?",
+"c": "Hipérbole",
+"e": [
+"Metáfora",
+"Antítese",
+"Metonímia",
+"Eufemismo"
+]
+},
+{
+"p": "Qual figura de linguagem aparece em \"O vento sussurrava segredos\"?",
+"c": "Prosopopeia",
+"e": [
+"Metonímia",
+"Hipérbole",
+"Antítese",
+"Pleonasmo"
+]
+},
+{
+"p": "Em qual frase o uso da crase está correto?",
+"c": "Fui à escola de manhã.",
+"e": [
+"Fui à pé até a escola.",
+"Vou à ele amanhã.",
+"Cheguei à tarde às 8 horas e fui à dormir.",
+"Ele começou à falar."
+]
+},
+{
+"p": "Qual frase usa corretamente a expressão \"a fim de\"?",
+"c": "Ele estudou a fim de passar na prova.",
+"e": [
+"Ele estudou afim de passar na prova.",
+"Ele estudou a fim passar na prova.",
+"Ele estudou afim passar na prova.",
+"Ele estudou à fim de passar na prova."
+]
+},
+{
+"p": "Qual das palavras apresenta um hiato?",
+"c": "Saída",
+"e": [
+"Pai",
+"Boi",
+"Quando",
+"Água"
+]
+},
+{
+"p": "Qual das palavras tem um dígrafo consonantal (duas letras, um só som)?",
+"c": "Chuva",
+"e": [
+"Flor",
+"Casa",
+"Brasil",
+"Prato"
+]
+},
+{
+"p": "Qual frase está correta quanto à regência do verbo \"assistir\" no sentido de \"ver\"?",
+"c": "Assisti ao filme ontem.",
+"e": [
+"Assisti o filme ontem.",
+"Assisti no filme ontem.",
+"Assisti do filme ontem.",
+"Assisti pelo filme ontem."
+]
+},
+{
+"p": "Qual palavra é escrita sem acento gráfico pelo Acordo Ortográfico em vigor?",
+"c": "Ideia",
+"e": [
+"Heróico",
+"Assembléia",
+"Jibóia",
+"Européia"
+]
+},
+{
+"p": "Qual movimento literário tem como marca a análise psicológica e a ironia de Machado de Assis em \"Dom Casmurro\"?",
+"c": "Realismo",
+"e": [
+"Romantismo",
+"Naturalismo",
+"Parnasianismo",
+"Modernismo"
+]
+},
+{
+"p": "Qual é a grafia correta do verbo que significa \"pousar\" (um avião)?",
+"c": "Aterrissar",
+"e": [
+"Aterisar",
+"Atterrissar",
+"Aterrisar",
+"Atterizar"
+]
+},
+{
+"p": "Qual movimento literário brasileiro é representado por \"Iracema\" e \"O Guarani\"?",
+"c": "Romantismo",
+"e": [
+"Realismo",
+"Barroco",
+"Modernismo",
+"Arcadismo"
+]
+}
+]

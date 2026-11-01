@@ -1,0 +1,372 @@
+[
+{
+"p": "Qual é o rio mais extenso da Europa?",
+"c": "Volga",
+"e": [
+"Danúbio",
+"Reno",
+"Dnieper",
+"Elba"
+]
+},
+{
+"p": "Qual país tem o maior número de lagos do mundo?",
+"c": "Canadá",
+"e": [
+"Rússia",
+"Finlândia",
+"Estados Unidos",
+"Brasil"
+]
+},
+{
+"p": "Qual é a capital de Mianmar?",
+"c": "Naypyidaw",
+"e": [
+"Yangon",
+"Mandalay",
+"Bangcoc",
+"Hanói"
+]
+},
+{
+"p": "Qual é a capital do Butão?",
+"c": "Timphu",
+"e": [
+"Katmandu",
+"Daca",
+"Colombo",
+"Nova Délhi"
+]
+},
+{
+"p": "Qual é a capital do Quirguistão?",
+"c": "Bisqueque",
+"e": [
+"Tashkent",
+"Dushanbe",
+"Astana",
+"Ashgabat"
+]
+},
+{
+"p": "Qual é a capital do Uzbequistão?",
+"c": "Tashkent",
+"e": [
+"Samarcanda",
+"Bisqueque",
+"Dushanbe",
+"Bucara"
+]
+},
+{
+"p": "Qual é a capital de Madagascar?",
+"c": "Antananarivo",
+"e": [
+"Maputo",
+"Dar es Salaam",
+"Port Louis",
+"Toamasina"
+]
+},
+{
+"p": "Qual é a capital de Burkina Faso?",
+"c": "Uagadugu",
+"e": [
+"Bamako",
+"Niamei",
+"Dacar",
+"Acra"
+]
+},
+{
+"p": "Qual é a capital oficial da Tanzânia?",
+"c": "Dodoma",
+"e": [
+"Dar es Salaam",
+"Arusha",
+"Zanzibar",
+"Nairóbi"
+]
+},
+{
+"p": "Qual é a capital do Camboja?",
+"c": "Phnom Penh",
+"e": [
+"Vientiane",
+"Siem Reap",
+"Hanói",
+"Bangcoc"
+]
+},
+{
+"p": "Qual é a capital do Suriname?",
+"c": "Paramaribo",
+"e": [
+"Georgetown",
+"Caiena",
+"Port of Spain",
+"Belmopan"
+]
+},
+{
+"p": "Qual é a capital da Guiana?",
+"c": "Georgetown",
+"e": [
+"Paramaribo",
+"Caiena",
+"Kingston",
+"Bridgetown"
+]
+},
+{
+"p": "Qual é a capital da Lituânia?",
+"c": "Vilnius",
+"e": [
+"Riga",
+"Tallinn",
+"Minsk",
+"Kaunas"
+]
+},
+{
+"p": "Qual é a capital da Estônia?",
+"c": "Tallinn",
+"e": [
+"Riga",
+"Vilnius",
+"Helsinque",
+"Tartu"
+]
+},
+{
+"p": "Qual é a capital da Croácia?",
+"c": "Zagreb",
+"e": [
+"Belgrado",
+"Split",
+"Liubliana",
+"Sarajevo"
+]
+},
+{
+"p": "Qual é a capital da Eslováquia?",
+"c": "Bratislava",
+"e": [
+"Praga",
+"Košice",
+"Budapeste",
+"Liubliana"
+]
+},
+{
+"p": "Qual é a capital da Bulgária?",
+"c": "Sófia",
+"e": [
+"Bucareste",
+"Plovdiv",
+"Belgrado",
+"Skopje"
+]
+},
+{
+"p": "Qual é a capital da Arábia Saudita?",
+"c": "Riade",
+"e": [
+"Jidá",
+"Meca",
+"Medina",
+"Abu Dhabi"
+]
+},
+{
+"p": "Qual é a capital de Gana?",
+"c": "Acra",
+"e": [
+"Lagos",
+"Kumasi",
+"Abidjan",
+"Lomé"
+]
+},
+{
+"p": "Qual é a capital de Angola?",
+"c": "Luanda",
+"e": [
+"Maputo",
+"Benguela",
+"Lubango",
+"Windhoek"
+]
+},
+{
+"p": "Qual é a capital da Ucrânia?",
+"c": "Kiev (Kyiv)",
+"e": [
+"Carcóvia",
+"Odessa",
+"Minsk",
+"Lviv"
+]
+},
+{
+"p": "Qual é a capital do Irã?",
+"c": "Teerã",
+"e": [
+"Bagdá",
+"Isfahan",
+"Xiraz",
+"Cabul"
+]
+},
+{
+"p": "Qual é a capital da Argélia?",
+"c": "Argel",
+"e": [
+"Orã",
+"Túnis",
+"Rabat",
+"Trípoli"
+]
+},
+{
+"p": "Qual rio forma parte da fronteira entre o Rio Grande do Sul e a Argentina?",
+"c": "Rio Uruguai",
+"e": [
+"Rio Iguaçu",
+"Rio Jaguarão",
+"Rio Paraná",
+"Rio Guaíba"
+]
+},
+{
+"p": "Qual é o ponto extremo norte do território brasileiro?",
+"c": "Monte Caburaí",
+"e": [
+"Pico da Neblina",
+"Ilha de Marajó",
+"Cabo Orange",
+"Serra do Imeri"
+]
+},
+{
+"p": "Qual é o ponto extremo sul do território brasileiro?",
+"c": "Arroio Chuí",
+"e": [
+"Cabo de Santa Marta",
+"Lagoa Mirim",
+"Serra do Sudeste",
+"Arroio Taim"
+]
+},
+{
+"p": "Qual é o ponto extremo leste do Brasil continental?",
+"c": "Ponta do Seixas",
+"e": [
+"Cabo Branco",
+"Cabo de Santo Agostinho",
+"Ponta do Mel",
+"Ponta de Itapuã"
+]
+},
+{
+"p": "Qual é a maior ilha fluvial do mundo, localizada em território brasileiro?",
+"c": "Ilha do Bananal",
+"e": [
+"Ilha de Marajó",
+"Ilha de Santa Catarina",
+"Ilha Grande",
+"Ilha de Itamaracá"
+]
+},
+{
+"p": "Qual grande cidade está dividida entre os continentes europeu e asiático?",
+"c": "Istambul",
+"e": [
+"Ancara",
+"Baku",
+"Atenas",
+"Tbilisi"
+]
+},
+{
+"p": "Qual cadeia de montanhas é considerada a divisa convencional entre Europa e Ásia?",
+"c": "Montes Urais",
+"e": [
+"Cáucaso",
+"Cárpatos",
+"Alpes",
+"Altai"
+]
+},
+{
+"p": "Qual país é considerado o mais densamente povoado do mundo, entre os países soberanos?",
+"c": "Mônaco",
+"e": [
+"Singapura",
+"Malta",
+"Bangladesh",
+"Vaticano"
+]
+},
+{
+"p": "Qual é o único país africano que tem o espanhol como língua oficial?",
+"c": "Guiné Equatorial",
+"e": [
+"Gabão",
+"Camarões",
+"Mauritânia",
+"Guiné-Bissau"
+]
+},
+{
+"p": "Qual é a fronteira terrestre mais longa do mundo entre dois países?",
+"c": "Canadá e Estados Unidos",
+"e": [
+"Rússia e Cazaquistão",
+"China e Mongólia",
+"Argentina e Chile",
+"Índia e Bangladesh"
+]
+},
+{
+"p": "Qual é o rio mais extenso da Ásia?",
+"c": "Yangtzé",
+"e": [
+"Rio Amarelo",
+"Mekong",
+"Ganges",
+"Indo"
+]
+},
+{
+"p": "Qual é o sistema fluvial mais extenso da América do Norte?",
+"c": "Mississippi–Missouri",
+"e": [
+"Colorado",
+"Rio Grande",
+"Yukon",
+"São Lourenço"
+]
+},
+{
+"p": "Qual capital brasileira é cortada pela Linha do Equador?",
+"c": "Macapá",
+"e": [
+"Belém",
+"Manaus",
+"Boa Vista",
+"Santarém"
+]
+},
+{
+"p": "Qual capital brasileira é cortada pelo Trópico de Capricórnio?",
+"c": "São Paulo",
+"e": [
+"Curitiba",
+"Campo Grande",
+"Rio de Janeiro",
+"Florianópolis"
+]
+}
+]
