@@ -15,7 +15,7 @@ interface Corrida {
   q: Pergunta; ordem: number[]; limite: number; fimEm: number; restante: number;
   fase: Fase; pausado: boolean; escolha: number | null; motivo: 'erro' | 'tempo' | 'desistiu' | null;
   fora: number[]; elimNestaPergunta: boolean; ultimaCat?: string; premio: string;
-  ajudasUsadas: number; puladas: number; comeco: number; novoRecorde: boolean; semente: number;
+  ajudasUsadas: number; puladas: number; comeco: number; novoRecorde: boolean; semente: number; modal: boolean; recordeFeito: boolean;
 }
 let C: Corrida | null = null;
 let timerProx: ReturnType<typeof setTimeout> | null = null;
@@ -29,7 +29,7 @@ export function iniciarSolo() {
     seq: 0, pular: SOLO_AJUDAS_INICIAIS.pular, elim: SOLO_AJUDAS_INICIAIS.eliminar, usadas: new Set(),
     q: null as unknown as Pergunta, ordem: [], limite: 0, fimEm: 0, restante: 0, fase: 'pergunta', pausado: false,
     escolha: null, motivo: null, fora: [], elimNestaPergunta: false, premio: '', ajudasUsadas: 0, puladas: 0,
-    comeco: Date.now(), novoRecorde: false, semente: Math.floor(Math.random() * 1e9),
+    comeco: Date.now(), novoRecorde: false, semente: Math.floor(Math.random() * 1e9), modal: false, recordeFeito: false,
   };
   novaPergunta(Number(params.get('q')) || undefined); // ?q=ID: só para testes
 }
@@ -60,17 +60,26 @@ function responder(i: number) { // i = posição mostrada; -1 = tempo esgotado
     timerProx = setTimeout(() => novaPergunta(), 1300 / VELOCIDADE);
   } else {
     c.motivo = i < 0 ? 'tempo' : 'erro';
-    ui.desenhar(); // fica na tela mostrando a certa até a pessoa tocar em "Ver resultado"
+    registrarRecorde(c);
+    ui.desenhar(); // mostra a certa por uns 3,5 s e então abre o quadro com Jogar de novo / Ver resposta / Sair
+    timerProx = setTimeout(() => { c.modal = true; ui.desenhar(); }, 3500 / VELOCIDADE);
   }
 }
 
 function fim(motivo: Corrida['motivo']) {
   const c = C!;
   if (timerProx) clearTimeout(timerProx);
-  c.motivo = c.motivo ?? motivo; c.fase = 'fim'; c.pausado = false;
+  c.motivo = c.motivo ?? motivo; c.fase = 'fim'; c.pausado = false; c.modal = false;
+  registrarRecorde(c);
+  ui.desenhar();
+}
+
+/** Guarda o recorde (número + data) uma vez só por partida. */
+function registrarRecorde(c: Corrida) {
+  if (c.recordeFeito) return;
+  c.recordeFeito = true;
   const d = ler();
   if (c.seq > 0 && (!d.recorde || c.seq > d.recorde.n)) { c.novoRecorde = true; atualizar((x) => { x.recorde = { n: c.seq, data: hoje() }; }); }
-  ui.desenhar();
 }
 
 function pausar(on: boolean) {
@@ -103,6 +112,7 @@ export async function acaoSolo(act: string, el: HTMLElement): Promise<boolean> {
     c.elim--; c.ajudasUsadas++; c.elimNestaPergunta = true; c.fora = eliminar2(`${c.q.id}:${c.semente}`, certaMostrada(c)); ui.desenhar();
   }
   else if (act === 'resultado') fim(c.motivo);
+  else if (act === 'ver-resposta') { c.modal = false; ui.desenhar(); }
   else if (act === 'de-novo') iniciarSolo();
   else if (act === 'ir-inicio') { sairDoSolo(); ui.ir('inicio'); }
   else return false;
@@ -133,11 +143,23 @@ function perguntaHTML(c: Corrida) {
   return `<main class="qscr ${oculta ? 'pausada' : ''}"><div class="qleft">
     <div class="bar"><button class="ib" data-act="pausar" aria-label="Pausar" ${resp ? 'disabled' : ''}>${ICONE_PAUSA}</button>
     <div class="streak"><small>Sequência</small><b>${c.seq}</b></div>
-    <div class="help"><button data-act="pular" ${podePu ? '' : 'disabled'}><b>${c.pular}</b>Pular</button><button data-act="eliminar" ${podeEl ? '' : 'disabled'}><b>${c.elim}</b>Eliminar 2</button></div></div>
+    </div>
     ${pistaHTML(20, [{ cor: 'var(--a1)', nome, pos: c.seq, eu: true }])}${faixa}
     <h2 class="q">${oculta ? '<span class="barra"></span><span class="barra"></span><span class="barra c"></span>' : esc(q.pergunta)}</h2></div>
     <div class="opts">${opts}</div>
+    ${oculta ? '' : `<div class="ajudas"><button data-act="pular" ${podePu ? '' : 'disabled'}><b>${c.pular}</b><span>Pular<small>troca a pergunta</small></span></button><button data-act="eliminar" ${podeEl ? '' : 'disabled'}><b>${c.elim}</b><span>Eliminar 2<small>tira 2 erradas</small></span></button></div>`}
+    ${c.modal ? modalHTML(c) : ''}
     ${oculta ? `<div class="ov"><div class="ovc"><div class="pic">${ICONE_PAUSA}</div><h3>Pausado</h3><p>O tempo parou e a pergunta fica escondida.</p><button class="cta big" data-act="continuar"><span>Continuar</span></button><button class="cta" data-act="desistir"><span>Desistir e ver o resultado</span></button></div></div>` : ''}</main>`;
+}
+
+function modalHTML(c: Corrida) {
+  const d = ler();
+  const rec = c.novoRecorde ? '<span class="newrec">Novo recorde!</span>' : d.recorde ? `<span class="data">Recorde: ${d.recorde.n} · ${dataBonita(d.recorde.data)}</span>` : '';
+  return `<div class="ov"><div class="ovc"><div class="lbl c">${c.motivo === 'tempo' ? 'Tempo esgotado' : 'Fim da sequência'}</div>
+    <div class="big14 mini"><b>${c.seq}</b><span>${c.seq === 1 ? 'acerto seguido' : 'acertos seguidos'}</span></div>${rec}
+    <button class="cta big" data-act="de-novo"><span>Jogar de novo</span></button>
+    <button class="cta" data-act="ver-resposta"><span>Ver a resposta</span></button>
+    <button class="cta" data-act="ir-inicio"><span>Sair</span></button></div></div>`;
 }
 
 function fimHTML(c: Corrida) {

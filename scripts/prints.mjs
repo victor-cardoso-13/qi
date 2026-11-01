@@ -29,12 +29,24 @@ for (const q of [238, 855, 1]) {
       await page.click('[data-act=pausar]'); await page.waitForTimeout(200);
       await page.screenshot({ path: `${pasta}/solo-pausa-${nome}.png` });
       await page.click('[data-act=continuar]');
-      await page.click('.opt >> nth=0'); await page.waitForTimeout(250);
+      await page.click('.opt:not(:has-text("Madri")) >> nth=0'); await page.waitForTimeout(250);
       await page.screenshot({ path: `${pasta}/solo-erro-${nome}.png` });
       await rolagem(page, `solo erro ${nome}`);
       await page.click('[data-act=resultado]'); await page.waitForTimeout(250);
       await page.screenshot({ path: `${pasta}/solo-fim-${nome}.png` });
       await rolagem(page, `solo fim ${nome}`);
+    }
+    if (q === 238) { // quadro que abre sozinho ~3,5 s depois do erro
+      const m = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 2 });
+      await m.goto(`${base}?q=238`); await m.click('[data-act=solo]'); await m.waitForSelector('.opt');
+      await m.click('.opt:not(:has-text("Madri")) >> nth=0');
+      if (await m.$('.ov')) falhas.push(`modal ${nome}: abriu cedo demais`);
+      await m.waitForSelector('.ov', { timeout: 6000 }); await m.waitForTimeout(200);
+      await m.screenshot({ path: `${pasta}/solo-modal-${nome}.png` });
+      const cabe = await m.evaluate(() => { const b = document.querySelector('.ovc').getBoundingClientRect(); return b.top >= 0 && b.bottom <= innerHeight; });
+      if (!cabe) falhas.push(`modal ${nome}: não cabe na tela`);
+      await m.click('[data-act=ver-resposta]'); await m.waitForSelector('.ov', { state: 'detached' });
+      await m.close();
     }
     await page.close();
   }
