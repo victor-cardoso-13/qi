@@ -6,7 +6,7 @@ import './estilo.css';
 import { atualizar, ler } from './ui/dados.ts';
 import { $app, carregarPerguntas, ui, type Tela } from './ui/comum.ts';
 import { acaoConta, contaHTML, inicioHTML } from './ui/inicio.ts';
-import { acaoSala, abrirDaUrl, codigoDaUrl, criarSala, entrarNaSala, salaHTML } from './ui/sala.ts';
+import { acaoSala, abrirDaUrl, isTV, codigoDaUrl, criarSala, entrarNaSala, salaHTML } from './ui/sala.ts';
 import { acaoSolo, iniciarSolo, sairDoSolo, soloHTML } from './ui/solo.ts';
 import { iniciarNuvem, usuarioAtual } from './nuvem/sincronia.ts';
 
@@ -42,6 +42,7 @@ $app.addEventListener('click', async (ev) => {
   const act = el.dataset.act!;
   try {
     if (ui.tela === 'inicio') {
+      if (act === 'tv') { location.href = `${location.pathname}?tv`; return; }
       if (act === 'solo') { await carregarPerguntas(); nomeDigitado(); ui.tela = 'solo'; iniciarSolo(); return; }
       if (act === 'criar') { const n = nomeDigitado(); if (n) { await carregarPerguntas(); await criarSala(n); } return; }
       if (act === 'entrar') {
@@ -56,12 +57,14 @@ $app.addEventListener('click', async (ev) => {
     if (ui.tela === 'sala') await acaoSala(act, el);
   } catch {
     ui.msg = 'Sem internet agora. Tente de novo quando a internet voltar.';
-    if (ui.tela !== 'solo') { ui.tela = 'inicio'; sairDoSolo(); }
+    if (isTV) ui.msg = 'Sem internet agora. Confira a conexão e toque de novo.';
+    else if (ui.tela !== 'solo') { ui.tela = 'inicio'; sairDoSolo(); }
     desenhar();
   }
 });
 
 (async function iniciar() {
+  if (isTV && !codigoDaUrl()) ui.tela = 'sala'; // TV sem sala ainda: mostra o botão "Abrir a sala"
   desenhar();
   void iniciarNuvem(desenhar);
   try {

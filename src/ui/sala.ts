@@ -12,7 +12,7 @@ import {
 import { abrirSalas, local, type Db } from '../nuvem/salas-db.ts';
 import { atualizar, ler } from './dados.ts';
 import {
-  LETRAS, PERGUNTAS, VELOCIDADE, atualizarCronometro, cronometroHTML, esc, fichaHTML, params, pistaHTML, tempoTexto, ui,
+  LETRAS, PERGUNTAS, VELOCIDADE, carregarPerguntas, atualizarCronometro, cronometroHTML, esc, fichaHTML, params, pistaHTML, tempoTexto, ui,
 } from './comum.ts';
 import { usuarioAtual } from '../nuvem/sincronia.ts';
 import { duracaoEstimada, esperaMaxima, partesPergunta, textoCerta } from '../motor/narracao.ts';
@@ -26,7 +26,7 @@ interface Entrada { n: number; choice?: number; t?: number; h5?: boolean }
 interface Rodada { n: number; phase?: 'prep' | 'question' | 'reveal'; leitura?: boolean; lido?: boolean; cat?: string; tier?: Nivel; qid?: number; order?: string; ends?: number; start?: number; ans?: number }
 interface Resultado { ch: number; ok: boolean; d: number; ms: number }
 interface Sala {
-  host: string; status: 'lobby' | 'playing' | 'finished'; game: number; win?: number; created?: number;
+  host?: string; tv?: boolean; status: 'lobby' | 'playing' | 'finished'; game: number; win?: number; created?: number;
   players?: Record<string, Jogador>; in?: Record<string, Entrada>; res?: Record<string, Resultado>;
   cur?: Rodada; used?: Record<string, boolean>; voz?: number; winners?: string; exhausted?: boolean;
 }
@@ -35,7 +35,7 @@ type J = Jogador & { id: string };
 export const isTV = params.has('tv');
 let db: Db;
 let S: Sala | null = null;
-let code = (params.get('tv') || params.get('sala') || '').toUpperCase();
+let code = (params.get('tv') || params.get('sala') || '').toUpperCase(); // `?tv` sem código = TV que ainda vai abrir a sala
 let unsub: (() => void) | null = null;
 let confirmando = false;
 let busy = false, handled = '', contadaKey = '';
@@ -87,8 +87,8 @@ const somHTML = () => (isTV ? `<button class="cta sm somtv ${narradorLigado() ? 
 
 function sairLocal() {
   unsub?.(); unsub = null; S = null; code = ''; confirmando = false; handled = '';
-  history.replaceState(null, '', location.pathname);
-  ui.ir('inicio');
+  history.replaceState(null, '', location.pathname + (isTV ? '?tv' : ''));
+  ui.ir(isTV ? 'sala' : 'inicio');
 }
 
 async function entrar(nome: string) {
@@ -99,6 +99,8 @@ async function entrar(nome: string) {
   const emAndamento = (await db.get(room('status'))) === 'playing';
   const pos = emAndamento && ps.length ? Math.min(...ps.map((p) => p.pos)) : 0; // entrada tardia: começa na última posição
   await db.set(room(`players/${pid}`), { name: nome, j, color: CORES[j % CORES.length], pos, wins: 0, h5: false, tt: ps.length && emAndamento ? Math.max(...ps.map((p) => p.tt || 0)) : 0 });
+  const r = (await db.get(room())) as Sala | null;
+  if (r?.tv && !r.host) await db.update(room(), { host: pid }); // sala aberta pela TV: o 1º a entrar é o anfitrião
 }
 
 export async function criarSala(nome: string) {
@@ -108,6 +110,16 @@ export async function criarSala(nome: string) {
   code = c;
   await db.set(room(), { host: pid, status: 'lobby', game: 1, win: TAMANHO_PADRAO, created: db.now() });
   await entrar(nome);
+  observar(); ui.ir('sala');
+}
+
+/** Modo TV: a TV abre a sala sozinha (sem anfitrião); o 1º celular a entrar vira o anfitrião. */
+export async function criarSalaTV() {
+  db = await abrirSalas();
+  let c: string;
+  do { c = novoCodigo(); } while (await db.get(`rooms/${c}`));
+  code = c;
+  await db.set(room(), { tv: true, status: 'lobby', game: 1, win: TAMANHO_PADRAO, created: db.now() });
   observar(); ui.ir('sala');
 }
 
@@ -133,12 +145,12 @@ export async function abrirDaUrl(): Promise<boolean> {
 async function sairDaSala() {
   const resto = players().filter((p) => p.id !== pid);
   const eraHost = isHost();
-  const c = code;
+  const c = code, comTV = !!S?.tv;
   sairLocal(); // sai da tela já; o resto é limpeza
-  if (!resto.length) await db.remove(`rooms/${c}`);
+  if (!resto.length && !comTV) await db.remove(`rooms/${c}`);
   else {
     const upd: Record<string, unknown> = { [`players/${pid}`]: null, [`in/${pid}`]: null };
-    if (eraHost) upd.host = resto[0].id;
+    if (eraHost) upd.host = resto[0]?.id ?? null; // sala da TV sem ninguém: o próximo a entrar vira anfitrião
     await db.update(`rooms/${c}`, upd);
   }
 }
@@ -226,6 +238,14 @@ export async function acaoSala(act: string, el: HTMLElement): Promise<boolean> {
   if (act === 'copiar') { const i = document.querySelector<HTMLInputElement>('.linkrow input')!; i.select(); navigator.clipboard?.writeText(i.value).catch(() => {}); el.textContent = 'Copiado!'; }
   else if (act === 'entrar-aqui') { const n = nomeAtual(); if (!n) { ui.msg = 'Digite seu nome.'; ui.desenhar(); } else { atualizar((d) => { d.nome = n; }); ui.msg = ''; await entrar(n); } }
   else if (act === 'som') await alternarSom();
+  else if (act === 'tv-abrir') {
+    ui.msg = '';
+    const pronto = ligarNarrador(); // liga o som dentro do toque, antes de qualquer espera
+    try { await carregarPerguntas(); await criarSalaTV(); } catch { desligarNarrador(); ui.msg = 'Sem internet agora. Confira a conexão e toque de novo.'; ui.desenhar(); return true; }
+    bater(); batida = setInterval(bater, 5000);
+    await pronto; ui.desenhar();
+    void boasVindas();
+  }
   else if (act === 'tamanho') await db.update(room(), { win: Number(el.dataset.v) });
   else if (act === 'iniciar') await comecarRodada();
   else if (act === 'ans') { if (minhaEntrada()?.choice === undefined) await gravarEntrada({ choice: Number(el.dataset.i), t: db.now() }); }
@@ -318,7 +338,8 @@ function lobbyHTML() {
   ${!isTV && dentro && isHost() ? '<button class="cta big" data-act="iniciar"><span>Iniciar jogo</span></button>' : ''}
   ${!isTV && dentro && !isHost() ? '<p class="dica">Aguardando o anfitrião iniciar…</p>' : ''}
   ${!isTV && !dentro ? `<label class="lbl" for="nome">Seu nome</label><input id="nome" maxlength="14" placeholder="Como quer ser chamado?" value="${esc(nomeAtual())}"><button class="cta big" data-act="entrar-aqui"><span>Entrar na sala</span></button>` : ''}
-  ${!isTV && dentro && isHost() ? `<a class="cta" href="?tv=${code}" target="_blank"><span>Abrir tabuleiro em outra tela</span></a>` : ''}${confirmarSair()}</main>`;
+  ${isTV && !ps.length ? '<p class="dica">Esperando o 1º jogador… quem entrar primeiro vira o anfitrião e inicia pelo celular.</p>' : ''}
+  ${!isTV && dentro && isHost() && !S!.tv ? `<a class="cta" href="?tv=${code}" target="_blank"><span>Abrir tabuleiro em outra tela</span></a>` : ''}${confirmarSair()}</main>`;
 }
 
 function fimHTML() {
@@ -353,7 +374,15 @@ function tvHTML() {
   return `<div class="tv"><div class="tvhead">Sala <b>${code}</b><span class="sep">·</span>Partida ${S!.game || 1}</div><div class="tvnar">${somHTML()}${narradorLigado() ? `<small>${narradorFalando() ? '🎙️ ' : ''}${esc(legendaAtual())}</small>` : ''}</div>${tabuleiroHTML()}<div class="tvside">${lado}</div></div>`;
 }
 
+function tvInicioHTML() {
+  return `<div class="tv"><main class="inicio"><div class="logo"><span>QI</span><small>Modo TV · quiz em sala</small></div>
+  ${ui.msg ? `<p class="err">${esc(ui.msg)}</p>` : ''}
+  <button class="cta big" data-act="tv-abrir"><span>Abrir a sala</span><small>Mostra o código e o QR para o pessoal entrar</small></button>
+  <p class="foot">Toque aqui uma vez: isso liga o som do narrador e a tela cheia. O 1º a entrar pelo celular vira o anfitrião.</p></main></div>`;
+}
+
 export function salaHTML(): string {
+  if (!S && isTV && !code) return tvInicioHTML();
   if (!S) return '<main class="inicio"><p class="dica">Entrando na sala…</p></main>';
   contarVitoria();
   if (S.status === 'playing' && !cur()?.phase) return '<main class="inicio"><p class="dica">Preparando a próxima rodada…</p></main>';
