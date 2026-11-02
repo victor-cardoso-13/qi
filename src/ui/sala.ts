@@ -17,6 +17,7 @@ import {
 import { usuarioAtual } from '../nuvem/sincronia.ts';
 import { duracaoEstimada, esperaMaxima, partesPergunta, textoCerta } from '../motor/narracao.ts';
 import { aoMudar, boasVindas, desligarNarrador, legendaAtual, ligarNarrador, narradorFalando, narradorLigado } from './narrador.ts';
+import { qrSvg } from './qr.ts';
 
 const CORES = ['#ff6b81', '#ffa94d', '#ffd43b', '#69db7c', '#38d9a9', '#4dabf7', '#748ffc', '#da77f2', '#f783ac', '#a9b4c2'];
 const SAIR_ICONE = '<svg class="ic" viewBox="0 0 24 24" width="18" height="18"><path d="M10 5H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4M14 8l4 4-4 4M18 12H9"/></svg>';
@@ -304,13 +305,12 @@ function prepHTML() {
 
 function lobbyHTML() {
   const ps = players(), link = `${location.origin}${location.pathname}?sala=${code}`;
-  const qr = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=0&color=e8ecf1&bgcolor=0a0c10&data=${encodeURIComponent(link)}`;
   const dentro = !!me();
   const tam = isHost() ? `<div class="tamanho"><small>Tamanho da partida</small><div>${Object.entries(TAMANHOS).map(([nome, n]) => `<button class="${casas() === n ? 'on' : ''}" data-act="tamanho" data-v="${n}"><b>${n}</b>${nome}</button>`).join('')}</div></div>` : `<p class="dica">Partida de <b>${casas()}</b> casas</p>`;
   return `<main class="lobby"><div class="bar"><button class="ib" data-act="sair" aria-label="Sair da sala">${SAIR_ICONE}</button><div class="streak"><small>Código da sala</small><b class="cod">${code}</b></div></div>
   ${ui.msg ? `<p class="err">${esc(ui.msg)}</p>` : ''}
   ${somHTML()}${isTV && narradorLigado() ? `<p class="dica">${esc(legendaAtual())}</p>` : ''}
-  ${isTV ? `<img class="qr" src="${qr}" alt="QR code da sala">` : ''}
+  ${isTV ? qrSvg(link) : ''}
   <div class="linkrow"><input readonly value="${esc(link)}"><button class="cta sm" data-act="copiar">Copiar link</button></div>
   <h3 class="sec">Jogadores <span>${ps.length}/${MAX_JOGADORES}</span></h3>
   <ul class="moves">${ps.map((p) => `<li>${fichaHTML(p.color, p.name)}<span>${esc(p.name)}${p.id === S!.host ? ' <em>anfitrião</em>' : ''}${p.id === pid ? ' <em>você</em>' : ''}</span>${p.wins ? `<b>${p.wins} vitória${p.wins > 1 ? 's' : ''}</b>` : ''}</li>`).join('')}</ul>

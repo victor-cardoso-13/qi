@@ -7,7 +7,7 @@ const POLITICA = [
   "default-src 'self'",
   "script-src 'self'",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://api.qrserver.com",
+  "img-src 'self' data: blob:",
   "font-src 'self' data:",
   "media-src 'self' data: blob:",
   "connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com https://*.firebaseapp.com",
