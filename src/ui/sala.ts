@@ -15,18 +15,20 @@ import {
   LETRAS, PERGUNTAS, VELOCIDADE, atualizarCronometro, cronometroHTML, esc, fichaHTML, params, pistaHTML, tempoTexto, ui,
 } from './comum.ts';
 import { usuarioAtual } from '../nuvem/sincronia.ts';
+import { duracaoEstimada, esperaMaxima, partesPergunta, textoCerta } from '../motor/narracao.ts';
+import { aoMudar, boasVindas, desligarNarrador, legendaAtual, ligarNarrador, narradorFalando, narradorLigado } from './narrador.ts';
 
 const CORES = ['#ff6b81', '#ffa94d', '#ffd43b', '#69db7c', '#38d9a9', '#4dabf7', '#748ffc', '#da77f2', '#f783ac', '#a9b4c2'];
 const SAIR_ICONE = '<svg class="ic" viewBox="0 0 24 24" width="18" height="18"><path d="M10 5H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4M14 8l4 4-4 4M18 12H9"/></svg>';
 
 interface Jogador { name: string; j: number; color: string; pos: number; wins: number; h5: boolean; tt: number }
 interface Entrada { n: number; choice?: number; t?: number; h5?: boolean }
-interface Rodada { n: number; phase?: 'prep' | 'question' | 'reveal'; cat?: string; tier?: Nivel; qid?: number; order?: string; ends?: number; start?: number; ans?: number }
+interface Rodada { n: number; phase?: 'prep' | 'question' | 'reveal'; leitura?: boolean; lido?: boolean; cat?: string; tier?: Nivel; qid?: number; order?: string; ends?: number; start?: number; ans?: number }
 interface Resultado { ch: number; ok: boolean; d: number; ms: number }
 interface Sala {
   host: string; status: 'lobby' | 'playing' | 'finished'; game: number; win?: number; created?: number;
   players?: Record<string, Jogador>; in?: Record<string, Entrada>; res?: Record<string, Resultado>;
-  cur?: Rodada; used?: Record<string, boolean>; winners?: string; exhausted?: boolean;
+  cur?: Rodada; used?: Record<string, boolean>; voz?: number; winners?: string; exhausted?: boolean;
 }
 type J = Jogador & { id: string };
 
@@ -63,9 +65,25 @@ function observar() {
   unsub = db.on(room(), (v: Sala | null) => {
     S = v;
     if (!v) { ui.msg = 'Sala encerrada.'; sairLocal(); return; }
+    if (isTV) aoMudar({ status: v.status, game: v.game || 1, exhausted: v.exhausted, cur: v.cur, acertou: Object.values(v.res || {}).some((r) => r.ok) }, { lido: marcarLido });
     ui.desenhar();
   });
 }
+
+// ---------- narrador (TV) ----------
+/** A TV avisa que o narrador está ligado (a cada 5 s). O anfitrião só espera a leitura enquanto este aviso for recente. */
+const vozAtiva = () => !!S?.voz && db.now() - S.voz < 15000;
+let batida: ReturnType<typeof setInterval> | undefined;
+const bater = () => { if (S) void db.update(room(), { voz: db.now() }); };
+function marcarLido(n: number) { if (S?.cur?.n === n && S.cur.phase === 'prep') void db.update(room('cur'), { lido: true }); }
+async function alternarSom() {
+  if (narradorLigado()) { desligarNarrador(); clearInterval(batida); if (S) await db.update(room(), { voz: null }); ui.desenhar(); return; }
+  const pronto = ligarNarrador(); // a parte síncrona roda dentro do toque
+  bater(); batida = setInterval(bater, 5000);
+  await pronto; ui.desenhar();
+  if (S?.status === 'lobby') void boasVindas();
+}
+const somHTML = () => (isTV ? `<button class="cta sm somtv ${narradorLigado() ? 'on' : ''}" data-act="som">${narradorLigado() ? '🎙️ Narrador ligado (tocar desliga)' : '🔇 Tocar para ligar o narrador'}</button>` : '');
 
 function sairLocal() {
   unsub?.(); unsub = null; S = null; code = ''; confirmando = false; handled = '';
@@ -136,9 +154,12 @@ function comecarRodada() {
     return db.update(room(), { status: 'finished', exhausted: true, winners: topo.map((p) => p.id).join(',') });
   }
   const n = (S!.cur?.n || 0) + 1;
+  // Com o narrador ligado na TV, a pergunta só começa a contar depois da leitura (ou do limite de espera).
+  const leitura = vozAtiva();
+  const espera = leitura ? esperaMaxima(partesPergunta(q, true)) : PREP_MS;
   return db.update(room(), {
     status: 'playing',
-    cur: { n, phase: 'prep', cat: q.cat, tier: q.nivel, qid: q.id, order: embaralhar(5).join(','), ends: db.now() + PREP_MS / VELOCIDADE },
+    cur: { n, phase: 'prep', cat: q.cat, tier: q.nivel, qid: q.id, order: embaralhar(5).join(','), ends: db.now() + espera / VELOCIDADE, ...(leitura ? { leitura: true } : {}) },
     [`used/${q.id}`]: true,
   });
 }
@@ -147,7 +168,7 @@ async function revelar() {
   const c = cur()!, q = PERGUNTAS.get(c.qid!)!, ordem = c.order!.split(',').map(Number);
   const certa = ordem.indexOf(q.correta);
   const limite = TEMPO[c.tier!] * 1000 / VELOCIDADE;
-  const upd: Record<string, unknown> = { 'cur/phase': 'reveal', 'cur/ends': db.now() + REVELA_MS / VELOCIDADE, 'cur/ans': certa };
+  const upd: Record<string, unknown> = { 'cur/phase': 'reveal', 'cur/ends': db.now() + Math.max(REVELA_MS, vozAtiva() ? duracaoEstimada(textoCerta(q)) + 2500 : 0) / VELOCIDADE, 'cur/ans': certa };
   for (const p of players()) {
     const e: Entrada | Record<string, never> = S!.in?.[p.id]?.n === c.n ? S!.in![p.id] : {};
     const escolha = (e as Entrada).choice;
@@ -184,7 +205,7 @@ async function passoDoAnfitriao() {
   const chave = `${S.game}:${c.n}:${c.phase}`;
   busy = true;
   try {
-    if (c.phase === 'prep' && agora >= c.ends! && chave !== handled) {
+    if (c.phase === 'prep' && (agora >= c.ends! || (c.leitura && c.lido)) && chave !== handled) {
       handled = chave;
       await db.update(room('cur'), { phase: 'question', ends: agora + TEMPO[c.tier!] * 1000 / VELOCIDADE, start: agora });
     } else if (c.phase === 'question') {
@@ -204,6 +225,7 @@ const gravarEntrada = (patch: Partial<Entrada>) => db.set(room(`in/${pid}`), { .
 export async function acaoSala(act: string, el: HTMLElement): Promise<boolean> {
   if (act === 'copiar') { const i = document.querySelector<HTMLInputElement>('.linkrow input')!; i.select(); navigator.clipboard?.writeText(i.value).catch(() => {}); el.textContent = 'Copiado!'; }
   else if (act === 'entrar-aqui') { const n = nomeAtual(); if (!n) { ui.msg = 'Digite seu nome.'; ui.desenhar(); } else { atualizar((d) => { d.nome = n; }); ui.msg = ''; await entrar(n); } }
+  else if (act === 'som') await alternarSom();
   else if (act === 'tamanho') await db.update(room(), { win: Number(el.dataset.v) });
   else if (act === 'iniciar') await comecarRodada();
   else if (act === 'ans') { if (minhaEntrada()?.choice === undefined) await gravarEntrada({ choice: Number(el.dataset.i), t: db.now() }); }
@@ -277,7 +299,7 @@ function prepHTML() {
   const c = cur()!;
   return `<main class="prep">${barra(`${c.n}`)}${pistaHTML(casas(), pinos())}
   <div class="rev"><div class="lbl c">Rodada ${c.n}</div><div class="catgr">${esc(CATEGORIAS[c.cat!])}</div><span class="tier t-${c.tier}">● ${NIVEL_NOME[c.tier!]}</span></div>
-  ${cronometroHTML()}${confirmarSair()}</main>`;
+  ${c.leitura && !isTV ? '<p class="dica">🎙️ O narrador está lendo a pergunta…</p>' : c.leitura ? '' : cronometroHTML()}${isTV && c.leitura ? `<h2 class="q">${esc(PERGUNTAS.get(c.qid!)?.pergunta ?? '')}</h2>` : ''}${confirmarSair()}</main>`;
 }
 
 function lobbyHTML() {
@@ -287,6 +309,7 @@ function lobbyHTML() {
   const tam = isHost() ? `<div class="tamanho"><small>Tamanho da partida</small><div>${Object.entries(TAMANHOS).map(([nome, n]) => `<button class="${casas() === n ? 'on' : ''}" data-act="tamanho" data-v="${n}"><b>${n}</b>${nome}</button>`).join('')}</div></div>` : `<p class="dica">Partida de <b>${casas()}</b> casas</p>`;
   return `<main class="lobby"><div class="bar"><button class="ib" data-act="sair" aria-label="Sair da sala">${SAIR_ICONE}</button><div class="streak"><small>Código da sala</small><b class="cod">${code}</b></div></div>
   ${ui.msg ? `<p class="err">${esc(ui.msg)}</p>` : ''}
+  ${somHTML()}${isTV && narradorLigado() ? `<p class="dica">${esc(legendaAtual())}</p>` : ''}
   ${isTV ? `<img class="qr" src="${qr}" alt="QR code da sala">` : ''}
   <div class="linkrow"><input readonly value="${esc(link)}"><button class="cta sm" data-act="copiar">Copiar link</button></div>
   <h3 class="sec">Jogadores <span>${ps.length}/${MAX_JOGADORES}</span></h3>
@@ -327,7 +350,7 @@ function tvHTML() {
   else if (c?.phase === 'prep') lado = prepHTML();
   else if (c?.phase === 'question') lado = perguntaHTML();
   else if (c?.phase === 'reveal') lado = revelaHTML();
-  return `<div class="tv"><div class="tvhead">Sala <b>${code}</b><span class="sep">·</span>Partida ${S!.game || 1}</div>${tabuleiroHTML()}<div class="tvside">${lado}</div></div>`;
+  return `<div class="tv"><div class="tvhead">Sala <b>${code}</b><span class="sep">·</span>Partida ${S!.game || 1}</div><div class="tvnar">${somHTML()}${narradorLigado() ? `<small>${narradorFalando() ? '🎙️ ' : ''}${esc(legendaAtual())}</small>` : ''}</div>${tabuleiroHTML()}<div class="tvside">${lado}</div></div>`;
 }
 
 export function salaHTML(): string {
@@ -357,6 +380,6 @@ function tique() {
   const resta = Math.max(0, (c.ends || 0) - db.now());
   atualizarCronometro(resta, total);
   const nx = document.getElementById('nx');
-  if (nx) nx.style.width = `${(100 * resta) / total}%`;
+  if (nx) nx.style.width = `${Math.min(100, (100 * resta) / total)}%`;
 }
 setInterval(() => { if (code && db) tique(); }, 200);

@@ -4,6 +4,8 @@ import {
   proximaPergunta, tempoGasto, vencedores, type Pergunta,
 } from '../src/motor/motor.ts';
 import { NIVEIS, type Nivel } from '../src/motor/regras.ts';
+import { readFileSync } from 'node:fs';
+import { TEXTOS_FIXOS, partesBoasVindas, partesFim, partesPergunta, partesResposta, textoCerta, textoPergunta } from '../src/motor/narracao.ts';
 import banco from '../public/questions.json';
 
 const BANCO = banco as Pergunta[];
@@ -130,5 +132,31 @@ describe('solo', () => {
     expect(ajudaGanha(11)).toBeNull();
     expect(ajudaGanha(10, () => 0.1)).toBe('pular');
     expect(ajudaGanha(20, () => 0.9)).toBe('eliminar');
+  });
+});
+
+describe('mestre de cerimônias (voz)', () => {
+  const falas = () => {
+    const f: Record<string, string> = { ...TEXTOS_FIXOS };
+    for (const q of BANCO) { f[`q-${q.id}`] = textoPergunta(q); f[`r-${q.id}`] = textoCerta(q); }
+    return f;
+  };
+  it('a pergunta abre com a categoria e a resposta certa vem do banco', () => {
+    const q = BANCO[0];
+    expect(partesPergunta(q, false).map((p) => p.clip)).toEqual(['cat-arte', 'q-1']);
+    expect(partesPergunta(q, true)[0].clip).toBe('vamos-comecar');
+    expect(textoCerta(q)).toBe('A resposta certa é: Leonardo da Vinci.');
+    expect(partesResposta(q, false).map((p) => p.clip)).toEqual(['r-1', 'ninguem-acertou']);
+  });
+  it('toda categoria do banco tem frase gravada', () => {
+    for (const q of BANCO) expect(TEXTOS_FIXOS[`cat-${q.cat}`], q.cat).toBeTruthy();
+  });
+  it('nunca fala nome de jogador (só fixas, perguntas e respostas)', () => {
+    for (const p of [...partesBoasVindas(), ...partesFim(true), ...partesFim(false), ...partesResposta(BANCO[1], true)]) expect(p.clip).toBeTruthy();
+  });
+  it('os áudios gravados (indice.json) batem com o texto de hoje', () => {
+    const f = falas();
+    const idx = JSON.parse(readFileSync(new URL('../public/voz/indice.json', import.meta.url), 'utf8')) as Record<string, string>;
+    for (const [clip, texto] of Object.entries(f)) expect(idx[clip], clip).toBe(texto);
   });
 });
