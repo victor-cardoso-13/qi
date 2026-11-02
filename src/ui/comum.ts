@@ -11,7 +11,8 @@ export const ui = {
   ir: (_t: Tela) => {},
 };
 
-export const esc = (s: unknown) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]!));
+import { escapar } from './seguranca.ts';
+export const esc = escapar;
 export const $app = document.getElementById('app')!;
 export const params = new URLSearchParams(location.search);
 /** Só para testes: acelera os tempos (?speed=10). */
@@ -43,7 +44,7 @@ export function atualizarCronometro(restanteMs: number, totalMs: number) {
 }
 
 export const inicial = (nome: string) => esc((nome[0] || '?').toUpperCase());
-export const fichaHTML = (cor: string, nome: string, cls = '') => `<i class="dot ${cls}" style="--c:${cor}">${inicial(nome)}</i>`;
+export const fichaHTML = (cor: string, nome: string, cls = '') => `<i class="dot ${cls}" style="--c:${esc(cor)}">${inicial(nome)}</i>`;
 
 export interface Pino { cor: string; nome: string; pos: number; eu?: boolean }
 /**
@@ -57,7 +58,7 @@ export function pistaHTML(casas: number, pinos: Pino[], rotulo = true) {
   const fichas = [...grupos.entries()].flatMap(([pos, g]) => g.map((p, k) => {
     const lin = Math.floor(k / POR_LINHA), nLin = Math.min(POR_LINHA, g.length - lin * POR_LINHA), col = k % POR_LINHA;
     const desvio = pos === 0 ? col * PASSO : pos === casas ? -(nLin - 1 - col) * PASSO : (col - (nLin - 1) / 2) * PASSO;
-    return `<i class="dot rd${p.eu ? ' eu' : ''}" style="--c:${p.cor};left:calc(${(pos / casas) * 100}% + ${desvio}px);bottom:${lin * ROW}px;z-index:${p.eu ? 99 : k}" title="${esc(p.nome)}">${inicial(p.nome)}</i>`;
+    return `<i class="dot rd${p.eu ? ' eu' : ''}" style="--c:${esc(p.cor)};left:calc(${(pos / casas) * 100}% + ${desvio}px);bottom:${lin * ROW}px;z-index:${p.eu ? 99 : k}" title="${esc(p.nome)}">${inicial(p.nome)}</i>`;
   })).join('');
   const lider = Math.max(0, ...pinos.map((p) => p.pos));
   return `<div class="pista"><div class="lane" style="height:${linhas * ROW}px">${fichas}</div>
