@@ -18,7 +18,8 @@ O bloco `@media (display-mode: standalone)` do `estilo.css` (tela cheia no iOS 2
 - Tamanho da partida: o anfitrião escolhe 12/16/20 (as faixas Médio/Difícil/QI esticam proporcionalmente).
 
 ## Mestre de cerimônias (voz na TV) — feito igual ao Chutômetro
-- Tela da TV = `?tv=CODIGO` (botão "Abrir tabuleiro em outra tela" no celular do anfitrião). Nela, o botão **"Tocar para ligar o narrador"** (precisa de um toque) liga a voz.
+- **Modo TV (igual ao Chutômetro):** na tela inicial, "📺 Modo TV" abre `?tv`; a TV toca em "Abrir a sala" (liga o narrador + tela cheia), cria a sala (`tv:true`, sem `host`) e mostra código/QR; o **1º celular a entrar vira o anfitrião** (`entrar()` grava `host`). A sala da TV não some quando todos saem. Teste: `?local&tv`.
+- Ou: tela da TV = `?tv=CODIGO` (botão "Abrir tabuleiro em outra tela" no celular do anfitrião). Nela, o botão **"Tocar para ligar o narrador"** (precisa de um toque) liga a voz.
 - Fala só: boas-vindas, "Vamos começar!", **categoria + pergunta**, **resposta certa** ("Muito bem!"/"Ninguém acertou desta vez."), fim de jogo. **Nunca diz nomes de jogadores** (pedido do Victor). Não lê as alternativas.
 - Voz = **áudios gravados do Edge TTS (pt-BR Antonio)** em `public/voz/*.mp3` (`q-ID`, `r-ID`, frases fixas) + `indice.json`; falta algum → voz do aparelho. Falas em `src/motor/narracao.ts`, tocador em `src/ui/narrador.ts`. **Mudou texto de fala ou pergunta?** `node scripts/lista-falas.ts > data/falas.json && python3 scripts/gerar-narracao.py` (só ESCREVE arquivos, retomável; usa `edge-tts`). O teste confere que `indice.json` bate com os textos.
 - Sincronia: a TV grava `voz` (batida a cada 5 s) na sala. Com a batida recente, o anfitrião põe `cur.leitura` na fase `prep` e só começa a contar o tempo quando a TV grava `cur.lido` (ou no limite `esperaMaxima`); a revelação dura o tempo de falar a resposta. TV desligada = jogo normal.
