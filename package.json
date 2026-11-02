@@ -20,6 +20,7 @@
   "dependencies": {
     "@fontsource/inter": "^5.3.0",
     "@fontsource/jetbrains-mono": "^5.3.0",
-    "firebase": "^13.1.0"
+    "firebase": "^13.1.0",
+    "qrcode-generator": "^2.0.4"
   }
 }
