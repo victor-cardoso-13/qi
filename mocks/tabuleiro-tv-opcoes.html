@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-br"><meta charset="utf-8"><title>QI — tabuleiro da TV: 3 opções</title>
+<style>
+:root{--bg:#0a0c10;--surf:#11151b;--tx:#e8edf2;--mu:#8b95a3;--m:#34d399;--d:#f5b942;--q:#ff6b81;--mono:ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px -apple-system,Inter,sans-serif;padding:28px 40px 80px}
+h1{font-size:22px;margin:0 0 4px}p.s{color:var(--mu);margin:0 0 28px}
+section{margin:0 0 56px}h2{font:700 15px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--m);margin:0 0 6px}
+.nota{color:var(--mu);margin:0 0 16px;max-width:900px}
+.tela{width:1200px;max-width:100%;background:#0d1117;border:1px solid #232a34;border-radius:12px;padding:22px 26px}
+.leg{display:flex;justify-content:center;gap:26px;font:700 14px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mu);margin-bottom:16px}
+.leg span::before{content:'';display:inline-block;width:13px;height:13px;margin-right:8px;border-radius:3px;background:var(--zc)}.leg b{color:var(--tx);margin-left:4px}
+.z1{--zc:var(--m)}.z2{--zc:var(--d)}.z3{--zc:var(--q)}
+.ficha{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;font:800 17px var(--mono);color:#10141a;box-shadow:0 3px 8px rgba(0,0,0,.55)}
+.fichas{display:flex;gap:4px;justify-content:center;flex-wrap:wrap}
+.casa{position:relative;border-radius:10px;border:2px solid color-mix(in srgb,var(--zc) 50%,transparent);background:color-mix(in srgb,var(--zc) 10%,var(--surf))}
+.casa .n{position:absolute;top:6px;left:9px;font:800 19px/1 var(--mono);color:color-mix(in srgb,var(--zc) 80%,#fff)}
+.lider{box-shadow:0 0 0 3px color-mix(in srgb,var(--zc) 30%,transparent),0 0 20px color-mix(in srgb,var(--zc) 35%,transparent);border-color:var(--zc)}
+.fim{background:color-mix(in srgb,var(--q) 24%,var(--surf));border-color:var(--q);box-shadow:0 0 26px color-mix(in srgb,var(--q) 40%,transparent)}
+.fim .n,.ini .n{color:var(--tx);font-size:13px;letter-spacing:.05em;text-transform:uppercase}
+.ini{background:#151a22;border-color:#3a4452}
+
+/* Opção 1 — cobrinha maior */
+#o1 .board{display:grid;grid-template-columns:repeat(7,1fr);gap:16px}
+#o1 .casa{aspect-ratio:1.25}#o1 .fichas{position:absolute;inset:34% 6% 8%;align-content:center}
+#o1 .ficha{width:44px;height:44px;font-size:22px}
+
+/* Opção 2 — escada contínua */
+#o2 .esc{display:flex;align-items:flex-end;gap:6px;height:430px;position:relative}
+#o2 .deg{flex:1;position:relative;border-radius:8px 8px 0 0;border:2px solid color-mix(in srgb,var(--zc) 50%,transparent);border-bottom:0;background:linear-gradient(to top,color-mix(in srgb,var(--zc) 22%,var(--surf)),color-mix(in srgb,var(--zc) 8%,var(--surf)))}
+#o2 .deg .n{position:absolute;bottom:8px;left:0;right:0;text-align:center;font:800 16px var(--mono);color:color-mix(in srgb,var(--zc) 80%,#fff)}
+#o2 .deg .fichas{position:absolute;bottom:100%;left:-6px;right:-6px;padding-bottom:6px;flex-direction:column-reverse;align-items:center}
+#o2 .deg.lider{box-shadow:0 0 18px color-mix(in srgb,var(--zc) 40%,transparent)}
+#o2 .bandeira{position:absolute;right:-2px;top:-6px;font-size:40px}
+#o2 .ficha{width:30px;height:30px;font-size:15px}
+
+/* Opção 3 — três patamares subindo */
+#o3 .pat{display:flex;gap:8px;position:relative}
+#o3 .patamares{position:relative;height:470px}
+#o3 .linha{position:absolute;display:flex;gap:8px;align-items:flex-end}
+#o3 .base{border-radius:8px;border:2px solid color-mix(in srgb,var(--zc) 50%,transparent);background:color-mix(in srgb,var(--zc) 10%,var(--surf))}
+#o3 .c{position:relative;width:104px;height:84px}
+#o3 .c .n{position:absolute;top:6px;left:8px;font:800 17px/1 var(--mono);color:color-mix(in srgb,var(--zc) 80%,#fff)}
+#o3 .c .fichas{position:absolute;inset:30% 4% 6%;align-content:center}
+#o3 .ficha{width:36px;height:36px;font-size:18px}
+#o3 .rot{position:absolute;font:700 13px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--zc)}
+#o3 .sobe{position:absolute;width:6px;background:color-mix(in srgb,var(--zc) 55%,transparent);border-radius:3px}
+</style>
+<h1>Tabuleiro da TV — 3 opções</h1>
+<p class="s">Mesmo jogo nas três: 20 casas, jogadores A (casa 2), B (casa 2), C (casa 5) e D (casa 9 — líder). Tamanho de TV (1200 px de largura de exemplo).</p>
+
+<section id="o1"><h2>Opção 1 · Cobrinha maior</h2>
+<p class="nota">O que já existe, só que ocupando a tela toda e com casas mais largas. Simples e seguro, mas continua sem sensação de "subida".</p>
+<div class="tela"><div class="leg"></div><div class="board"></div></div></section>
+
+<section id="o2"><h2>Opção 2 · Escada de 20 degraus</h2>
+<p class="nota">Uma fila só, da esquerda para a direita; cada degrau é mais alto que o anterior. As fichas ficam em pé em cima do degrau. O fim é lá no alto, com a bandeira: dá para ver o líder "subindo".</p>
+<div class="tela"><div class="leg"></div><div class="esc"></div></div></section>
+
+<section id="o3"><h2>Opção 3 · Três patamares (um por faixa)</h2>
+<p class="nota">Médio embaixo, Difícil no meio, QI no alto, cada faixa deslocada para a direita como degraus de uma escadaria. Sobe-se de um patamar ao outro por um traço. Chegada fica no topo.</p>
+<div class="tela"><div class="leg"></div><div class="patamares"></div></div></section>
+
+<script>
+const TOTAL=20, J=[{l:'A',c:'#ff6b81',p:2},{l:'B',c:'#f5b942',p:2},{l:'C',c:'#fde047',p:5},{l:'D',c:'#6ee7a0',p:9}];
+const zona=i=>i/TOTAL<=.325?'z1':i/TOTAL<=.675?'z2':'z3';
+const faixa=z=>{const x=[...Array(TOTAL)].map((_,k)=>k+1).filter(i=>zona(i)===z);return x[0]+'–'+x.at(-1)};
+const lider=Math.max(...J.map(j=>j.p));
+const fichas=i=>`<div class="fichas">${J.filter(j=>j.p===i).map(j=>`<div class="ficha" style="background:${j.c}">${j.l}</div>`).join('')}</div>`;
+const legenda=`<span class="z1">Médio <b>${faixa('z1')}</b></span><span class="z2">Difícil <b>${faixa('z2')}</b></span><span class="z3">QI <b>${faixa('z3')}</b></span>`;
+document.querySelectorAll('.leg').forEach(e=>e.innerHTML=legenda);
+const rot=i=>i===0?'Início':i===TOTAL?'🏁 Chegada':i;
+const cls=i=>`${zona(i)}${i===0?' ini':''}${i===TOTAL?' fim':''}${i===lider?' lider':''}`;
+
+// 1
+{const n=TOTAL+1,pos=i=>{const r=Math.floor(i/7),k=i%7;return[r,r%2?6-k:k]};
+ document.querySelector('#o1 .board').innerHTML=[...Array(n)].map((_,i)=>{const[r,c]=pos(i);return`<div class="casa ${cls(i)}" style="grid-row:${r+1};grid-column:${c+1}"><span class="n">${rot(i)}</span>${fichas(i)}</div>`}).join('');
+ document.querySelectorAll('#o1 .fichas').forEach(f=>f.style.position='absolute');}
+
+// 2
+{const e=document.querySelector('#o2 .esc');
+ e.innerHTML=[...Array(TOTAL+1)].map((_,i)=>{const h=46+i*17.5;return`<div class="deg ${cls(i)}" style="height:${h}px"><span class="n">${i===0?'▶':i===TOTAL?'🏁':i}</span>${fichas(i)}</div>`}).join('')+'';}
+
+// 3  (patamares: 0..6 / 7..13 / 14..20 ; cada um 7 casas, deslocado)
+{const P=document.querySelector('#o3 .patamares'),W=112,H=84,ofs=[0,150,300],top=[330,170,10];
+ const grupos=[[0,1,2,3,4,5,6],[7,8,9,10,11,12,13],[14,15,16,17,18,19,20]];
+ P.innerHTML=grupos.map((g,gi)=>`<div class="linha" style="left:${ofs[gi]}px;top:${top[gi]}px">${g.map(i=>`<div class="c casa ${cls(i)}"><span class="n" ${i===0||i===TOTAL?'style="font-size:12px;text-transform:uppercase"':''}>${rot(i)}</span>${fichas(i)}</div>`).join('')}</div>`).join('')
+ +`<div class="sobe z1" style="left:${ofs[0]+7*W-60}px;top:${top[0]-86}px;height:90px;--zc:var(--m)"></div>`
+ +`<div class="sobe z2" style="left:${ofs[1]+7*W-60}px;top:${top[1]-86}px;height:90px;--zc:var(--d)"></div>`
+ +`<div class="rot z1" style="left:0;top:${top[0]+96}px">Médio</div><div class="rot z2" style="left:${ofs[1]}px;top:${top[1]+96}px">Difícil</div><div class="rot z3" style="left:${ofs[2]}px;top:${top[2]-24}px">QI</div>`;}
+</script>

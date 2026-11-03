@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-br"><meta charset="utf-8"><title>QI — tabuleiro da TV: rodada 2</title>
+<style>
+:root{--bg:#0a0c10;--surf:#11151b;--tx:#e8edf2;--mu:#8b95a3;--fa:#5b6572;--m:#34d399;--d:#f5b942;--q:#ff6b81;--mono:ui-monospace,Menlo,monospace;--S:.55}
+*{box-sizing:border-box}
+body{margin:0;background:#050607;color:var(--tx);font:16px -apple-system,Inter,sans-serif;padding:28px 40px 80px}
+h1{font-size:22px;margin:0 0 4px}p.s{color:var(--mu);margin:0 0 26px;max-width:1000px}
+section{margin:0 0 54px}h2{font:700 15px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--m);margin:0 0 6px}
+.nota{color:var(--mu);margin:0 0 14px;max-width:1000px}
+.wrap{width:calc(1920px*var(--S));height:calc(1080px*var(--S));border:1px solid #232a34;border-radius:6px;overflow:hidden}
+.tv{width:1920px;height:1080px;transform:scale(var(--S));transform-origin:0 0;position:relative;background:var(--bg);
+ background-image:linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);background-size:48px 48px}
+.head{position:absolute;top:22px;left:0;right:0;text-align:center;font:500 26px var(--mono);color:var(--mu);letter-spacing:.06em}.head b{color:var(--tx);letter-spacing:.14em}
+.z1{--zc:var(--m)}.z2{--zc:var(--d)}.z3{--zc:var(--q)}
+.leg{display:flex;justify-content:center;gap:40px;font:700 22px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
+.leg span::before{content:'';display:inline-block;width:20px;height:20px;margin-right:12px;border-radius:4px;background:var(--zc);vertical-align:-2px}.leg b{color:var(--tx);margin-left:8px}
+.ficha{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;font:800 28px var(--mono);color:#10141a;box-shadow:0 4px 12px rgba(0,0,0,.6)}
+.info{position:absolute}
+.info .sala{font:600 18px var(--mono);letter-spacing:.12em;color:var(--mu)}
+.info .rod{font:500 22px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
+.info .cat{font:800 48px Inter,sans-serif;margin:4px 0 0}
+.info .niv{font:700 22px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--q)}
+.info .tempo{display:flex;align-items:center;gap:18px;margin:14px 0}.info .tempo b{font:700 52px var(--mono);white-space:nowrap}
+.info .bar{display:flex;gap:5px}.info .bar i{width:16px;height:26px;background:var(--m)}.info .bar i.off{background:#1d242d}
+.info .perg{font:650 40px/1.28 Inter,sans-serif;border-left:4px solid var(--m);padding-left:22px}
+
+/* ===== 2b: degraus de lado ===== */
+.esc{position:absolute;left:40px;right:40px;top:100px;height:640px}
+.esc svg{position:absolute;inset:0}
+.esc .f{position:absolute;display:flex;flex-direction:column-reverse;align-items:center;gap:4px}
+.esc .rotu{position:absolute;font:800 26px var(--mono);text-align:center}
+.esc .tro{position:absolute;font-size:84px;filter:drop-shadow(0 0 22px #ff6b81)}
+
+/* ===== pista ===== */
+.pista{position:absolute;left:40px;right:40px;top:100px}
+.pista .topo{position:relative;height:50px;margin-left:130px;margin-right:150px;display:flex}
+.pista .topo i{flex:1;text-align:center;font:700 20px var(--mono);color:color-mix(in srgb,var(--zc) 80%,#fff);font-style:normal;padding-top:20px;border-top:5px solid var(--zc)}
+.pista .raia{position:relative;height:130px;margin:0 0 14px;display:flex;align-items:center}
+.pista .rotulo{width:130px;display:flex;justify-content:center}
+.pista .trilha{position:relative;flex:1;height:100%;border-radius:14px;display:flex;overflow:hidden;background:var(--surf);border:2px solid #232a34}
+.pista .trilha i{flex:1;border-left:1px solid #ffffff10;background:color-mix(in srgb,var(--zc) 9%,transparent)}
+.pista .rastro{position:absolute;left:0;top:0;bottom:0;border-radius:12px 0 0 12px;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--cor) 35%,transparent))}
+.pista .ficha{position:absolute;top:50%;width:84px;height:84px;font-size:44px;transform:translate(-50%,-50%);border-radius:18px}
+.pista .chg{width:150px;height:100%;margin-left:-2px;border-radius:0 14px 14px 0;background:repeating-conic-gradient(#e8edf2 0 25%,#10141a 0 50%) 0 0/36px 36px;opacity:.9;display:grid;place-items:center;font-size:60px}
+.pista .lider .trilha{box-shadow:0 0 0 3px color-mix(in srgb,var(--q) 20%,transparent),0 0 28px color-mix(in srgb,var(--m) 40%,transparent);border-color:var(--m)}
+.pista .pos{position:absolute;right:16px;top:8px;font:800 26px var(--mono);color:var(--mu)}
+
+/* ===== torre ===== */
+.torre{position:absolute;left:150px;top:80px;width:820px;height:940px}
+.andar{position:absolute;left:0;right:0;height:42px;border-radius:6px;border:2px solid color-mix(in srgb,var(--zc) 40%,transparent);background:color-mix(in srgb,var(--zc) 8%,var(--surf));display:flex;align-items:center;opacity:.55}
+.andar.sub{opacity:1;background:color-mix(in srgb,var(--zc) 24%,var(--surf));border-color:var(--zc)}
+.andar .n{width:84px;text-align:center;font:800 24px var(--mono);color:color-mix(in srgb,var(--zc) 80%,#fff)}
+.andar .fs{display:flex;gap:8px;margin-left:auto;margin-right:16px}
+.andar .ficha{width:36px;height:36px;font-size:20px;border-radius:8px}
+.andar.lid{opacity:1;box-shadow:0 0 0 3px color-mix(in srgb,var(--zc) 30%,transparent),0 0 24px color-mix(in srgb,var(--zc) 40%,transparent)}
+.andar.topo{height:66px;background:color-mix(in srgb,var(--q) 26%,var(--surf));border-color:var(--q);opacity:1;box-shadow:0 0 32px color-mix(in srgb,var(--q) 45%,transparent)}
+.andar.topo .n{width:auto;padding-left:20px;font-size:30px;color:var(--tx)}
+.poste{position:absolute;left:-4px;top:0;bottom:0;width:4px;background:#232a34}
+</style>
+<h1>Tabuleiro da TV — rodada 2</h1>
+<p class="s">Cada tela abaixo é uma TV de verdade (1920×1080, reduzida), já com o painel da rodada e a pergunta mais comprida do jogo (nº 238). Jogadores: A e B na casa 2, C na casa 5, D na casa 9 (líder).</p>
+
+<section><h2>2B · Degraus de lado (corrigida)</h2>
+<p class="nota">Agora é uma escadaria de verdade: pisos largos, só o piso e a parede lateral. Os degraus que o líder já subiu acendem, os de cima ficam apagados. Fichas grandes em pé no piso, troféu no último degrau. O tabuleiro ocupa a largura toda e a pergunta vai embaixo (esta é a mudança de layout).</p>
+<div class="wrap"><div class="tv" id="e20"></div></div></section>
+
+<section><h2>2B · Mesma coisa com 12 casas</h2>
+<p class="nota">Os degraus ficam mais largos e mais altos; continua cheio.</p>
+<div class="wrap"><div class="tv" id="e12"></div></div></section>
+
+<section><h2>4 · Montanha / trilha</h2>
+<p class="nota">O caminho sobe serpenteando até uma bandeira no pico. As faixas viram altitude: base verde, meio âmbar, topo rosa (QI). Fica na coluna da esquerda, a pergunta continua à direita como hoje.</p>
+<div class="wrap"><div class="tv" id="mon"></div></div></section>
+
+<section><h2>5 · Pista com raias</h2>
+<p class="nota">Cada jogador tem a sua raia e a ficha corre para a direita até a linha quadriculada. Quem está na frente se vê de longe e nada empilha. Com 4 jogadores as raias são grandes; a sala aceita até 10, aí cada raia fica com ~55 px (as fichas encolhem).</p>
+<div class="wrap"><div class="tv" id="pis"></div></div></section>
+
+<section><h2>6 · Torre</h2>
+<p class="nota">Cada casa é um andar; sobe-se do térreo até o troféu no topo. Andares já alcançados pelo líder acendem. Estreita e alta, cabe na coluna da esquerda. Com 20 casas os andares ficam finos; com 12 ficam mais gordos.</p>
+<div class="wrap"><div class="tv" id="tor"></div></div></section>
+
+<script>
+const J=[{l:'A',c:'#ff6b81',p:2},{l:'B',c:'#f5b942',p:2},{l:'C',c:'#fde047',p:5},{l:'D',c:'#6ee7a0',p:9}];
+const COR={z1:'#34d399',z2:'#f5b942',z3:'#ff6b81'};
+const lider=Math.max(...J.map(j=>j.p));
+const zona=(i,T)=>i/T<=.325?'z1':i/T<=.675?'z2':'z3';
+const faixa=(z,T)=>{const x=[...Array(T)].map((_,k)=>k+1).filter(i=>zona(i,T)===z);return x[0]+'–'+x.at(-1)};
+const leg=T=>`<div class="leg"><span class="z1">Médio <b>${faixa('z1',T)}</b></span><span class="z2">Difícil <b>${faixa('z2',T)}</b></span><span class="z3">QI <b>${faixa('z3',T)}</b></span></div>`;
+const fch=(j,x='')=>`<div class="ficha" ${x} style="background:${j.c}">${j.l}</div>`;
+const head=`<div class="head">Sala <b>PNYV</b> · Partida 1</div>`;
+const PERG='Qual tratado de 1750, entre Portugal e Espanha, substituiu Tordesilhas e fixou os limites do Brasil colonial com base no uso efetivo da terra?';
+const barra=`<div class="bar">${[...Array(20)].map((_,k)=>`<i class="${k<13?'':'off'}"></i>`).join('')}</div>`;
+// painel embaixo (layout "tabuleiro em cima")
+const infoBaixo=`<div class="info" style="left:60px;top:770px;width:520px"><div class="sala">SALA PNYV · 0/4</div><div class="rod" style="margin-top:12px">Rodada 10</div><div class="cat">História</div><div class="niv">● QI</div><div class="tempo"><b>13 s</b>${barra}</div></div>
+<div class="info" style="left:660px;top:790px;width:1200px"><div class="perg">${PERG}</div></div>`;
+// painel à direita
+const infoLado=`<div class="info" style="left:1230px;top:130px;width:630px"><div class="sala">SALA PNYV · 0/4</div><div class="rod" style="margin-top:20px">Rodada 10</div><div class="cat">História</div><div class="niv">● QI</div><div class="tempo"><b>13 s</b>${barra}</div><div class="perg" style="margin-top:30px">${PERG}</div></div>`;
+
+/* 2B */
+function escada(id,T){
+ const N=T+1,W=1840,H=640,w=W/N,base=70,rise=(H-base-150)/(N-1),top=i=>H-base-i*rise-14;
+ let s='<defs>';
+ for(const z of ['z1','z2','z3'])s+=`<linearGradient id="${id}${z}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${COR[z]}" stop-opacity=".42"/><stop offset="1" stop-color="${COR[z]}" stop-opacity=".05"/></linearGradient>`;
+ s+='</defs>';
+ let f='';
+ for(let i=0;i<N;i++){
+  const z=i===0?'z1':zona(i,T),sub=i<=lider,x=i*w,y=top(i);
+  s+=`<g opacity="${sub?1:.4}"><rect x="${x}" y="${y}" width="${w}" height="${H-y}" fill="${sub?`url(#${id}${z})`:'#11151b'}"/>
+   <rect x="${x}" y="${y}" width="${w+1}" height="16" fill="${COR[z]}" opacity="${sub?1:.55}" rx="3"/>
+   <line x1="${x}" y1="${y}" x2="${x}" y2="${H}" stroke="${COR[z]}" stroke-opacity=".5" stroke-width="2"/></g>`;
+  const rot=i===0?'INÍCIO':i===T?'':i;
+  f+=`<div class="rotu" style="left:${x}px;width:${w}px;top:${y+30}px;color:${sub?COR[z]:'#5b6572'};${i===0?'font-size:20px':''}">${rot}</div>`;
+  const aq=J.filter(j=>j.p===i);
+  if(aq.length)f+=`<div class="f" style="left:${x}px;width:${w}px;bottom:${H-y}px;padding-bottom:6px">${aq.map(j=>fch(j,i===lider&&j.p===lider?'':'')).join('')}</div>`;
+ }
+ const yT=top(T);
+ f+=`<div class="tro" style="left:${T*w+w/2-42}px;top:${yT-104}px">🏆</div>`;
+ s+=`<line x1="${w*.5}" y1="${H-6}" x2="${W}" y2="${H-6}" stroke="#232a34" stroke-width="4"/>`;
+ document.getElementById(id).innerHTML=head+`<div style="position:absolute;top:62px;left:0;right:0">${leg(T)}</div><div class="esc"><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">${s}</svg>${f}</div>`+infoBaixo;
+}
+escada('e20',20);escada('e12',12);
+
+/* Montanha */
+{const T=20,N=T+1,pt=i=>{const t=i/T;return[110+t*860+34*Math.sin(t*4*Math.PI),840-t*740]};
+ let s=`<defs><clipPath id="mc"><polygon points="0,900 250,700 360,720 640,420 760,450 980,70 1100,900"/></clipPath></defs>
+ <g clip-path="url(#mc)"><rect x="0" y="0" width="1100" height="340" fill="#ff6b81" opacity=".13"/><rect x="0" y="340" width="1100" height="260" fill="#f5b942" opacity=".12"/><rect x="0" y="600" width="1100" height="300" fill="#34d399" opacity=".12"/></g>
+ <polygon points="0,900 250,700 360,720 640,420 760,450 980,70 1100,900" fill="none" stroke="#2a323d" stroke-width="3"/>
+ <text x="1060" y="332" fill="#ff6b81" font-family="monospace" font-size="22" text-anchor="end" font-weight="700">QI ${faixa('z3',T)}</text>
+ <text x="1060" y="592" fill="#f5b942" font-family="monospace" font-size="22" text-anchor="end" font-weight="700">DIFÍCIL ${faixa('z2',T)}</text>
+ <text x="1060" y="858" fill="#34d399" font-family="monospace" font-size="22" text-anchor="end" font-weight="700">MÉDIO ${faixa('z1',T)}</text>`;
+ const pts=[...Array(N*12)].map((_,k)=>{const[x,y]=pt(k/12);return x+','+y}).join(' ');
+ s+=`<polyline points="${pts}" fill="none" stroke="#3a4452" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 16"/>`;
+ const ptsL=[...Array(lider*12+1)].map((_,k)=>{const[x,y]=pt(k/12);return x+','+y}).join(' ');
+ s+=`<polyline points="${ptsL}" fill="none" stroke="#34d399" stroke-width="8" stroke-linecap="round" opacity=".8"/>`;
+ for(let i=0;i<N;i++){const[x,y]=pt(i),z=i===0?'z1':zona(i,T),ex=i===0||i===T,r=ex?36:i===lider?29:24;
+  s+=`<circle cx="${x}" cy="${y}" r="${r}" fill="${i<=lider?COR[z]:'#11151b'}" fill-opacity="${i<=lider?.28:1}" stroke="${COR[z]}" stroke-width="${i===lider?6:3}"/>
+  <text x="${x}" y="${y+8}" text-anchor="middle" font-family="monospace" font-weight="800" font-size="${ex?18:22}" fill="${ex?'#e8edf2':COR[z]}">${i===0?'INÍCIO':i===T?'':i}</text>`;
+  const aq=J.filter(j=>j.p===i);aq.forEach((j,k)=>{const fx=x-52-(aq.length-1-k)*0+(k%2)*0-(aq.length>1?(1-k)*0:0)-k*0+(aq.length>1?(k-(aq.length-1)/2)*58:0),fy=y-r-30-(aq.length>2?0:0);
+   s+=`<rect x="${fx-26}" y="${fy-26}" width="52" height="52" rx="11" fill="${j.c}"/><text x="${fx}" y="${fy+10}" text-anchor="middle" font-family="monospace" font-weight="800" font-size="28" fill="#10141a">${j.l}</text>`});}
+ const[fx,fy]=pt(T);s+=`<line x1="${fx}" y1="${fy-40}" x2="${fx}" y2="${fy-120}" stroke="#e8edf2" stroke-width="5"/><polygon points="${fx},${fy-120} ${fx+60},${fy-100} ${fx},${fy-80}" fill="#ff6b81"/>`;
+ document.getElementById('mon').innerHTML=head+`<div style="position:absolute;left:40px;top:80px"><svg viewBox="0 0 1100 900" width="1100" height="900">${s}</svg></div>`+infoLado;}
+
+/* Pista */
+{const T=20,N=T+1;
+ let topo=`<div class="topo">`;for(let i=0;i<N;i++){topo+=`<i class="${i===0?'z1':zona(i,T)}">${i%2===0||i===T?(i===0?'':i):''}</i>`}topo+='</div>';
+ const ord=[...J].sort((a,b)=>b.p-a.p);
+ const raias=ord.map(j=>{const pc=(j.p+.5)/N*100;
+  return`<div class="raia ${j.p===lider?'lider':''}"><div class="rotulo">${fch(j)}</div><div class="trilha">${[...Array(N)].map((_,i)=>`<i class="${i===0?'z1':zona(i,T)}"></i>`).join('')}<div class="rastro" style="width:${pc}%;--cor:${j.c}"></div><div class="ficha" style="left:${pc}%;background:${j.c}">${j.l}</div><span class="pos">${j.p===0?'':'casa '+j.p}</span></div><div class="chg">🏁</div></div>`}).join('');
+ document.getElementById('pis').innerHTML=head+`<div style="position:absolute;top:62px;left:0;right:0">${leg(T)}</div><div class="pista">${topo}${raias}</div>`+infoBaixo.replace('top:770px','top:790px').replace('top:790px;width:1200px','top:810px;width:1200px');}
+
+/* Torre */
+{const T=20,h=42,gap=4,N=T+1;
+ let s='';
+ for(let i=0;i<N;i++){const z=i===0?'z1':zona(i,T),bottom=i*(h+gap)+(i===T?0:0),aq=J.filter(j=>j.p===i);
+  const topo=i===T;
+  s+=`<div class="andar ${z} ${i<=lider?'sub':''} ${i===lider?'lid':''} ${topo?'topo':''}" style="bottom:${bottom}px"><span class="n">${i===0?'TÉRREO':topo?'🏆 CHEGADA':i}</span>${[1,7,14].includes(i)?`<span style="margin-left:20px;font:700 18px var(--mono);letter-spacing:.14em;color:${COR[z]}">${{1:'MÉDIO',7:'DIFÍCIL',14:'QI'}[i]}</span>`:''}<div class="fs">${aq.map(j=>fch(j)).join('')}</div></div>`}
+ document.getElementById('tor').innerHTML=head+`<div class="torre">${s.replace(/class="andar/g,'class="andar')}<div class="poste"></div></div>`+infoLado;
+ // andares com bottom crescente: ancora o contêiner embaixo
+ const t=document.querySelector('#tor .torre');t.style.top='auto';t.style.bottom='40px';t.style.height=(N*(h+gap)+30)+'px';}
+</script>

@@ -3,6 +3,7 @@
 import { chromium } from 'playwright';
 const base = `http://localhost:${process.env.PORTA ?? 5199}/`;
 const casas = process.argv[2] ?? '20';
+const estilo = process.argv[3] ?? 'escada';
 const browser = await chromium.launch({ args: ['--mute-audio'] });
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
 const abrir = async (url, w) => { const p = await ctx.newPage(); if (w) await p.setViewportSize(w); await p.goto(url); return p; };
@@ -15,7 +16,9 @@ for (const [id, nome] of [['pB', 'Beto'], ['pC', 'Carla'], ['pD', 'Davi']]) {
   await p.fill('#nome', nome); await p.click('[data-act=entrar-aqui]'); outros.push(p);
 }
 const T = await abrir(`${base}?local&speed=25&tv=${code}`, { width: 1280, height: 720 });
-await A.click(`[data-act=tamanho][data-v="${casas}"]`); await A.click('[data-act=iniciar]');
+await A.click(`[data-act=tamanho][data-v="${casas}"]`);
+// Cockpit do anfitrião: escolhe o estilo do tabuleiro da TV
+await A.click('[data-act=cockpit]'); await A.click(`[data-act=estilo][data-v=${estilo}]`); await A.screenshot({ path: `prints/cockpit-390x844.png` }); await A.click('[data-act=cockpit-fechar]'); await A.click('[data-act=iniciar]');
 const todos = [A, ...outros];
 // cada um "chuta" uma alternativa diferente: alguns acertam, outros não
 const t0 = Date.now();
@@ -26,7 +29,7 @@ while (Date.now() - t0 < 60000 && rodadas < 9) {
   await A.waitForTimeout(80);
 }
 await T.waitForSelector('.qscr, .prep');
-await T.screenshot({ path: `prints/tv-tabuleiro-${casas}-1280x720.png` });
+await T.screenshot({ path: `prints/tv-${estilo}-${casas}-1280x720.png` });
 await T.setViewportSize({ width: 1920, height: 1080 }); await T.waitForTimeout(300);
-await T.screenshot({ path: `prints/tv-tabuleiro-${casas}-1920x1080.png` });
+await T.screenshot({ path: `prints/tv-${estilo}-${casas}-1920x1080.png` });
 await browser.close();
