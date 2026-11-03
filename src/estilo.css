@@ -225,24 +225,74 @@ h2.q { margin: 0; font-size: var(--q-fs); line-height: 1.28; font-weight: 650; b
 .stats b { display: block; font: 700 19px var(--mono); } .stats small { display: block; font: 600 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mu); margin-top: 2px; }
 
 /* ---------- Tela compartilhada (TV) ---------- */
-.board { display: grid; grid-template-columns: repeat(var(--cols), 1fr); gap: 8px; }
-.bcell { position: relative; min-height: 84px; border: 1px solid var(--line); background: var(--surf); overflow: hidden; }
-.bcell::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; opacity: .6; }
-.bcell.z1::after { background: var(--m); } .bcell.z2::after { background: var(--d); } .bcell.z3::after { background: var(--q); }
-.cn { position: absolute; top: 6px; left: 8px; font: 600 10px var(--mono); color: var(--fa); }
-.tokens { display: flex; flex-wrap: wrap; gap: 3px; justify-content: center; align-items: center; padding: 24px 4px 10px; }
+/* Tabuleiros da TV (escada, pista, torre): src/ui/tabuleiros.ts. Cores por faixa: zm = Médio, zd = Difícil, zq = QI. */
+.zm { --zc: var(--m); } .zd { --zc: var(--d); } .zq { --zc: var(--q); }
+.tab { --fs: clamp(26px, calc(min(92vw, 1760px) / var(--n, 21) * .62), 64px); display: flex; flex-direction: column; gap: 10px; width: 100%; min-height: 0; }
+.tleg { display: flex; justify-content: center; gap: 28px; font: 700 clamp(12px, 1.1vw, 20px) var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--mu); }
+.tleg span::before { content: ''; display: inline-block; width: .9em; height: .9em; margin-right: .55em; vertical-align: -1px; border-radius: 3px; background: var(--zc); }
+.tleg b { color: var(--tx); margin-left: 4px; }
+.tab .dot { width: var(--fs); height: var(--fs); font-size: calc(var(--fs) * .5); border-radius: calc(var(--fs) * .22); box-shadow: 0 3px 8px rgba(0, 0, 0, .55); }
+
+/* escada */
+.esc .degraus { flex: 1; min-height: 30vh; display: flex; align-items: flex-end; gap: 4px; padding-top: 4vh; }
+.deg { position: relative; flex: 1 1 0; min-width: 0; border: 2px solid color-mix(in srgb, var(--zc) 40%, transparent); border-bottom: 0; border-radius: 6px 6px 0 0; opacity: .42;
+  background: linear-gradient(to top, color-mix(in srgb, var(--zc) 5%, var(--surf)), color-mix(in srgb, var(--zc) 12%, var(--surf))); }
+.deg::before { content: ''; position: absolute; left: -2px; right: -2px; top: -2px; height: 10px; border-radius: 6px 6px 0 0; background: var(--zc); }
+.deg.sub { opacity: 1; border-color: var(--zc); background: linear-gradient(to top, color-mix(in srgb, var(--zc) 5%, var(--surf)), color-mix(in srgb, var(--zc) 38%, var(--surf))); }
+.deg.lid { box-shadow: 0 0 26px color-mix(in srgb, var(--zc) 45%, transparent); }
+.deg .rt { position: absolute; left: 0; right: 0; bottom: 8px; text-align: center; font: 800 clamp(11px, 1.15vw, 21px) var(--mono); color: color-mix(in srgb, var(--zc) 80%, #fff); }
+.deg.ini .rt { font-size: clamp(9px, .8vw, 14px); text-transform: uppercase; }
+.deg .fs { position: absolute; left: -4px; right: -4px; bottom: 100%; padding-bottom: 6px; display: flex; flex-direction: column-reverse; align-items: center; gap: 3px; z-index: 2; }
+.deg .tro { position: absolute; left: 50%; bottom: calc(100% + 6px); transform: translateX(-50%); font-size: clamp(36px, 4.2vw, 84px); line-height: 1; filter: drop-shadow(0 0 20px var(--q)); }
+.deg:last-child .fs { bottom: calc(100% + 1.1em + 2vw); }
+
+/* pista */
+.pis .regua { display: flex; margin: 0 0 0 calc(var(--lab, 14%) + 8px); padding-right: calc(var(--fim, 9%) + 8px); }
+.pis .regua i { flex: 1; text-align: center; font: 700 clamp(9px, .9vw, 16px) var(--mono); font-style: normal; color: color-mix(in srgb, var(--zc) 80%, #fff); border-top: 4px solid var(--zc); padding-top: 3px; }
+.pis .raias { flex: 1; min-height: 28vh; display: flex; flex-direction: column; gap: 8px; }
+.raia { flex: 1 1 0; max-height: 15vh; min-height: 0; display: flex; align-items: stretch; gap: 8px; }
+.raia .rot { width: var(--lab, 14%); display: flex; align-items: center; gap: 10px; min-width: 0; font: 700 clamp(13px, 1.4vw, 26px) var(--f); } .raia .rot span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.raia .rot .dot { width: clamp(24px, 2.6vw, 48px); height: clamp(24px, 2.6vw, 48px); font-size: clamp(12px, 1.3vw, 24px); }
+.trilha { position: relative; flex: 1; display: flex; overflow: hidden; border-radius: 12px; background: var(--surf); border: 2px solid var(--line); container-type: size; }
+.trilha > i:not(.dot) { flex: 1; border-left: 1px solid #ffffff10; background: color-mix(in srgb, var(--zc) 9%, transparent); }
+.rastro { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--cor) 38%, transparent)); }
+.trilha .ficha { position: absolute; top: 50%; width: 62cqh; height: 62cqh; font-size: 34cqh; transform: translate(-50%, -50%); border-radius: 22%; }
+.raia .chg { width: var(--fim, 9%); border-radius: 12px; background: repeating-conic-gradient(#e8edf2 0 25%, #10141a 0 50%) 0 0 / 28px 28px; display: grid; place-items: center; font-size: clamp(24px, 3vw, 56px); }
+.raia.lid .trilha { border-color: var(--m); box-shadow: 0 0 0 3px color-mix(in srgb, var(--m) 20%, transparent), 0 0 26px color-mix(in srgb, var(--m) 40%, transparent); }
+
+/* torre */
+.tor { min-height: 0; } .tor .andares { flex: 1; min-height: 0; display: flex; flex-direction: column-reverse; gap: 3px; }
+.andar { flex: 1 1 0; min-height: 0; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 6px; opacity: .5; container-type: size;
+  border: 2px solid color-mix(in srgb, var(--zc) 40%, transparent); background: color-mix(in srgb, var(--zc) 8%, var(--surf)); }
+.andar.sub { opacity: 1; background: color-mix(in srgb, var(--zc) 24%, var(--surf)); border-color: var(--zc); }
+.andar.lid { box-shadow: 0 0 0 3px color-mix(in srgb, var(--zc) 30%, transparent), 0 0 24px color-mix(in srgb, var(--zc) 40%, transparent); }
+.andar .n { width: 5.5em; font: 800 clamp(11px, 55cqh, 26px) var(--mono); color: color-mix(in srgb, var(--zc) 80%, #fff); white-space: nowrap; }
+.andar em { font: 700 clamp(10px, 40cqh, 18px) var(--mono); font-style: normal; letter-spacing: .14em; text-transform: uppercase; color: var(--zc); }
+.andar .fs { margin-left: auto; display: flex; gap: 6px; }
+.andar .dot { width: 80cqh; height: 80cqh; font-size: 42cqh; border-radius: 22%; }
+.andar.topo { flex-grow: 1.6; opacity: 1; background: color-mix(in srgb, var(--q) 26%, var(--surf)); border-color: var(--q); box-shadow: 0 0 30px color-mix(in srgb, var(--q) 45%, transparent); }
+.andar.topo .n { color: var(--tx); width: auto; }
+
+/* Cockpit do anfitrião (celular) */
+.push { margin-left: auto; }
+.ovc.cockpit { max-height: 100%; overflow-y: auto; scrollbar-width: none; text-align: left; gap: 8px; } .ovc.cockpit h3 { text-align: center; }
+.ovc.cockpit .sec { font-size: 15px; margin: 6px 0 0; }
+.cp { max-height: none; } .cp li { align-items: center; gap: 10px; } .cp li > span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.cp .cta.sm { width: auto; min-height: 40px; padding: 0 14px; flex: none; justify-content: center; }
 .tv { max-width: 1360px; margin: 0 auto; width: 100%; } .tvhead { font: 500 15px var(--mono); color: var(--mu); text-align: center; margin: 6px 0 18px; letter-spacing: .06em; } .tvhead b { color: var(--tx); letter-spacing: .14em; }
 .tvside { margin-top: 22px; } .sep { margin: 0 8px; color: var(--fa); }
-.tv .ib { display: none; }
+.tv .ib { display: none; } .tv .pista { display: none; } .tvnar { grid-column: 1 / -1; } .tv .somtv { min-height: 38px; width: auto; max-width: 440px; margin: 0 auto; font-size: 14px; } .tvnar small { display: block; text-align: center; }
+.tv-larga { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; max-width: none; } .tv-larga .tvhead { margin: 0 0 6px; } .tv-larga .tab { flex: 1; min-height: 0; } .tv-larga .tvside { margin: 8px 0 0; flex: none; }
+.tv-larga .tvside .qleft { display: grid; grid-template-columns: minmax(260px, 28%) 1fr; column-gap: 40px; align-items: center; } .tv-larga .qleft > .bar, .tv-larga .qleft > .meta { grid-column: 1; } .tv-larga .qleft > h2.q { grid-column: 2; grid-row: 1 / 3; } .tv-larga .qleft .pista { display: none; }
 
 /* ---------- Tamanhos ---------- */
 @media (min-width: 700px) and (min-height: 700px) { /* iPad */
   .vista { max-width: 640px; } .opts > .opt { max-height: 100px; } :root { --q-fs: 24px; --o-fs: 19px; } .opt { min-height: 62px; } .cta { min-height: 68px; }
 }
 @media (min-width: 900px) {
-  .vista:has(.tv) { max-width: 1380px; padding: 24px 40px; }
-  .tv { display: grid; grid-template-columns: 1.25fr 1fr; gap: 48px; } .tvhead { grid-column: 1 / 3; font-size: 18px; } .tvside { margin: 0; }
-  .bcell { min-height: 128px; } .tv h2.q { font-size: 28px; } .tv .ot { font-size: 19px; } .dot.big { width: 40px; height: 40px; font-size: 17px; }
+  .vista:has(.tv) { max-width: 1380px; padding: 24px 40px; } .vista:has(.tv-larga) { max-width: 1900px; padding: 14px 36px; }
+  .tv:not(.tv-larga) { display: grid; grid-template-columns: 1.25fr 1fr; grid-template-rows: auto auto minmax(0, 1fr); gap: 12px 48px; height: 100%; } .tv:not(.tv-larga) .tvside { align-self: start; } .tvhead { grid-column: 1 / 3; font-size: 18px; } .tvside { margin: 0; }
+  .tv h2.q { font-size: clamp(24px, 2.2vw, 40px); } .tv .ot { font-size: 19px; } .dot.big { width: 40px; height: 40px; font-size: 17px; }
 }
 /* iPhone deitado: pergunta à esquerda, alternativas à direita (sem rolagem) */
 .col-a, .col-b { display: contents; }
@@ -273,3 +323,13 @@ h2.q { margin: 0; font-size: var(--q-fs); line-height: 1.28; font-weight: 650; b
 /* Mestre de cerimônias (tela da TV): botão para ligar o som e legenda do que está sendo falado */
 .somtv { margin: 6px auto; max-width: 420px; } .somtv.on { color: var(--g, #34d399); }
 .tvnar { text-align: center; margin: -8px 0 14px; grid-column: 1 / -1; } .tvnar small { display: block; color: var(--mu); font-size: 15px; margin-top: 4px; }
+
+/* TV larga (escada/pista): as telas de rodada/resultado ficam compactas embaixo do tabuleiro */
+.tvnar { margin-top: 6px; }
+.tv-larga .tvside .prep { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 36px; } .tv-larga .prep .bar { display: none; }
+.tv-larga .prep .rev { display: flex; align-items: center; gap: 24px; } .tv-larga .prep .catgr { font-size: clamp(24px, 2.6vw, 48px); margin: 0; }
+.tv-larga .tvside .revela, .tv-larga .tvside .fimsala { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 40px; align-items: start; } .tv-larga .revela .bar, .tv-larga .fimsala .dica, .tv-larga .fimsala .pista { display: none; }
+.tv-larga .revela .next { grid-column: 1 / -1; } .tv-larga .revela .moves li, .tv-larga .fimsala .moves li { padding: 4px; }
+.tv-larga .fimsala .lbl, .tv-larga .fimsala .winner { grid-column: 1; } .tv-larga .fimsala .moves { grid-column: 2; grid-row: 1 / 5; }
+.cp .cta span { flex: none; }
+.tv-larga .prep .rev { flex-direction: row; flex: none; } .tv-larga .prep .tm { margin: 0; }

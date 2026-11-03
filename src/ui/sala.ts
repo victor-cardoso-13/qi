@@ -18,8 +18,10 @@ import { usuarioAtual } from '../nuvem/sincronia.ts';
 import { duracaoEstimada, esperaMaxima, partesPergunta, textoCerta } from '../motor/narracao.ts';
 import { aoMudar, boasVindas, desligarNarrador, legendaAtual, ligarNarrador, narradorFalando, narradorLigado } from './narrador.ts';
 import { qrSvg } from './qr.ts';
+import { ESTILOS, estiloLargo, estiloValido, tabuleiroHTML as desenharTabuleiro, type Estilo } from './tabuleiros.ts';
 
 const CORES = ['#ff6b81', '#ffa94d', '#ffd43b', '#69db7c', '#38d9a9', '#4dabf7', '#748ffc', '#da77f2', '#f783ac', '#a9b4c2'];
+const ENGRENAGEM = '<svg class="ic" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8"/></svg>';
 const SAIR_ICONE = '<svg class="ic" viewBox="0 0 24 24" width="18" height="18"><path d="M10 5H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4M14 8l4 4-4 4M18 12H9"/></svg>';
 
 interface Jogador { name: string; j: number; color: string; pos: number; wins: number; h5: boolean; tt: number }
@@ -30,6 +32,7 @@ interface Sala {
   host?: string; tv?: boolean; status: 'lobby' | 'playing' | 'finished'; game: number; win?: number; created?: number;
   players?: Record<string, Jogador>; in?: Record<string, Entrada>; res?: Record<string, Resultado>;
   cur?: Rodada; used?: Record<string, boolean>; voz?: number; winners?: string; exhausted?: boolean;
+  vista?: Estilo; fora?: Record<string, boolean>; parou?: boolean; // estilo do tabuleiro da TV · quem o anfitrião tirou · jogo encerrado pelo anfitrião
 }
 type J = Jogador & { id: string };
 
@@ -39,6 +42,7 @@ let S: Sala | null = null;
 let code = (params.get('tv') || params.get('sala') || '').toUpperCase(); // `?tv` sem código = TV que ainda vai abrir a sala
 let unsub: (() => void) | null = null;
 let confirmando = false;
+let cockpit = false, confirmaTirar = '', confirmaEncerrar = false, estavaDentro = false;
 let busy = false, handled = '', contadaKey = '';
 const idStore = local ? sessionStorage : localStorage;
 let pid = params.get('as') || idStore.getItem('qi.pid') || '';
@@ -49,6 +53,7 @@ export const emSala = () => !!code;
 const players = (): J[] => Object.entries(S?.players || {}).map(([id, p]) => ({ id, ...p })).sort((a, b) => a.j - b.j);
 const me = () => S?.players?.[pid];
 const isHost = () => S?.host === pid;
+const estilo = (): Estilo => estiloValido(S?.vista);
 const cur = () => S?.cur;
 const casas = () => S?.win || TAMANHO_PADRAO;
 const minhaEntrada = () => (S?.in?.[pid]?.n === cur()?.n ? S!.in![pid] : null);
@@ -66,6 +71,8 @@ function observar() {
   unsub = db.on(room(), (v: Sala | null) => {
     S = v;
     if (!v) { ui.msg = 'Sala encerrada.'; sairLocal(); return; }
+    if (v.players?.[pid]) estavaDentro = true;
+    else if (estavaDentro && !isTV && v.fora?.[pid]) { ui.msg = 'O anfitrião retirou você da sala.'; sairLocal(); return; }
     if (isTV) aoMudar({ status: v.status, game: v.game || 1, exhausted: v.exhausted, cur: v.cur, acertou: Object.values(v.res || {}).some((r) => r.ok) }, { lido: marcarLido });
     ui.desenhar();
   });
@@ -87,14 +94,16 @@ async function alternarSom() {
 const somHTML = () => (isTV ? `<button class="cta sm somtv ${narradorLigado() ? 'on' : ''}" data-act="som">${narradorLigado() ? '🎙️ Narrador ligado (tocar desliga)' : '🔇 Tocar para ligar o narrador'}</button>` : '');
 
 function sairLocal() {
-  unsub?.(); unsub = null; S = null; code = ''; confirmando = false; handled = '';
+  unsub?.(); unsub = null; S = null; code = ''; confirmando = false; handled = ''; cockpit = false; confirmaTirar = ''; confirmaEncerrar = false; estavaDentro = false;
   history.replaceState(null, '', location.pathname + (isTV ? '?tv' : ''));
   ui.ir(isTV ? 'sala' : 'inicio');
 }
 
-async function entrar(nome: string) {
+/** Devolve false se o anfitrião já tirou esta pessoa da sala. */
+async function entrar(nome: string): Promise<boolean> {
+  if (await db.get(room(`fora/${pid}`))) return false;
   const ex = await db.get(room(`players/${pid}`));
-  if (ex) { await db.update(room(`players/${pid}`), { name: nome }); return; }
+  if (ex) { await db.update(room(`players/${pid}`), { name: nome }); return true; }
   const ps = Object.values((await db.get(room('players'))) || {}) as Jogador[];
   const j = ps.reduce((m, p) => Math.max(m, p.j), -1) + 1;
   const emAndamento = (await db.get(room('status'))) === 'playing';
@@ -102,6 +111,7 @@ async function entrar(nome: string) {
   await db.set(room(`players/${pid}`), { name: nome, j, color: CORES[j % CORES.length], pos, wins: 0, h5: false, tt: ps.length && emAndamento ? Math.max(...ps.map((p) => p.tt || 0)) : 0 });
   const r = (await db.get(room())) as Sala | null;
   if (r?.tv && !r.host) await db.update(room(), { host: pid }); // sala aberta pela TV: o 1º a entrar é o anfitrião
+  return true;
 }
 
 export async function criarSala(nome: string) {
@@ -130,7 +140,7 @@ export async function entrarNaSala(c: string, nome: string) {
   if (!r) { ui.msg = 'Sala não encontrada.'; ui.desenhar(); return; }
   if (!r.players?.[pid] && Object.keys(r.players || {}).length >= MAX_JOGADORES) { ui.msg = `Sala cheia (máx. ${MAX_JOGADORES}).`; ui.desenhar(); return; }
   code = c;
-  await entrar(nome);
+  if (!(await entrar(nome))) { code = ''; ui.msg = 'O anfitrião não deixou você entrar nesta sala.'; ui.desenhar(); return; }
   observar(); ui.ir('sala');
 }
 
@@ -205,7 +215,7 @@ async function depoisDaRevelacao() {
 }
 
 async function novaPartida() {
-  const upd: Record<string, unknown> = { status: 'playing', game: (S!.game || 1) + 1, winners: null, in: null, res: null, exhausted: null, cur: { n: S!.cur?.n || 0, cat: S!.cur?.cat || '' } };
+  const upd: Record<string, unknown> = { status: 'playing', game: (S!.game || 1) + 1, winners: null, in: null, res: null, exhausted: null, parou: null, cur: { n: S!.cur?.n || 0, cat: S!.cur?.cat || '' } };
   players().forEach((p) => { upd[`players/${p.id}/pos`] = 0; upd[`players/${p.id}/h5`] = false; upd[`players/${p.id}/tt`] = 0; });
   await db.update(room(), upd);
   await new Promise((r) => setTimeout(r, 50));
@@ -232,12 +242,26 @@ async function passoDoAnfitriao() {
 }
 setInterval(() => { if (code && db) void passoDoAnfitriao(); }, 300);
 
+/** Moderação (só o anfitrião vê os botões): tira a pessoa e a impede de voltar a esta sala. */
+async function tirarJogador(id: string) {
+  if (!isHost() || !id || id === pid || !S?.players?.[id]) return;
+  await db.update(room(), { [`players/${id}`]: null, [`in/${id}`]: null, [`res/${id}`]: null, [`fora/${id}`]: true });
+}
+
+/** Encerra a partida na hora: quem está na frente aparece, mas ninguém ganha vitória no recorde. */
+async function encerrarJogo() {
+  if (!isHost() || S?.status !== 'playing') return;
+  const ordem = classificar(players().map((p) => ({ ...p, tt: p.tt || 0 })));
+  const topo = ordem.filter((p) => p.pos === ordem[0].pos && p.tt === ordem[0].tt);
+  await db.update(room(), { status: 'finished', parou: true, winners: topo.map((p) => p.id).join(',') });
+}
+
 // ---------- ações da pessoa ----------
 const gravarEntrada = (patch: Partial<Entrada>) => db.set(room(`in/${pid}`), { ...(minhaEntrada() || {}), ...patch, n: cur()!.n });
 
 export async function acaoSala(act: string, el: HTMLElement): Promise<boolean> {
   if (act === 'copiar') { const i = document.querySelector<HTMLInputElement>('.linkrow input')!; i.select(); navigator.clipboard?.writeText(i.value).catch(() => {}); el.textContent = 'Copiado!'; }
-  else if (act === 'entrar-aqui') { const n = nomeAtual(); if (!n) { ui.msg = 'Digite seu nome.'; ui.desenhar(); } else { atualizar((d) => { d.nome = n; }); ui.msg = ''; await entrar(n); } }
+  else if (act === 'entrar-aqui') { const n = nomeAtual(); if (!n) { ui.msg = 'Digite seu nome.'; ui.desenhar(); } else { atualizar((d) => { d.nome = n; }); ui.msg = ''; if (!(await entrar(n))) { ui.msg = 'O anfitrião não deixou você entrar nesta sala.'; sairLocal(); } } }
   else if (act === 'som') await alternarSom();
   else if (act === 'tv-abrir') {
     ui.msg = '';
@@ -252,6 +276,15 @@ export async function acaoSala(act: string, el: HTMLElement): Promise<boolean> {
   else if (act === 'ans') { if (minhaEntrada()?.choice === undefined) await gravarEntrada({ choice: Number(el.dataset.i), t: db.now() }); }
   else if (act === 'eliminar') await gravarEntrada({ h5: true });
   else if (act === 'nova') await novaPartida();
+  else if (act === 'cockpit') { if (isHost()) { cockpit = true; ui.desenhar(); } }
+  else if (act === 'cockpit-fechar') { cockpit = false; confirmaTirar = ''; confirmaEncerrar = false; ui.desenhar(); }
+  else if (act === 'estilo') { if (isHost()) await db.update(room(), { vista: estiloValido(el.dataset.v) }); }
+  else if (act === 'tirar') { confirmaTirar = el.dataset.id || ''; confirmaEncerrar = false; ui.desenhar(); }
+  else if (act === 'tirar-nao') { confirmaTirar = ''; ui.desenhar(); }
+  else if (act === 'tirar-sim') { const id = confirmaTirar; confirmaTirar = ''; ui.desenhar(); await tirarJogador(id); }
+  else if (act === 'encerrar') { confirmaEncerrar = true; confirmaTirar = ''; ui.desenhar(); }
+  else if (act === 'encerrar-nao') { confirmaEncerrar = false; ui.desenhar(); }
+  else if (act === 'encerrar-sim') { confirmaEncerrar = false; cockpit = false; ui.desenhar(); await encerrarJogo(); }
   else if (act === 'sair') { confirmando = true; ui.desenhar(); }
   else if (act === 'ficar') { confirmando = false; ui.desenhar(); }
   else if (act === 'sair-sim') await sairDaSala();
@@ -265,8 +298,31 @@ const respondidos = () => players().filter((p) => S!.in?.[p.id]?.n === cur()!.n 
 const seg = (ms: number) => (ms / 1000).toFixed(1).replace('.', ',') + ' s';
 
 function barra(centro: string) {
-  return `<div class="bar"><button class="ib" data-act="sair" aria-label="Sair da sala">${SAIR_ICONE}</button><div class="streak"><small>Sala ${code}</small><b>${centro}</b></div></div>`;
+  return `<div class="bar"><button class="ib" data-act="sair" aria-label="Sair da sala">${SAIR_ICONE}</button><div class="streak"><small>Sala ${code}</small><b>${centro}</b></div>${botaoCockpit()}</div>`;
 }
+
+const botaoCockpit = () => (isHost() && !isTV ? `<button class="ib push" data-act="cockpit" aria-label="Cockpit do anfitrião">${ENGRENAGEM}</button>` : '');
+
+function cockpitHTML() {
+  if (!cockpit || !isHost() || isTV) return '';
+  const ps = players(), jogando = S!.status === 'playing';
+  if (confirmaEncerrar) return `<div class="ov"><div class="ovc"><h3>Encerrar o jogo?</h3><p>A partida acaba agora e ninguém ganha vitória.</p><button class="cta big" data-act="encerrar-nao"><span>Continuar jogando</span></button><button class="cta" data-act="encerrar-sim"><span>Encerrar agora</span></button></div></div>`;
+  const alvo = ps.find((p) => p.id === confirmaTirar);
+  const lista = ps.map((p) => {
+    const ehEu = p.id === pid;
+    const acao = ehEu ? '<small>anfitrião</small>' : alvo?.id === p.id
+      ? `<button class="cta sm go" data-act="tirar-sim"><span>Tirar</span></button><button class="cta sm go" data-act="tirar-nao"><span>Não</span></button>`
+      : `<button class="cta sm go" data-act="tirar" data-id="${esc(p.id)}"><span>Tirar</span></button>`;
+    return `<li>${fichaHTML(p.color, p.name)}<span>${esc(p.name)}</span>${acao}</li>`;
+  }).join('');
+  return `<div class="ov"><div class="ovc cockpit"><h3>Cockpit</h3>
+  <div class="tamanho"><small>Tabuleiro da TV</small><div>${ESTILOS.map((e) => `<button class="${estilo() === e.id ? 'on' : ''}" data-act="estilo" data-v="${e.id}"><b>${e.nome}</b>${e.dica}</button>`).join('')}</div></div>
+  <h3 class="sec">Jogadores <span>${ps.length}/${MAX_JOGADORES}</span></h3>
+  <ul class="moves cp">${lista}</ul>
+  ${jogando ? '<button class="cta" data-act="encerrar"><span>Encerrar o jogo</span></button>' : ''}
+  <button class="cta big" data-act="cockpit-fechar"><span>Fechar</span></button></div></div>`;
+}
+const overlays = () => confirmarSair() + cockpitHTML();
 
 function confirmarSair() {
   return confirmando ? `<div class="ov"><div class="ovc"><h3>Sair da sala?</h3><p>${isHost() && players().length > 1 ? 'Outra pessoa vira o anfitrião.' : 'Você pode voltar com o código da sala.'}</p><button class="cta big" data-act="ficar"><span>Ficar na sala</span></button><button class="cta" data-act="sair-sim"><span>Sair da sala</span></button></div></div>` : '';
@@ -297,7 +353,7 @@ function perguntaHTML() {
   return `<main class="qscr"><div class="qleft">${barra(`${respondidos()}/${players().length}`)}
   ${pistaHTML(casas(), pinos())}
   <div class="meta">${cronometroHTML()}<div class="mi"><span class="tier t-${c.tier}">● ${NIVEL_NOME[c.tier!]}</span><span class="cat">${esc(CATEGORIAS[c.cat!])}</span></div></div>
-  <h2 class="q">${esc(b.q.pergunta)}</h2></div><div class="opts">${isTV ? '' : b.opts}</div>${ajuda}${confirmarSair()}</main>`;
+  <h2 class="q">${esc(b.q.pergunta)}</h2></div><div class="opts">${isTV ? '' : b.opts}</div>${ajuda}${overlays()}</main>`;
 }
 
 function revelaHTML() {
@@ -313,21 +369,21 @@ function revelaHTML() {
   const errada = r && !r.ok && r.ch >= 0 ? `<div class="ans"><small>Você marcou</small>${cartao(r.ch, 'wrong')}</div>` : '';
   return `<main class="revela">${barra(`${respondidos()}/${players().length}`)}${pistaHTML(casas(), pinos())}${isTV ? '' : veredito}
   <div class="ans"><small>Resposta certa</small>${cartao(c.ans!, 'right')}</div>${isTV ? '' : errada}${lista}
-  <div class="next"><small>Próxima pergunta já já</small><i id="nx"></i></div>${confirmarSair()}</main>`;
+  <div class="next"><small>Próxima pergunta já já</small><i id="nx"></i></div>${overlays()}</main>`;
 }
 
 function prepHTML() {
   const c = cur()!;
   return `<main class="prep">${barra(`${c.n}`)}${pistaHTML(casas(), pinos())}
   <div class="rev"><div class="lbl c">Rodada ${c.n}</div><div class="catgr">${esc(CATEGORIAS[c.cat!])}</div><span class="tier t-${c.tier}">● ${NIVEL_NOME[c.tier!]}</span></div>
-  ${c.leitura && !isTV ? '<p class="dica">🎙️ O narrador está lendo a pergunta…</p>' : c.leitura ? '' : cronometroHTML()}${isTV && c.leitura ? `<h2 class="q">${esc(PERGUNTAS.get(c.qid!)?.pergunta ?? '')}</h2>` : ''}${confirmarSair()}</main>`;
+  ${c.leitura && !isTV ? '<p class="dica">🎙️ O narrador está lendo a pergunta…</p>' : c.leitura ? '' : cronometroHTML()}${isTV && c.leitura ? `<h2 class="q">${esc(PERGUNTAS.get(c.qid!)?.pergunta ?? '')}</h2>` : ''}${overlays()}</main>`;
 }
 
 function lobbyHTML() {
   const ps = players(), link = `${location.origin}${location.pathname}?sala=${code}`;
   const dentro = !!me();
   const tam = isHost() ? `<div class="tamanho"><small>Tamanho da partida</small><div>${Object.entries(TAMANHOS).map(([nome, n]) => `<button class="${casas() === n ? 'on' : ''}" data-act="tamanho" data-v="${n}"><b>${n}</b>${nome}</button>`).join('')}</div></div>` : `<p class="dica">Partida de <b>${casas()}</b> casas</p>`;
-  return `<main class="lobby"><div class="bar"><button class="ib" data-act="sair" aria-label="Sair da sala">${SAIR_ICONE}</button><div class="streak"><small>Código da sala</small><b class="cod">${code}</b></div></div>
+  return `<main class="lobby"><div class="bar"><button class="ib" data-act="sair" aria-label="Sair da sala">${SAIR_ICONE}</button><div class="streak"><small>Código da sala</small><b class="cod">${code}</b></div>${botaoCockpit()}</div>
   ${ui.msg ? `<p class="err">${esc(ui.msg)}</p>` : ''}
   ${somHTML()}${isTV && narradorLigado() ? `<p class="dica">${esc(legendaAtual())}</p>` : ''}
   ${isTV ? qrSvg(link) : ''}
@@ -339,7 +395,7 @@ function lobbyHTML() {
   ${!isTV && dentro && !isHost() ? '<p class="dica">Aguardando o anfitrião iniciar…</p>' : ''}
   ${!isTV && !dentro ? `<label class="lbl" for="nome">Seu nome</label><input id="nome" maxlength="14" placeholder="Como quer ser chamado?" value="${esc(nomeAtual())}"><button class="cta big" data-act="entrar-aqui"><span>Entrar na sala</span></button>` : ''}
   ${isTV && !ps.length ? '<p class="dica">Esperando o 1º jogador… quem entrar primeiro vira o anfitrião e inicia pelo celular.</p>' : ''}
-  ${!isTV && dentro && isHost() && !S!.tv ? `<a class="cta" href="?tv=${code}" target="_blank"><span>Abrir tabuleiro em outra tela</span></a>` : ''}${confirmarSair()}</main>`;
+  ${!isTV && dentro && isHost() && !S!.tv ? `<a class="cta" href="?tv=${code}" target="_blank"><span>Abrir tabuleiro em outra tela</span></a>` : ''}${overlays()}</main>`;
 }
 
 function fimHTML() {
@@ -347,22 +403,18 @@ function fimHTML() {
   const venc = ids.map((id) => S!.players![id]).filter(Boolean);
   const ordem = classificar(ps.map((p) => ({ ...p, tt: p.tt || 0 })));
   const desempate = !S!.exhausted && ordem.filter((p) => p.pos >= casas()).length > 1 && ids.length === 1 ? '<p class="dica">Chegaram juntos: venceu quem somou menos tempo de resposta.</p>' : '';
-  return `<main class="fimsala"><div class="lbl c">${venc.length > 1 ? 'Empate' : 'Vencedor'}</div><h2 class="winner">${venc.map((x) => esc(x.name)).join(' e ')}</h2>
+  const parou = !!S!.parou, nada = parou && !ordem.some((p) => p.pos > 0);
+  return `<main class="fimsala"><div class="lbl c">${parou ? 'Jogo encerrado' : venc.length > 1 ? 'Empate' : 'Vencedor'}</div><h2 class="winner">${parou && nada ? '—' : venc.map((x) => esc(x.name)).join(' e ')}</h2>
+  ${parou ? `<p class="dica">${nada ? 'O anfitrião encerrou o jogo.' : 'O anfitrião encerrou o jogo. Quem estava na frente aparece acima.'}</p>` : ''}
   ${S!.exhausted ? '<p class="dica">As perguntas desta sala acabaram. Para jogar mais, crie uma sala nova.</p>' : ''}${desempate}
   ${pistaHTML(casas(), pinos(), false)}
   <ul class="moves rank">${ordem.map((p, i) => `<li><b class="pl">${i + 1}º</b>${fichaHTML(p.color, p.name)}<span>${esc(p.name)}${p.id === pid ? ' <em>você</em>' : ''}</span><small>${tempoTexto(p.tt)}</small><b>${p.pos}/${casas()}</b></li>`).join('')}</ul>
   <p class="dica peq">A coluna do meio é a soma dos tempos de resposta (desempate).</p>
   ${!isTV && isHost() && !S!.exhausted ? '<button class="cta big" data-act="nova"><span>Nova partida</span></button>' : (!isTV ? '<p class="dica">Aguardando o anfitrião iniciar outra partida…</p>' : '')}
-  ${!isTV ? '<button class="cta" data-act="sair"><span>Sair da sala</span></button>' : ''}${confirmarSair()}</main>`;
+  ${!isTV && isHost() ? '<button class="cta" data-act="cockpit"><span>Cockpit</span></button>' : ''}${!isTV ? '<button class="cta" data-act="sair"><span>Sair da sala</span></button>' : ''}${overlays()}</main>`;
 }
 
-function tabuleiroHTML() {
-  const ps = players(), n = casas() + 1, ordem: number[] = [];
-  const linhas = Math.ceil(n / 7);
-  for (let r = 0; r < linhas; r++) { const row = [0, 1, 2, 3, 4, 5, 6].map((k) => r * 7 + k).filter((i) => i < n); if (r % 2) row.reverse(); ordem.push(...row); }
-  const zona = (i: number) => (i / casas() <= 0.325 ? 'z1' : i / casas() <= 0.675 ? 'z2' : 'z3');
-  return `<div class="board" style="--cols:7">${ordem.map((i) => `<div class="bcell ${zona(i)}"><span class="cn">${i === 0 ? 'início' : i === casas() ? 'chegada' : i}</span><div class="tokens">${ps.filter((p) => Math.min(p.pos, casas()) === i).map((p) => fichaHTML(p.color, p.name, 'big')).join('')}</div></div>`).join('')}</div>`;
-}
+const tabuleiroHTML = () => desenharTabuleiro(estilo(), players(), casas());
 
 function tvHTML() {
   const c = cur();
@@ -371,7 +423,7 @@ function tvHTML() {
   else if (c?.phase === 'prep') lado = prepHTML();
   else if (c?.phase === 'question') lado = perguntaHTML();
   else if (c?.phase === 'reveal') lado = revelaHTML();
-  return `<div class="tv"><div class="tvhead">Sala <b>${code}</b><span class="sep">·</span>Partida ${S!.game || 1}</div><div class="tvnar">${somHTML()}${narradorLigado() ? `<small>${narradorFalando() ? '🎙️ ' : ''}${esc(legendaAtual())}</small>` : ''}</div>${tabuleiroHTML()}<div class="tvside">${lado}</div></div>`;
+  return `<div class="tv${estiloLargo(estilo()) ? ' tv-larga' : ''}"><div class="tvhead">Sala <b>${code}</b><span class="sep">·</span>Partida ${S!.game || 1}</div><div class="tvnar">${somHTML()}${narradorLigado() ? `<small>${narradorFalando() ? '🎙️ ' : ''}${esc(legendaAtual())}</small>` : ''}</div>${tabuleiroHTML()}<div class="tvside">${lado}</div></div>`;
 }
 
 function tvInicioHTML() {
@@ -395,7 +447,7 @@ export function salaHTML(): string {
 
 /** Minha vitória entra uma vez só no recorde da conta (por sala e partida). */
 function contarVitoria() {
-  if (isTV || S?.status !== 'finished') return;
+  if (isTV || S?.status !== 'finished' || S.parou) return;
   const chave = `${code}:${S.game}`;
   if (contadaKey === chave) return;
   contadaKey = chave;
