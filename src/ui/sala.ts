@@ -357,11 +357,23 @@ function fimHTML() {
 }
 
 function tabuleiroHTML() {
-  const ps = players(), n = casas() + 1, ordem: number[] = [];
-  const linhas = Math.ceil(n / 7);
-  for (let r = 0; r < linhas; r++) { const row = [0, 1, 2, 3, 4, 5, 6].map((k) => r * 7 + k).filter((i) => i < n); if (r % 2) row.reverse(); ordem.push(...row); }
-  const zona = (i: number) => (i / casas() <= 0.325 ? 'z1' : i / casas() <= 0.675 ? 'z2' : 'z3');
-  return `<div class="board" style="--cols:7">${ordem.map((i) => `<div class="bcell ${zona(i)}"><span class="cn">${i === 0 ? 'início' : i === casas() ? 'chegada' : i}</span><div class="tokens">${ps.filter((p) => Math.min(p.pos, casas()) === i).map((p) => fichaHTML(p.color, p.name, 'big')).join('')}</div></div>`).join('')}</div>`;
+  // Caminho em "cobrinha": linha 1 da esquerda p/ direita, linha 2 volta, e assim por diante.
+  const ps = players(), total = casas(), n = total + 1, COLS = 7;
+  const lugar = (i: number) => { const r = Math.floor(i / COLS), k = i % COLS; return { r, c: r % 2 ? COLS - 1 - k : k }; };
+  const zona = (i: number) => (i / total <= 0.325 ? 'z1' : i / total <= 0.675 ? 'z2' : 'z3');
+  const faixa = (z: string) => { const xs = Array.from({ length: total }, (_, k) => k + 1).filter((i) => zona(i) === z); return xs.length ? `${xs[0]}–${xs[xs.length - 1]}` : ''; };
+  const lider = Math.max(0, ...ps.map((p) => Math.min(p.pos, total)));
+  const casasHTML = Array.from({ length: n }, (_, i) => {
+    const { r, c } = lugar(i), prox = i < total ? lugar(i + 1) : null;
+    const liga = !prox ? '' : prox.r > r ? ' ld' : prox.c > c ? ' lr' : ' ll';
+    const aqui = ps.filter((p) => Math.min(p.pos, total) === i);
+    const tam = aqui.length > 4 ? 'p' : aqui.length > 2 ? 'm' : 'g';
+    const rot = i === 0 ? '<span class="cn txt">Início</span>' : i === total ? '<span class="cn txt">🏁 Chegada</span>' : `<span class="cn">${i}</span>`;
+    const cls = `casa ${zona(i)}${liga}${i === 0 ? ' ini' : ''}${i === total ? ' fim' : ''}${aqui.length && i === lider && i > 0 ? ' lider' : ''}`;
+    return `<div class="${cls}" style="grid-row:${r + 1};grid-column:${c + 1}">${rot}<div class="fichas ${tam}">${aqui.map((p) => fichaHTML(p.color, p.name)).join('')}</div></div>`;
+  }).join('');
+  const legenda = `<div class="tleg"><span class="z1">Médio <b>${faixa('z1')}</b></span><span class="z2">Difícil <b>${faixa('z2')}</b></span><span class="z3">QI <b>${faixa('z3')}</b></span></div>`;
+  return `<section class="tab">${legenda}<div class="board" style="--cols:${COLS}">${casasHTML}</div></section>`;
 }
 
 function tvHTML() {
