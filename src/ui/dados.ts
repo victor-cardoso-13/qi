@@ -9,7 +9,7 @@ export interface Dados {
   recorde: { n: number; data: string } | null;
   /** Vitórias em salas. */
   vitorias: number;
-  /** Ids de perguntas já vistas no solo (para preferir as novas). */
+  /** Ids de perguntas já vistas (solo e salas), a mais antiga primeiro, para preferir as novas. */
   vistas: number[];
 }
 
@@ -48,6 +48,15 @@ export function mesclar(a: Dados, b: Partial<Dados> | null): Dados {
     vitorias: Math.max(a.vitorias, o.vitorias),
     vistas: [...new Set([...a.vistas, ...o.vistas])],
   };
+}
+
+/** Marca a pergunta como vista agora: vai para o fim da fila (a mais recente). */
+export function marcarVista(id: number) {
+  const d = ler();
+  if (d.vistas[d.vistas.length - 1] === id) return;
+  d.vistas = d.vistas.filter((v) => v !== id);
+  d.vistas.push(id);
+  gravar(d);
 }
 
 export const hoje = () => new Date().toLocaleDateString('sv-SE'); // AAAA-MM-DD no fuso do aparelho

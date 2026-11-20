@@ -4,7 +4,7 @@
  */
 import { ajudaGanha, eliminar2, embaralhar, perguntaSolo, type Pergunta } from '../motor/motor.ts';
 import { NIVEL_NOME, CATEGORIAS, SOLO_AJUDAS_INICIAIS, TEMPO } from '../motor/regras.ts';
-import { atualizar, dataBonita, hoje, ler } from './dados.ts';
+import { atualizar, dataBonita, hoje, ler, marcarVista } from './dados.ts';
 import {
   ICONE_PAUSA, LETRAS, PERGUNTAS, VELOCIDADE, atualizarCronometro, cronometroHTML, esc, params, pistaHTML, tempoTexto, ui,
 } from './comum.ts';
@@ -36,12 +36,12 @@ export function iniciarSolo() {
 
 function novaPergunta(forcada?: number) {
   const c = C!;
-  const q = (forcada && PERGUNTAS.get(forcada)) || perguntaSolo([...PERGUNTAS.values()], c.seq, c.usadas, new Set(ler().vistas), c.ultimaCat);
+  const q = (forcada && PERGUNTAS.get(forcada)) || perguntaSolo([...PERGUNTAS.values()], c.seq, c.usadas, ler().vistas, c.ultimaCat);
   if (!q) return fim('desistiu'); // acabaram todas as perguntas: encerra com o que fez
   c.q = q; c.usadas.add(q.id); c.ultimaCat = q.cat;
   c.ordem = embaralhar(5); c.fora = []; c.elimNestaPergunta = false; c.escolha = null; c.fase = 'pergunta'; c.pausado = false;
   c.limite = (TEMPO[q.nivel] * 1000) / VELOCIDADE; c.restante = c.limite; c.fimEm = agora() + c.limite;
-  atualizar((d) => { if (!d.vistas.includes(q.id)) d.vistas.push(q.id); });
+  marcarVista(q.id);
   ui.desenhar();
 }
 

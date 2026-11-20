@@ -10,7 +10,7 @@ import {
   CATEGORIAS, MAX_JOGADORES, NIVEL_NOME, PREP_MS, REVELA_MS, TAMANHOS, TAMANHO_PADRAO, TEMPO, type Nivel,
 } from '../motor/regras.ts';
 import { abrirSalas, local, type Db } from '../nuvem/salas-db.ts';
-import { atualizar, ler } from './dados.ts';
+import { atualizar, ler, marcarVista } from './dados.ts';
 import {
   LETRAS, PERGUNTAS, VELOCIDADE, carregarPerguntas, atualizarCronometro, cronometroHTML, esc, fichaHTML, params, pistaHTML, tempoTexto, ui,
 } from './comum.ts';
@@ -73,6 +73,7 @@ function observar() {
     if (!v) { ui.msg = 'Sala encerrada.'; sairLocal(); return; }
     if (v.players?.[pid]) estavaDentro = true;
     else if (estavaDentro && !isTV && v.fora?.[pid]) { ui.msg = 'O anfitrião retirou você da sala.'; sairLocal(); return; }
+    if (!isTV && v.cur?.qid && v.players?.[pid]) marcarVista(v.cur.qid); // a próxima sala/solo evita esta pergunta
     if (isTV) aoMudar({ status: v.status, game: v.game || 1, exhausted: v.exhausted, cur: v.cur, acertou: Object.values(v.res || {}).some((r) => r.ok) }, { lido: marcarLido });
     ui.desenhar();
   });
@@ -170,7 +171,7 @@ async function sairDaSala() {
 function comecarRodada() {
   const ps = players();
   const ref = posicaoRef(ps.map((p) => p.pos));
-  const q = proximaPergunta([...PERGUNTAS.values()], S!.used || {}, ref, casas(), S!.cur?.cat);
+  const q = proximaPergunta([...PERGUNTAS.values()], S!.used || {}, ref, casas(), S!.cur?.cat, ler().vistas);
   if (!q) { // acabaram as perguntas do banco: nunca repete, então encerra com quem está na frente
     const ordem = classificar(ps.map((p) => ({ ...p, tt: p.tt || 0 })));
     const topo = ordem.filter((p) => p.pos === ordem[0].pos && p.tt === ordem[0].tt);

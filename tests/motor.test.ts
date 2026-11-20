@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
-  ajudaGanha, aplicarResultado, chancesNivel, classificar, eliminar2, embaralhar, nivelSolo, perguntaSolo,
+  ajudaGanha, aplicarResultado, chancesNivel, classificar, eliminar2, embaralhar, nivelSolo, perguntaSolo, preferirNovas,
   proximaPergunta, tempoGasto, vencedores, type Pergunta,
 } from '../src/motor/motor.ts';
 import { NIVEIS, type Nivel } from '../src/motor/regras.ts';
@@ -97,6 +97,16 @@ describe('sala: sorteio de perguntas', () => {
     }
     expect(proximaPergunta(BANCO, usadas, 5, 16)).toBeNull();
   });
+  it('sala nova evita perguntas que o anfitrião já viu em salas anteriores', () => {
+    const vistas = BANCO.filter((_, i) => i % 2 === 0).map((q) => q.id); // viu metade do banco
+    const visto = new Set(vistas);
+    const usadas: Record<string, boolean> = {};
+    for (let i = 0; i < 40; i++) {
+      const q = proximaPergunta(BANCO, usadas, (i / 40) * 16, 16, undefined, vistas)!;
+      expect(visto.has(q.id)).toBe(false);
+      usadas[q.id] = true;
+    }
+  });
 });
 
 describe('solo', () => {
@@ -106,24 +116,52 @@ describe('solo', () => {
   });
   it('a pergunta sai do nível da sequência', () => {
     for (const [seq, nivel] of [[0, 'medio'], [8, 'dificil'], [15, 'qi']] as const) {
-      expect(perguntaSolo(BANCO, seq, new Set(), new Set())!.nivel).toBe(nivel);
+      expect(perguntaSolo(BANCO, seq, new Set(), [])!.nivel).toBe(nivel);
     }
   });
   it('prefere perguntas ainda não vistas', () => {
     const medias = BANCO.filter((q) => q.nivel === 'medio');
-    const vistas = new Set(medias.slice(0, medias.length - 3).map((q) => q.id));
+    const vistas = medias.slice(0, medias.length - 3).map((q) => q.id);
     const livres = new Set(medias.slice(-3).map((q) => q.id));
     for (let i = 0; i < 30; i++) expect(livres.has(perguntaSolo(BANCO, 0, new Set(), vistas)!.id)).toBe(true);
   });
   it('quando tudo do nível já foi visto, volta a usar as vistas, mas nunca repete na mesma partida', () => {
     const medias = BANCO.filter((q) => q.nivel === 'medio');
-    const todasVistas = new Set(medias.map((q) => q.id));
+    const todasVistas = medias.map((q) => q.id);
     const naPartida = new Set(medias.slice(1).map((q) => q.id));
     expect(perguntaSolo(BANCO, 0, naPartida, todasVistas)!.id).toBe(medias[0].id);
   });
+  it('já viu todas do nível: sorteia só entre o terço visto há mais tempo', () => {
+    const medias = BANCO.filter((q) => q.nivel === 'medio');
+    const vistas = medias.map((q) => q.id); // ordem: a 1ª é a mais antiga
+    const antigas = new Set(vistas.slice(0, Math.ceil(vistas.length / 3)));
+    for (let i = 0; i < 200; i++) expect(antigas.has(perguntaSolo(BANCO, 0, new Set(), vistas)!.id)).toBe(true);
+  });
+  it('jogando muitas partidas seguidas, nenhuma pergunta volta logo', () => {
+    // simula 300 partidas que param no 1º erro: a mesma pergunta não reaparece antes de ~2/3 do nível
+    const vistas: number[] = [];
+    const nMedias = BANCO.filter((q) => q.nivel === 'medio').length;
+    let rnd = 7; const sorte = () => ((rnd = (rnd * 16807) % 2147483647) / 2147483647);
+    const ultimaVez = new Map<number, number>();
+    let menorIntervalo = Infinity, contador = 0;
+    for (let p = 0; p < 300; p++) {
+      const naPartida = new Set<number>();
+      for (let k = 0; k < 4; k++) {
+        const q = perguntaSolo(BANCO, k, naPartida, vistas, undefined, sorte)!;
+        naPartida.add(q.id);
+        if (ultimaVez.has(q.id)) menorIntervalo = Math.min(menorIntervalo, contador - ultimaVez.get(q.id)!);
+        ultimaVez.set(q.id, contador++);
+        const i = vistas.indexOf(q.id); if (i >= 0) vistas.splice(i, 1); vistas.push(q.id);
+      }
+    }
+    expect(menorIntervalo).toBeGreaterThan(nMedias * 0.6);
+  });
+  it('preferirNovas: sem nada visto, devolve tudo', () => {
+    expect(preferirNovas(BANCO.slice(0, 5), [])).toHaveLength(5);
+  });
   it('nível esgotado usa o mais próximo', () => {
     const naPartida = new Set(BANCO.filter((q) => q.nivel === 'qi').map((q) => q.id));
-    expect(perguntaSolo(BANCO, 20, naPartida, new Set())!.nivel).toBe('dificil');
+    expect(perguntaSolo(BANCO, 20, naPartida, [])!.nivel).toBe('dificil');
     expect(NIVEIS).toContain('dificil');
   });
   it('ajuda: só em 10, 20, 30… acertos, sorteando entre Pular e Eliminar', () => {
