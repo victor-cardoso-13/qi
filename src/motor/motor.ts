@@ -122,16 +122,31 @@ function escolherDe(livres: Pergunta[], ultimaCat: string | undefined, rnd: Sort
 }
 
 /**
+ * Prefere o que a pessoa ainda não viu. `vistas` vem em ordem (a mais antiga primeiro).
+ * Se ela já viu todas, usa só o terço visto HÁ MAIS TEMPO: assim a repetição demora a voltar.
+ */
+export function preferirNovas(lista: Pergunta[], vistas: readonly number[]): Pergunta[] {
+  if (!vistas.length) return lista;
+  const ordem = new Map(vistas.map((id, i) => [id, i]));
+  const novas = lista.filter((q) => !ordem.has(q.id));
+  if (novas.length) return novas;
+  const antigas = [...lista].sort((a, b) => ordem.get(a.id)! - ordem.get(b.id)!);
+  return antigas.slice(0, Math.max(1, Math.ceil(antigas.length / 3)));
+}
+
+/**
  * Sala: sorteia a próxima pergunta SEM repetir nenhuma já usada (`usadas`: id → true).
+ * Entre as livres, prefere as que o anfitrião ainda não viu (`vistas`, de salas e solos anteriores).
  * Se o nível sorteado acabou, usa o mais próximo. Devolve null só quando o banco inteiro foi usado.
  */
 export function proximaPergunta(
-  banco: Pergunta[], usadas: Record<string, boolean>, ref: number, casas: number, ultimaCat?: string, rnd: Sorteio = Math.random,
+  banco: Pergunta[], usadas: Record<string, boolean>, ref: number, casas: number, ultimaCat?: string,
+  vistas: readonly number[] = [], rnd: Sorteio = Math.random,
 ): Pergunta | null {
   const nivel = sortearNivel(ref, casas, rnd);
   for (const n of porProximidade(nivel)) {
     const livres = banco.filter((q) => q.nivel === n && !usadas[q.id]);
-    if (livres.length) return escolherDe(livres, ultimaCat, rnd);
+    if (livres.length) return escolherDe(preferirNovas(livres, vistas), ultimaCat, rnd);
   }
   return null;
 }
@@ -144,16 +159,15 @@ export function nivelSolo(sequencia: number): Nivel {
 
 /**
  * Solo: pergunta do nível da sequência. Nunca repete uma desta partida (`destaPartida`);
- * prefere as que este jogador/aparelho ainda não viu (`vistas`), para o começo não ficar decorado.
+ * prefere as que este jogador/aparelho ainda não viu (`vistas`, a mais antiga primeiro);
+ * já viu todas → as vistas há mais tempo (ver `preferirNovas`).
  */
 export function perguntaSolo(
-  banco: Pergunta[], sequencia: number, destaPartida: Set<number>, vistas: Set<number>, ultimaCat?: string, rnd: Sorteio = Math.random,
+  banco: Pergunta[], sequencia: number, destaPartida: Set<number>, vistas: readonly number[], ultimaCat?: string, rnd: Sorteio = Math.random,
 ): Pergunta | null {
   for (const n of porProximidade(nivelSolo(sequencia))) {
     const doNivel = banco.filter((q) => q.nivel === n && !destaPartida.has(q.id));
-    const novas = doNivel.filter((q) => !vistas.has(q.id));
-    const lista = novas.length ? novas : doNivel;
-    if (lista.length) return escolherDe(lista, ultimaCat, rnd);
+    if (doNivel.length) return escolherDe(preferirNovas(doNivel, vistas), ultimaCat, rnd);
   }
   return null;
 }
