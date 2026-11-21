@@ -1,0 +1,402 @@
+[
+ {
+  "p": "Na mitologia nórdica, como se chama a batalha final que destruirá o mundo dos deuses?",
+  "c": "Ragnarök",
+  "e": [
+   "Valhalla",
+   "Asgard",
+   "Yggdrasil",
+   "Midgard"
+  ]
+ },
+ {
+  "p": "Qual deus egípcio, morto pelo irmão Set, tornou-se o senhor do mundo dos mortos?",
+  "c": "Osíris",
+  "e": [
+   "Hórus",
+   "Anúbis",
+   "Rá",
+   "Toth"
+  ]
+ },
+ {
+  "p": "Na mitologia grega, quem roubou o fogo dos deuses para entregá-lo aos seres humanos?",
+  "c": "Prometeu",
+  "e": [
+   "Epimeteu",
+   "Atlas",
+   "Hermes",
+   "Hefesto"
+  ]
+ },
+ {
+  "p": "Qual monstro de três cabeças guarda, na mitologia grega, a entrada do mundo dos mortos?",
+  "c": "Cérbero",
+  "e": [
+   "Hidra",
+   "Quimera",
+   "Fenrir",
+   "Ladon"
+  ]
+ },
+ {
+  "p": "Qual deusa lançou a maçã de ouro \"para a mais bela\", origem da Guerra de Troia?",
+  "c": "Éris",
+  "e": [
+   "Nêmesis",
+   "Hécate",
+   "Têmis",
+   "Deméter"
+  ]
+ },
+ {
+  "p": "Segundo a Bíblia, por quantos dias e noites choveu durante o dilúvio de Noé?",
+  "c": "40",
+  "e": [
+   "7",
+   "12",
+   "30",
+   "100"
+  ]
+ },
+ {
+  "p": "Qual filho de Jacó foi vendido pelos irmãos como escravo e chegou a governador do Egito?",
+  "c": "José",
+  "e": [
+   "Benjamim",
+   "Judá",
+   "Rúben",
+   "Levi"
+  ]
+ },
+ {
+  "p": "Qual rei de Israel, filho de Davi, construiu o primeiro Templo de Jerusalém?",
+  "c": "Salomão",
+  "e": [
+   "Saul",
+   "Ezequias",
+   "Herodes",
+   "Josias"
+  ]
+ },
+ {
+  "p": "Qual rei dos visigodos saqueou Roma em 410?",
+  "c": "Alarico",
+  "e": [
+   "Átila",
+   "Genserico",
+   "Teodorico",
+   "Odoacro"
+  ]
+ },
+ {
+  "p": "Como se completa o nome do Buda histórico: Sidarta ___?",
+  "c": "Gautama",
+  "e": [
+   "Maitreya",
+   "Ashoka",
+   "Mahavira",
+   "Nanak"
+  ]
+ },
+ {
+  "p": "Qual festa judaica relembra a libertação dos hebreus da escravidão no Egito?",
+  "c": "Pessach",
+  "e": [
+   "Hanucá",
+   "Purim",
+   "Yom Kipur",
+   "Sucot"
+  ]
+ },
+ {
+  "p": "Para qual cidade sagrada os muçulmanos fazem a peregrinação chamada hajj?",
+  "c": "Meca",
+  "e": [
+   "Jerusalém",
+   "Bagdá",
+   "Cairo",
+   "Damasco"
+  ]
+ },
+ {
+  "p": "Qual foi a primeira vila oficial do Brasil, fundada por Martim Afonso de Sousa, em 1532?",
+  "c": "São Vicente",
+  "e": [
+   "Salvador",
+   "Olinda",
+   "Santos",
+   "Paraty"
+  ]
+ },
+ {
+  "p": "Qual jesuíta, ao lado de Manuel da Nóbrega, esteve na fundação de São Paulo, em 1554?",
+  "c": "José de Anchieta",
+  "e": [
+   "Antônio Vieira",
+   "Padre Cícero",
+   "Frei Caneca",
+   "Padre Feijó"
+  ]
+ },
+ {
+  "p": "Qual bandeirante paulista ficou famoso, no século XVII, pela busca de esmeraldas no interior do Brasil?",
+  "c": "Fernão Dias Paes Leme",
+  "e": [
+   "Borba Gato",
+   "Raposo Tavares",
+   "Domingos Jorge Velho",
+   "Amador Bueno"
+  ]
+ },
+ {
+  "p": "Quem liderou Palmares e fez um acordo de paz com os portugueses em 1678, rejeitado por Zumbi?",
+  "c": "Ganga Zumba",
+  "e": [
+   "Henrique Dias",
+   "Chico Rei",
+   "Luís Gama",
+   "Preto Cosme"
+  ]
+ },
+ {
+  "p": "Qual cidade foi capital do Brasil de 1763 a 1960?",
+  "c": "Rio de Janeiro",
+  "e": [
+   "São Paulo",
+   "Salvador",
+   "Belo Horizonte",
+   "Recife"
+  ]
+ },
+ {
+  "p": "Qual lei de 1885 concedeu liberdade aos escravizados com mais de 60 anos de idade?",
+  "c": "Lei dos Sexagenários",
+  "e": [
+   "Lei do Ventre Livre",
+   "Lei Áurea",
+   "Lei de Terras",
+   "Lei Eusébio de Queirós"
+  ]
+ },
+ {
+  "p": "Qual cidade foi a capital do Brasil holandês no governo de Maurício de Nassau?",
+  "c": "Recife",
+  "e": [
+   "Olinda",
+   "Salvador",
+   "São Luís",
+   "Natal"
+  ]
+ },
+ {
+  "p": "Quais batalhas de 1648 e 1649, perto do Recife, foram decisivas para expulsar os holandeses?",
+  "c": "Batalhas dos Guararapes",
+  "e": [
+   "Batalha do Riachuelo",
+   "Batalha de Tuiuti",
+   "Batalha do Jenipapo",
+   "Batalha de Itararé"
+  ]
+ },
+ {
+  "p": "Quem decretou a Abertura dos Portos às nações amigas, em 1808?",
+  "c": "Dom João VI",
+  "e": [
+   "Dom Pedro I",
+   "Dom Pedro II",
+   "Dom José I",
+   "Dom Sebastião"
+  ]
+ },
+ {
+  "p": "Como se chama o período de 1831 a 1840, em que o Brasil foi governado por regentes?",
+  "c": "Período Regencial",
+  "e": [
+   "Primeiro Reinado",
+   "Segundo Reinado",
+   "República Velha",
+   "Período Joanino"
+  ]
+ },
+ {
+  "p": "Como também é conhecida a Conjuração Baiana, de 1798?",
+  "c": "Revolta dos Alfaiates",
+  "e": [
+   "Revolta dos Malês",
+   "Sabinada",
+   "Balaiada",
+   "Revolta da Vacina"
+  ]
+ },
+ {
+  "p": "Qual presidente renunciou em agosto de 1961, poucos meses depois de tomar posse?",
+  "c": "Jânio Quadros",
+  "e": [
+   "Café Filho",
+   "Eurico Gaspar Dutra",
+   "Washington Luís",
+   "Ranieri Mazzilli"
+  ]
+ },
+ {
+  "p": "Qual campanha popular de 1983 e 1984 pediu eleições diretas para presidente?",
+  "c": "Diretas Já",
+  "e": [
+   "Caras-Pintadas",
+   "Marcha da Família",
+   "Campanha da Legalidade",
+   "Movimento Tenentista"
+  ]
+ },
+ {
+  "p": "Qual líder paraguaio morreu em combate em Cerro Corá, em 1870, encerrando a Guerra do Paraguai?",
+  "c": "Francisco Solano López",
+  "e": [
+   "Bartolomé Mitre",
+   "Venâncio Flores",
+   "Duque de Caxias",
+   "José Gaspar de Francia"
+  ]
+ },
+ {
+  "p": "Qual imperador romano mandou construir uma grande muralha no norte da Britânia, a partir de 122?",
+  "c": "Adriano",
+  "e": [
+   "Trajano",
+   "Nero",
+   "Constantino",
+   "Marco Aurélio"
+  ]
+ },
+ {
+  "p": "Em qual batalha naval, em 31 a.C., Otaviano derrotou Marco Antônio e Cleópatra?",
+  "c": "Batalha de Áccio",
+  "e": [
+   "Batalha de Zama",
+   "Batalha de Canas",
+   "Batalha de Filipos",
+   "Batalha de Maratona"
+  ]
+ },
+ {
+  "p": "Qual faraó mandou construir a Grande Pirâmide de Gizé?",
+  "c": "Quéops",
+  "e": [
+   "Ramsés II",
+   "Tutmés III",
+   "Miquerinos",
+   "Akhenaton"
+  ]
+ },
+ {
+  "p": "Qual faraó teve o túmulo descoberto quase intacto por Howard Carter, em 1922?",
+  "c": "Tutancâmon",
+  "e": [
+   "Ramsés II",
+   "Seti I",
+   "Akhenaton",
+   "Tutmés III"
+  ]
+ },
+ {
+  "p": "Qual pedra, achada em 1799, permitiu a Champollion decifrar os hieróglifos egípcios?",
+  "c": "Pedra de Roseta",
+  "e": [
+   "Pedra do Sol",
+   "Pedra de Behistun",
+   "Estela de Hamurabi",
+   "Pedra Moabita"
+  ]
+ },
+ {
+  "p": "Qual rei inglês lutou contra Saladino na Terceira Cruzada?",
+  "c": "Ricardo Coração de Leão",
+  "e": [
+   "Henrique VIII",
+   "João Sem Terra",
+   "Eduardo III",
+   "Guilherme, o Conquistador"
+  ]
+ },
+ {
+  "p": "Qual viajante europeu do século XIII esteve na corte de Kublai Khan, na China?",
+  "c": "Marco Polo",
+  "e": [
+   "Cristóvão Colombo",
+   "Vasco da Gama",
+   "Américo Vespúcio",
+   "Henrique, o Navegador"
+  ]
+ },
+ {
+  "p": "Qual navegador comandou a expedição de 1519 que deu a primeira volta ao mundo, mas morreu nas Filipinas?",
+  "c": "Fernão de Magalhães",
+  "e": [
+   "Cristóvão Colombo",
+   "Francis Drake",
+   "Américo Vespúcio",
+   "Pedro Álvares Cabral"
+  ]
+ },
+ {
+  "p": "Qual navegador português contornou o extremo sul da África, em 1488?",
+  "c": "Bartolomeu Dias",
+  "e": [
+   "Vasco da Gama",
+   "Gil Eanes",
+   "Diogo Cão",
+   "Pedro Álvares Cabral"
+  ]
+ },
+ {
+  "p": "Qual imperador bizantino inaugurou a Basílica de Santa Sofia, em Constantinopla, em 537?",
+  "c": "Justiniano",
+  "e": [
+   "Constantino",
+   "Heráclio",
+   "Basílio II",
+   "Teodósio I"
+  ]
+ },
+ {
+  "p": "Qual cidade do norte da África Roma destruiu em 146 a.C., ao fim da Terceira Guerra Púnica?",
+  "c": "Cartago",
+  "e": [
+   "Alexandria",
+   "Tebas",
+   "Mênfis",
+   "Tiro"
+  ]
+ },
+ {
+  "p": "Qual rei persa foi derrotado por Alexandre, o Grande, na Batalha de Gaugamela, em 331 a.C.?",
+  "c": "Dario III",
+  "e": [
+   "Xerxes I",
+   "Ciro, o Grande",
+   "Dario I",
+   "Artaxerxes"
+  ]
+ },
+ {
+  "p": "Qual batalha vencida pelos soviéticos em 1943 foi um ponto de virada na frente oriental da Segunda Guerra?",
+  "c": "Batalha de Stalingrado",
+  "e": [
+   "Batalha de Berlim",
+   "Batalha das Ardenas",
+   "Batalha de Midway",
+   "Batalha da Inglaterra"
+  ]
+ },
+ {
+  "p": "Qual almirante britânico morreu na Batalha de Trafalgar, em 1805?",
+  "c": "Horatio Nelson",
+  "e": [
+   "Duque de Wellington",
+   "Francis Drake",
+   "Walter Raleigh",
+   "James Cook"
+  ]
+ }
+]

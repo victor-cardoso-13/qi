@@ -1,0 +1,552 @@
+[
+ {
+  "p": "Na mitologia romana, qual é o deus do mar?",
+  "c": "Netuno",
+  "e": [
+   "Júpiter",
+   "Plutão",
+   "Marte",
+   "Mercúrio"
+  ]
+ },
+ {
+  "p": "Qual deusa grega representa a sabedoria e protegia a cidade de Atenas?",
+  "c": "Atena",
+  "e": [
+   "Afrodite",
+   "Hera",
+   "Ártemis",
+   "Deméter"
+  ]
+ },
+ {
+  "p": "Na mitologia grega, qual herói realizou doze trabalhos famosos?",
+  "c": "Hércules",
+  "e": [
+   "Aquiles",
+   "Ulisses",
+   "Perseu",
+   "Teseu"
+  ]
+ },
+ {
+  "p": "Qual monstro, meio homem e meio touro, vivia no labirinto de Creta?",
+  "c": "Minotauro",
+  "e": [
+   "Cérbero",
+   "Hidra",
+   "Medusa",
+   "Quimera"
+  ]
+ },
+ {
+  "p": "Na lenda da Guerra de Troia, qual presente enganoso os gregos deixaram diante da cidade?",
+  "c": "Um cavalo de madeira",
+  "e": [
+   "Uma estátua de ouro",
+   "Um navio de prata",
+   "Um grande escudo",
+   "Um touro de bronze"
+  ]
+ },
+ {
+  "p": "Na mitologia nórdica, qual deus do trovão carrega o martelo Mjölnir?",
+  "c": "Thor",
+  "e": [
+   "Odin",
+   "Loki",
+   "Baldr",
+   "Freyr"
+  ]
+ },
+ {
+  "p": "Na mitologia egípcia, qual deus era representado como o Sol e navegava pelo céu em uma barca?",
+  "c": "Rá",
+  "e": [
+   "Osíris",
+   "Anúbis",
+   "Set",
+   "Ptah"
+  ]
+ },
+ {
+  "p": "Qual deus egípcio, com cabeça de chacal, era ligado à mumificação?",
+  "c": "Anúbis",
+  "e": [
+   "Rá",
+   "Hórus",
+   "Osíris",
+   "Set"
+  ]
+ },
+ {
+  "p": "Segundo a lenda, quais irmãos gêmeos fundaram a cidade de Roma?",
+  "c": "Rômulo e Remo",
+  "e": [
+   "Castor e Pólux",
+   "Rômulo e Aníbal",
+   "Remo e Cipião",
+   "Brutus e Cássio"
+  ]
+ },
+ {
+  "p": "Segundo a Bíblia, quem construiu uma arca para sobreviver ao dilúvio?",
+  "c": "Noé",
+  "e": [
+   "Moisés",
+   "Abraão",
+   "Davi",
+   "Jonas"
+  ]
+ },
+ {
+  "p": "Segundo a Bíblia, quem recebeu os Dez Mandamentos no monte Sinai?",
+  "c": "Moisés",
+  "e": [
+   "Abraão",
+   "Josué",
+   "Elias",
+   "Noé"
+  ]
+ },
+ {
+  "p": "Na Bíblia, qual gigante foi derrotado por Davi com uma funda e uma pedra?",
+  "c": "Golias",
+  "e": [
+   "Saul",
+   "Sansão",
+   "Caim",
+   "Herodes"
+  ]
+ },
+ {
+  "p": "Quantos apóstolos Jesus escolheu para acompanhá-lo, segundo os Evangelhos?",
+  "c": "12",
+  "e": [
+   "7",
+   "10",
+   "14",
+   "24"
+  ]
+ },
+ {
+  "p": "Em qual cidade nasceu Jesus, segundo a Bíblia?",
+  "c": "Belém",
+  "e": [
+   "Nazaré",
+   "Jerusalém",
+   "Cafarnaum",
+   "Jericó"
+  ]
+ },
+ {
+  "p": "Qual é o livro sagrado do islamismo?",
+  "c": "Alcorão",
+  "e": [
+   "Torá",
+   "Bíblia",
+   "Vedas",
+   "Talmude"
+  ]
+ },
+ {
+  "p": "Qual rio é considerado sagrado pelos hindus, que nele fazem rituais de purificação?",
+  "c": "Ganges",
+  "e": [
+   "Nilo",
+   "Eufrates",
+   "Jordão",
+   "Mekong"
+  ]
+ },
+ {
+  "p": "Na mitologia grega, quem é o rei dos deuses, senhor do raio e do monte Olimpo?",
+  "c": "Zeus",
+  "e": [
+   "Poseidon",
+   "Apolo",
+   "Hades",
+   "Ares"
+  ]
+ },
+ {
+  "p": "Qual criatura lendária renasce das próprias cinzas?",
+  "c": "Fênix",
+  "e": [
+   "Grifo",
+   "Pégaso",
+   "Basilisco",
+   "Dragão"
+  ]
+ },
+ {
+  "p": "Como eram chamadas as comunidades formadas por escravizados fugidos no Brasil colonial?",
+  "c": "Quilombos",
+  "e": [
+   "Aldeamentos",
+   "Senzalas",
+   "Missões",
+   "Arraiais"
+  ]
+ },
+ {
+  "p": "Como se chamou o sistema que dividiu o Brasil colonial em grandes faixas de terra entregues a donatários?",
+  "c": "Capitanias hereditárias",
+  "e": [
+   "Governos-gerais",
+   "Bandeiras",
+   "Engenhos",
+   "Feitorias"
+  ]
+ },
+ {
+  "p": "Qual cidade brasileira nasceu de um colégio jesuíta fundado em 1554?",
+  "c": "São Paulo",
+  "e": [
+   "Rio de Janeiro",
+   "Salvador",
+   "Recife",
+   "Belém"
+  ]
+ },
+ {
+  "p": "Como se chama o local de oração dos muçulmanos?",
+  "c": "Mesquita",
+  "e": [
+   "Sinagoga",
+   "Catedral",
+   "Mosteiro",
+   "Basílica"
+  ]
+ },
+ {
+  "p": "Qual povo da Antiguidade criou a democracia, o governo do povo?",
+  "c": "Os gregos",
+  "e": [
+   "Os romanos",
+   "Os egípcios",
+   "Os persas",
+   "Os fenícios"
+  ]
+ },
+ {
+  "p": "Qual religião, nascida na Índia, tem Buda como seu fundador?",
+  "c": "Budismo",
+  "e": [
+   "Hinduísmo",
+   "Xintoísmo",
+   "Taoísmo",
+   "Siquismo"
+  ]
+ },
+ {
+  "p": "Qual princesa assinou a Lei Áurea, em 1888?",
+  "c": "Princesa Isabel",
+  "e": [
+   "Leopoldina",
+   "Carlota Joaquina",
+   "Maria I",
+   "Teresa Cristina"
+  ]
+ },
+ {
+  "p": "No fim do século XIX e início do XX, qual produto era o principal item de exportação do Brasil?",
+  "c": "Café",
+  "e": [
+   "Cana-de-açúcar",
+   "Algodão",
+   "Cacau",
+   "Fumo"
+  ]
+ },
+ {
+  "p": "Qual lei brasileira de 1871 declarou livres os filhos de escravizadas nascidos a partir de então?",
+  "c": "Lei do Ventre Livre",
+  "e": [
+   "Lei dos Sexagenários",
+   "Lei Eusébio de Queirós",
+   "Lei Áurea",
+   "Lei de Terras"
+  ]
+ },
+ {
+  "p": "Qual escrivão da frota de Cabral escreveu ao rei de Portugal sobre as terras encontradas em 1500?",
+  "c": "Pero Vaz de Caminha",
+  "e": [
+   "Américo Vespúcio",
+   "Gaspar de Lemos",
+   "Duarte Pacheco",
+   "Martim Afonso de Sousa"
+  ]
+ },
+ {
+  "p": "Os antigos egípcios escreviam em folhas feitas de qual planta, que crescia às margens do Nilo?",
+  "c": "Papiro",
+  "e": [
+   "Bambu",
+   "Algodão",
+   "Linho",
+   "Palmeira"
+  ]
+ },
+ {
+  "p": "Em qual cidade o príncipe Dom Pedro proclamou a Independência, em 1822, às margens do Ipiranga?",
+  "c": "São Paulo",
+  "e": [
+   "Rio de Janeiro",
+   "Salvador",
+   "Santos",
+   "Recife"
+  ]
+ },
+ {
+  "p": "Qual profissão deu a Joaquim José da Silva Xavier o apelido de Tiradentes?",
+  "c": "Dentista",
+  "e": [
+   "Ferreiro",
+   "Alfaiate",
+   "Sapateiro",
+   "Barbeiro"
+  ]
+ },
+ {
+  "p": "Qual médico sanitarista comandou a campanha de vacinação contra a varíola no Rio, em 1904?",
+  "c": "Oswaldo Cruz",
+  "e": [
+   "Carlos Chagas",
+   "Vital Brazil",
+   "Adolfo Lutz",
+   "Emílio Ribas"
+  ]
+ },
+ {
+  "p": "Quem foi o cangaceiro conhecido como o Rei do Cangaço?",
+  "c": "Lampião",
+  "e": [
+   "Corisco",
+   "Antônio Silvino",
+   "Jesuíno Brilhante",
+   "Sabino"
+  ]
+ },
+ {
+  "p": "Em qual estado brasileiro fica Porto Seguro, onde Cabral desembarcou em 1500?",
+  "c": "Bahia",
+  "e": [
+   "Pernambuco",
+   "Espírito Santo",
+   "Rio de Janeiro",
+   "Sergipe"
+  ]
+ },
+ {
+  "p": "Qual marechal explorou o interior do Brasil, instalou linhas de telégrafo e criou o Serviço de Proteção aos Índios?",
+  "c": "Cândido Rondon",
+  "e": [
+   "Deodoro da Fonseca",
+   "Floriano Peixoto",
+   "Eurico Gaspar Dutra",
+   "Humberto Castelo Branco"
+  ]
+ },
+ {
+  "p": "Qual navegador português chegou à Índia pelo mar, contornando a África, em 1498?",
+  "c": "Vasco da Gama",
+  "e": [
+   "Pedro Álvares Cabral",
+   "Bartolomeu Dias",
+   "Fernão de Magalhães",
+   "Cristóvão Colombo"
+  ]
+ },
+ {
+  "p": "Qual escocês aperfeiçoou a máquina a vapor, impulsionando a Revolução Industrial?",
+  "c": "James Watt",
+  "e": [
+   "George Stephenson",
+   "Thomas Edison",
+   "Isaac Newton",
+   "Henry Ford"
+  ]
+ },
+ {
+  "p": "Qual rei da Macedônia conquistou o Império Persa e chegou até a Índia?",
+  "c": "Alexandre, o Grande",
+  "e": [
+   "Filipe II",
+   "Péricles",
+   "Dario III",
+   "Leônidas"
+  ]
+ },
+ {
+  "p": "Qual rei espartano comandou os 300 guerreiros na Batalha das Termópilas?",
+  "c": "Leônidas",
+  "e": [
+   "Xerxes",
+   "Péricles",
+   "Aquiles",
+   "Filipe"
+  ]
+ },
+ {
+  "p": "Como se chamava o sistema da Idade Média baseado na posse de terras e na relação entre senhores e vassalos?",
+  "c": "Feudalismo",
+  "e": [
+   "Capitalismo",
+   "Mercantilismo",
+   "Socialismo",
+   "Absolutismo"
+  ]
+ },
+ {
+  "p": "Qual mercador veneziano viajou à China no século XIII e escreveu sobre suas aventuras?",
+  "c": "Marco Polo",
+  "e": [
+   "Vasco da Gama",
+   "Américo Vespúcio",
+   "Ibn Battuta",
+   "Cristóvão Colombo"
+  ]
+ },
+ {
+  "p": "Qual príncipe português, chamado de o Navegador, impulsionou as grandes navegações?",
+  "c": "Infante Dom Henrique",
+  "e": [
+   "Dom Manuel I",
+   "Dom João II",
+   "Dom Sebastião",
+   "Dom Pedro"
+  ]
+ },
+ {
+  "p": "Em qual país começou o Renascimento cultural, no século XIV?",
+  "c": "Itália",
+  "e": [
+   "França",
+   "Espanha",
+   "Alemanha",
+   "Inglaterra"
+  ]
+ },
+ {
+  "p": "Qual rei francês foi guilhotinado, em 1793, durante a Revolução Francesa?",
+  "c": "Luís XVI",
+  "e": [
+   "Luís XIV",
+   "Luís XV",
+   "Carlos X",
+   "Henrique IV"
+  ]
+ },
+ {
+  "p": "Em que ano os Estados Unidos declararam sua independência da Inglaterra?",
+  "c": "1776",
+  "e": [
+   "1789",
+   "1765",
+   "1812",
+   "1783"
+  ]
+ },
+ {
+  "p": "Qual base militar norte-americana foi atacada de surpresa pelo Japão, em dezembro de 1941?",
+  "c": "Pearl Harbor",
+  "e": [
+   "San Diego",
+   "Norfolk",
+   "Guantánamo",
+   "Okinawa"
+  ]
+ },
+ {
+  "p": "Qual líder comunista proclamou a República Popular da China, em 1949?",
+  "c": "Mao Tsé-Tung",
+  "e": [
+   "Sun Yat-sen",
+   "Chiang Kai-shek",
+   "Deng Xiaoping",
+   "Ho Chi Minh"
+  ]
+ },
+ {
+  "p": "Qual presidente dos Estados Unidos foi assassinado em Dallas, em 1963?",
+  "c": "John F. Kennedy",
+  "e": [
+   "Abraham Lincoln",
+   "Richard Nixon",
+   "Lyndon Johnson",
+   "Harry Truman"
+  ]
+ },
+ {
+  "p": "Qual líder negro norte-americano fez o discurso Eu tenho um sonho, em 1963?",
+  "c": "Martin Luther King",
+  "e": [
+   "Malcolm X",
+   "Nelson Mandela",
+   "Barack Obama",
+   "Muhammad Ali"
+  ]
+ },
+ {
+  "p": "Qual povo antigo inventou a pólvora, a bússola e o papel?",
+  "c": "Os chineses",
+  "e": [
+   "Os árabes",
+   "Os egípcios",
+   "Os gregos",
+   "Os persas"
+  ]
+ },
+ {
+  "p": "Qual civilização da América Central construiu a pirâmide de Chichén Itzá?",
+  "c": "Maia",
+  "e": [
+   "Asteca",
+   "Inca",
+   "Olmeca",
+   "Zapoteca"
+  ]
+ },
+ {
+  "p": "De qual região da Europa partiam os vikings em suas viagens de saque e exploração?",
+  "c": "Escandinávia",
+  "e": [
+   "Península Ibérica",
+   "Mediterrâneo",
+   "Bálcãs",
+   "Cáucaso"
+  ]
+ },
+ {
+  "p": "Qual rainha britânica reinou de 1837 a 1901, dando nome a uma era?",
+  "c": "Vitória",
+  "e": [
+   "Elizabeth I",
+   "Ana",
+   "Maria Stuart",
+   "Catarina"
+  ]
+ },
+ {
+  "p": "Qual ditador liderou a Itália fascista e se aliou a Hitler na Segunda Guerra?",
+  "c": "Benito Mussolini",
+  "e": [
+   "Francisco Franco",
+   "Josef Stálin",
+   "Antonio Salazar",
+   "Vittorio Emanuele"
+  ]
+ },
+ {
+  "p": "Para qual grande evento foi construída a Torre Eiffel, em Paris, em 1889?",
+  "c": "Exposição Universal",
+  "e": [
+   "Jogos Olímpicos",
+   "Copa do Mundo",
+   "Fim da Primeira Guerra",
+   "Coroação de Napoleão"
+  ]
+ }
+]

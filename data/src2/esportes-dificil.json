@@ -1,0 +1,402 @@
+[
+  {
+    "p": "Qual seleção foi campeã da Copa do Mundo de 1978, disputada em seu próprio país?",
+    "c": "Argentina",
+    "e": [
+      "Brasil",
+      "Holanda",
+      "Itália",
+      "Uruguai"
+    ]
+  },
+  {
+    "p": "Quem marcou dois gols de cabeça na final da Copa de 1998, na vitória da França por 3 a 0 sobre o Brasil?",
+    "c": "Zinedine Zidane",
+    "e": [
+      "Thierry Henry",
+      "Emmanuel Petit",
+      "Youri Djorkaeff",
+      "Didier Deschamps"
+    ]
+  },
+  {
+    "p": "Quem marcou o gol do título da Alemanha sobre a Argentina na final da Copa de 2014?",
+    "c": "Mario Götze",
+    "e": [
+      "Thomas Müller",
+      "Miroslav Klose",
+      "Bastian Schweinsteiger",
+      "Toni Kroos"
+    ]
+  },
+  {
+    "p": "Em qual Copa do Mundo o Brasil perdeu de virada para a Holanda nas quartas de final?",
+    "c": "2010",
+    "e": [
+      "2006",
+      "1998",
+      "2014",
+      "2002"
+    ]
+  },
+  {
+    "p": "Quem foi o técnico do Brasil na conquista da Copa do Mundo de 1970?",
+    "c": "Zagallo",
+    "e": [
+      "Telê Santana",
+      "Vicente Feola",
+      "Cláudio Coutinho",
+      "Lazaroni"
+    ]
+  },
+  {
+    "p": "Qual atacante italiano marcou três gols no Brasil na Copa do Mundo de 1982?",
+    "c": "Paolo Rossi",
+    "e": [
+      "Roberto Baggio",
+      "Alessandro Altobelli",
+      "Gianni Rivera",
+      "Salvatore Schillaci"
+    ]
+  },
+  {
+    "p": "Qual piloto francês, apelidado de \"Professor\", foi tetracampeão mundial de Fórmula 1?",
+    "c": "Alain Prost",
+    "e": [
+      "Jacques Laffite",
+      "René Arnoux",
+      "Didier Pironi",
+      "Jean Alesi"
+    ]
+  },
+  {
+    "p": "Qual brasileiro foi tricampeão mundial de Fórmula 1 em 1981, 1983 e 1987?",
+    "c": "Nelson Piquet",
+    "e": [
+      "Emerson Fittipaldi",
+      "Rubens Barrichello",
+      "Felipe Massa",
+      "José Carlos Pace"
+    ]
+  },
+  {
+    "p": "Qual piloto argentino foi pentacampeão mundial de Fórmula 1 entre 1951 e 1957?",
+    "c": "Juan Manuel Fangio",
+    "e": [
+      "Alberto Ascari",
+      "Stirling Moss",
+      "Carlos Reutemann",
+      "José Froilán González"
+    ]
+  },
+  {
+    "p": "Qual piloto foi campeão de Fórmula 1 em 2008, vencendo Felipe Massa por um ponto?",
+    "c": "Lewis Hamilton",
+    "e": [
+      "Kimi Räikkönen",
+      "Fernando Alonso",
+      "Sebastian Vettel",
+      "Jenson Button"
+    ]
+  },
+  {
+    "p": "Qual cidade sediou os Jogos Olímpicos de 1988?",
+    "c": "Seul",
+    "e": [
+      "Tóquio",
+      "Pequim",
+      "Moscou",
+      "Los Angeles"
+    ]
+  },
+  {
+    "p": "Quantas medalhas de ouro Michael Phelps conquistou nos Jogos Olímpicos de Pequim, em 2008?",
+    "c": "8",
+    "e": [
+      "5",
+      "6",
+      "7",
+      "9"
+    ]
+  },
+  {
+    "p": "Em qual Olimpíada o vôlei masculino do Brasil conquistou seu primeiro ouro?",
+    "c": "1992",
+    "e": [
+      "1984",
+      "1988",
+      "1996",
+      "2000"
+    ]
+  },
+  {
+    "p": "Em que ano o futebol masculino do Brasil conquistou seu primeiro ouro olímpico?",
+    "c": "2016",
+    "e": [
+      "1988",
+      "1996",
+      "2004",
+      "2012"
+    ]
+  },
+  {
+    "p": "Qual nadador australiano, o \"Torpedo\", ganhou o ouro nos 400 metros livres em Sydney, em 2000?",
+    "c": "Ian Thorpe",
+    "e": [
+      "Grant Hackett",
+      "Kieren Perkins",
+      "Michael Klim",
+      "Pieter van den Hoogenband"
+    ]
+  },
+  {
+    "p": "Qual judoca brasileira foi a primeira mulher do país a ganhar ouro olímpico no judô, em 2012?",
+    "c": "Sarah Menezes",
+    "e": [
+      "Mayra Aguiar",
+      "Rafaela Silva",
+      "Ketleyn Quadros",
+      "Érika Miranda"
+    ]
+  },
+  {
+    "p": "Qual corredor tcheco venceu os 5.000 m, os 10.000 m e a maratona nos Jogos de Helsinque, em 1952?",
+    "c": "Emil Zátopek",
+    "e": [
+      "Paavo Nurmi",
+      "Abebe Bikila",
+      "Haile Gebrselassie",
+      "Lasse Virén"
+    ]
+  },
+  {
+    "p": "Qual nadador havaiano, ouro olímpico em 1912, ajudou a espalhar o surfe pelo mundo?",
+    "c": "Duke Kahanamoku",
+    "e": [
+      "Kelly Slater",
+      "Johnny Weissmuller",
+      "Tom Curren",
+      "Mark Spitz"
+    ]
+  },
+  {
+    "p": "Quem era o técnico da seleção masculina de vôlei do Brasil na prata olímpica de Los Angeles, em 1984?",
+    "c": "Bebeto de Freitas",
+    "e": [
+      "Bernardinho",
+      "José Roberto Guimarães",
+      "Radamés Lattari",
+      "Renan Dal Zotto"
+    ]
+  },
+  {
+    "p": "Em quais anos o Brasil foi campeão mundial de basquete masculino?",
+    "c": "1959 e 1963",
+    "e": [
+      "1950 e 1954",
+      "1963 e 1967",
+      "1954 e 1959",
+      "1959 e 1970"
+    ]
+  },
+  {
+    "p": "Qual astro do basquete brasileiro ficou conhecido pelo apelido de \"Mão Santa\"?",
+    "c": "Oscar Schmidt",
+    "e": [
+      "Marcelinho Huertas",
+      "Leandrinho Barbosa",
+      "Nenê Hilário",
+      "Rafael Hettsheimeritt"
+    ]
+  },
+  {
+    "p": "Quem foi o técnico do Chicago Bulls nos seis títulos da NBA conquistados na década de 1990?",
+    "c": "Phil Jackson",
+    "e": [
+      "Pat Riley",
+      "Red Auerbach",
+      "Gregg Popovich",
+      "Larry Brown"
+    ]
+  },
+  {
+    "p": "Quantos segundos tem uma equipe de basquete para finalizar o ataque, pela regra da NBA?",
+    "c": "24",
+    "e": [
+      "20",
+      "30",
+      "35",
+      "45"
+    ]
+  },
+  {
+    "p": "Quantos títulos de simples de Wimbledon a tenista Martina Navratilova conquistou?",
+    "c": "9",
+    "e": [
+      "7",
+      "8",
+      "10",
+      "11"
+    ]
+  },
+  {
+    "p": "Qual ginasta brasileiro ganhou o ouro nas argolas nos Jogos de Londres, em 2012?",
+    "c": "Arthur Zanetti",
+    "e": [
+      "Arthur Nory",
+      "Diego Hypólito",
+      "Caio Souza",
+      "Sérgio Sasaki"
+    ]
+  },
+  {
+    "p": "Qual prova do atletismo lança um peso de metal preso a um cabo, a partir de um círculo?",
+    "c": "Lançamento do martelo",
+    "e": [
+      "Lançamento do disco",
+      "Lançamento do dardo",
+      "Arremesso do peso",
+      "Salto com vara"
+    ]
+  },
+  {
+    "p": "No jiu-jítsu brasileiro adulto, qual é a faixa imediatamente anterior à preta?",
+    "c": "Marrom",
+    "e": [
+      "Roxa",
+      "Azul",
+      "Vermelha",
+      "Cinza"
+    ]
+  },
+  {
+    "p": "Qual país é a origem do taekwondo?",
+    "c": "Coreia do Sul",
+    "e": [
+      "Japão",
+      "China",
+      "Tailândia",
+      "Vietnã"
+    ]
+  },
+  {
+    "p": "Qual família brasileira é considerada criadora do jiu-jítsu brasileiro?",
+    "c": "Gracie",
+    "e": [
+      "Barbosa",
+      "Pereira",
+      "Nogueira",
+      "Oliveira"
+    ]
+  },
+  {
+    "p": "Qual judoca brasileiro conquistou o ouro olímpico nos Jogos de Seul, em 1988?",
+    "c": "Aurélio Miguel",
+    "e": [
+      "Rogério Sampaio",
+      "Douglas Vieira",
+      "Flávio Canto",
+      "Tiago Camilo"
+    ]
+  },
+  {
+    "p": "Qual skatista foi o primeiro a completar a manobra \"900\" em competição, nos X Games de 1999?",
+    "c": "Tony Hawk",
+    "e": [
+      "Bob Burnquist",
+      "Rodney Mullen",
+      "Shaun White",
+      "Andy Macdonald"
+    ]
+  },
+  {
+    "p": "Quais brasileiras ganharam o primeiro ouro olímpico do vôlei de praia, em Atlanta, em 1996?",
+    "c": "Jackie Silva e Sandra Pires",
+    "e": [
+      "Adriana Behar e Shelda",
+      "Mônica Rodrigues e Adriana Samuel",
+      "Ana Paula e Ana Richa",
+      "Márcia Fu e Fernanda Tavares"
+    ]
+  },
+  {
+    "p": "Em que ano a regra do recuo passou a proibir o goleiro de pegar com as mãos um passe de pé do companheiro?",
+    "c": "1992",
+    "e": [
+      "1982",
+      "1986",
+      "1998",
+      "2002"
+    ]
+  },
+  {
+    "p": "Qual seleção foi campeã da Copa do Mundo de 1966, disputada em seu próprio país?",
+    "c": "Inglaterra",
+    "e": [
+      "Alemanha Ocidental",
+      "Portugal",
+      "Hungria",
+      "União Soviética"
+    ]
+  },
+  {
+    "p": "Qual craque liderou o \"Carrossel Holandês\" na Copa do Mundo de 1974?",
+    "c": "Johan Cruyff",
+    "e": [
+      "Marco van Basten",
+      "Ruud Gullit",
+      "Dennis Bergkamp",
+      "Franz Beckenbauer"
+    ]
+  },
+  {
+    "p": "Qual atacante substituiu Pelé, lesionado, na campanha do título do Brasil na Copa de 1962?",
+    "c": "Amarildo",
+    "e": [
+      "Pepe",
+      "Zagallo",
+      "Coutinho",
+      "Mengálvio"
+    ]
+  },
+  {
+    "p": "Qual jogador croata foi eleito o melhor da Copa do Mundo de 2018?",
+    "c": "Luka Modrić",
+    "e": [
+      "Kylian Mbappé",
+      "Antoine Griezmann",
+      "Eden Hazard",
+      "Harry Kane"
+    ]
+  },
+  {
+    "p": "Qual seleção venceu a primeira Copa do Mundo de rúgbi, em 1987?",
+    "c": "Nova Zelândia",
+    "e": [
+      "Austrália",
+      "África do Sul",
+      "França",
+      "Inglaterra"
+    ]
+  },
+  {
+    "p": "Quantas vezes o belga Eddy Merckx venceu o Tour de France?",
+    "c": "5",
+    "e": [
+      "3",
+      "4",
+      "6",
+      "7"
+    ]
+  },
+  {
+    "p": "No golfe, como se chama terminar um buraco com uma tacada a menos que o par?",
+    "c": "Birdie",
+    "e": [
+      "Eagle",
+      "Bogey",
+      "Albatroz",
+      "Mulligan"
+    ]
+  }
+]

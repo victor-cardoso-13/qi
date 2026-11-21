@@ -1,0 +1,302 @@
+[
+ {
+  "p": "Qual é o maior país do mundo sem nenhum acesso ao mar?",
+  "c": "Cazaquistão",
+  "e": [
+   "Mongólia",
+   "Etiópia",
+   "Bolívia",
+   "Chade"
+  ]
+ },
+ {
+  "p": "Onde fica o ponto mais profundo dos oceanos, com cerca de 11 mil metros?",
+  "c": "Fossa das Marianas",
+  "e": [
+   "Fossa de Porto Rico",
+   "Fossa de Java",
+   "Fossa das Aleutas",
+   "Fossa de Tonga"
+  ]
+ },
+ {
+  "p": "Qual cordilheira forma a fronteira natural entre a França e a Espanha?",
+  "c": "Pireneus",
+  "e": [
+   "Alpes",
+   "Cárpatos",
+   "Apeninos",
+   "Montes Urais"
+  ]
+ },
+ {
+  "p": "Qual é o país mais extenso da América Central?",
+  "c": "Nicarágua",
+  "e": [
+   "Guatemala",
+   "Honduras",
+   "Panamá",
+   "Costa Rica"
+  ]
+ },
+ {
+  "p": "Qual estado do Nordeste tem o menor litoral, com cerca de 66 km?",
+  "c": "Piauí",
+  "e": [
+   "Sergipe",
+   "Alagoas",
+   "Paraíba",
+   "Rio Grande do Norte"
+  ]
+ },
+ {
+  "p": "Veneza, na Itália, fica às margens de qual mar?",
+  "c": "Mar Adriático",
+  "e": [
+   "Mar Tirreno",
+   "Mar Jônico",
+   "Mar Ligúrio",
+   "Mar Egeu"
+  ]
+ },
+ {
+  "p": "A usina de Itaipu, na fronteira com o Paraguai, fica em qual rio?",
+  "c": "Rio Paraná",
+  "e": [
+   "Rio Iguaçu",
+   "Rio Tietê",
+   "Rio Uruguai",
+   "Rio Tocantins"
+  ]
+ },
+ {
+  "p": "O Jalapão, região de dunas, rios e cachoeiras, fica em qual estado?",
+  "c": "Tocantins",
+  "e": [
+   "Maranhão",
+   "Goiás",
+   "Mato Grosso",
+   "Bahia"
+  ]
+ },
+ {
+  "p": "Qual mar banha as costas da Grécia e da Turquia, com milhares de ilhas?",
+  "c": "Mar Egeu",
+  "e": [
+   "Mar Adriático",
+   "Mar Negro",
+   "Mar Jônico",
+   "Mar Báltico"
+  ]
+ },
+ {
+  "p": "Qual é a capital da Romênia?",
+  "c": "Bucareste",
+  "e": [
+   "Budapeste",
+   "Sófia",
+   "Belgrado",
+   "Chisinau"
+  ]
+ },
+ {
+  "p": "O Monte Everest fica na fronteira entre o Nepal e qual país?",
+  "c": "China",
+  "e": [
+   "Índia",
+   "Butão",
+   "Paquistão",
+   "Mianmar"
+  ]
+ },
+ {
+  "p": "Qual é a segunda montanha mais alta do mundo, na fronteira entre Paquistão e China?",
+  "c": "K2",
+  "e": [
+   "Lhotse",
+   "Makalu",
+   "Kangchenjunga",
+   "Annapurna"
+  ]
+ },
+ {
+  "p": "Como é chamada a grande onda do mar que sobe o Rio Amazonas e outros rios do Norte?",
+  "c": "Pororoca",
+  "e": [
+   "Ressaca",
+   "Tsunami",
+   "Piracema",
+   "Maremoto"
+  ]
+ },
+ {
+  "p": "Qual país asiático é uma cidade-estado numa ilha ao sul da Malásia?",
+  "c": "Singapura",
+  "e": [
+   "Brunei",
+   "Taiwan",
+   "Maldivas",
+   "Bahrein"
+  ]
+ },
+ {
+  "p": "Em qual país fica Uluru (Ayers Rock), enorme rocha vermelha sagrada para os aborígenes?",
+  "c": "Austrália",
+  "e": [
+   "Nova Zelândia",
+   "África do Sul",
+   "Namíbia",
+   "Estados Unidos"
+  ]
+ },
+ {
+  "p": "Qual é a capital de Honduras?",
+  "c": "Tegucigalpa",
+  "e": [
+   "Manágua",
+   "San Salvador",
+   "Cidade da Guatemala",
+   "San José"
+  ]
+ },
+ {
+  "p": "Em qual país africano fica o Cabo da Boa Esperança?",
+  "c": "África do Sul",
+  "e": [
+   "Namíbia",
+   "Moçambique",
+   "Angola",
+   "Madagascar"
+  ]
+ },
+ {
+  "p": "O Estreito de Magalhães separa a América do Sul de qual arquipélago?",
+  "c": "Terra do Fogo",
+  "e": [
+   "Ilhas Malvinas",
+   "Chiloé",
+   "Galápagos",
+   "Geórgia do Sul"
+  ]
+ },
+ {
+  "p": "O Encontro das Águas, perto de Manaus, reúne o Solimões e qual outro rio?",
+  "c": "Rio Negro",
+  "e": [
+   "Rio Madeira",
+   "Rio Tapajós",
+   "Rio Xingu",
+   "Rio Tocantins"
+  ]
+ },
+ {
+  "p": "Como se chama a faixa semiárida logo ao sul do deserto do Saara?",
+  "c": "Sahel",
+  "e": [
+   "Magrebe",
+   "Karoo",
+   "Namibe",
+   "Serengeti"
+  ]
+ },
+ {
+  "p": "Quais dois países dividem a ilha de Hispaniola, no Caribe?",
+  "c": "Haiti e República Dominicana",
+  "e": [
+   "Cuba e Jamaica",
+   "Porto Rico e Haiti",
+   "Cuba e Bahamas",
+   "Jamaica e Honduras"
+  ]
+ },
+ {
+  "p": "Que rio, chamado Rio Bravo no México, marca parte da fronteira com os Estados Unidos?",
+  "c": "Rio Grande",
+  "e": [
+   "Colorado",
+   "Mississippi",
+   "Missouri",
+   "Columbia"
+  ]
+ },
+ {
+  "p": "O Rio Mekong nasce no Tibete e forma um grande delta em qual país?",
+  "c": "Vietnã",
+  "e": [
+   "Camboja",
+   "Tailândia",
+   "Laos",
+   "Mianmar"
+  ]
+ },
+ {
+  "p": "Qual rio nasce nos Alpes suíços e deságua no Mar do Norte, na Holanda?",
+  "c": "Reno",
+  "e": [
+   "Danúbio",
+   "Elba",
+   "Ródano",
+   "Loire"
+  ]
+ },
+ {
+  "p": "O Lago Titicaca fica na fronteira entre o Peru e qual país?",
+  "c": "Bolívia",
+  "e": [
+   "Chile",
+   "Equador",
+   "Colômbia",
+   "Argentina"
+  ]
+ },
+ {
+  "p": "Qual rio atravessa a cidade italiana de Florença?",
+  "c": "Arno",
+  "e": [
+   "Pó",
+   "Tibre",
+   "Adige",
+   "Ticino"
+  ]
+ },
+ {
+  "p": "Qual país possui o litoral mais extenso do mundo?",
+  "c": "Canadá",
+  "e": [
+   "Rússia",
+   "Indonésia",
+   "Austrália",
+   "Noruega"
+  ]
+ },
+ {
+  "p": "Qual mar do Atlântico Norte é o único do mundo sem nenhuma costa em terra?",
+  "c": "Mar dos Sargaços",
+  "e": [
+   "Mar do Caribe",
+   "Mar do Norte",
+   "Mar Báltico",
+   "Mar de Marmara"
+  ]
+ },
+ {
+  "p": "Em qual país africano fica a lendária cidade de Timbuktu?",
+  "c": "Mali",
+  "e": [
+   "Níger",
+   "Senegal",
+   "Mauritânia",
+   "Chade"
+  ]
+ },
+ {
+  "p": "Qual ilha é dividida entre a Indonésia e a Papua-Nova Guiné?",
+  "c": "Nova Guiné",
+  "e": [
+   "Bornéu",
+   "Timor",
+   "Sumatra",
+   "Celebes"
+  ]
+ }
+]

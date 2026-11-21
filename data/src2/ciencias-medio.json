@@ -1,0 +1,552 @@
+[
+ {
+  "p": "Qual órgão do corpo humano filtra o sangue e produz a urina?",
+  "c": "Rins",
+  "e": [
+   "Fígado",
+   "Pâncreas",
+   "Baço",
+   "Intestino"
+  ]
+ },
+ {
+  "p": "Qual vitamina, presente na cenoura, ajuda a manter a boa visão?",
+  "c": "Vitamina A",
+  "e": [
+   "Vitamina B12",
+   "Vitamina D",
+   "Vitamina K",
+   "Vitamina E"
+  ]
+ },
+ {
+  "p": "Em qual parte do corpo fica o labirinto, que ajuda no equilíbrio?",
+  "c": "No ouvido",
+  "e": [
+   "No olho",
+   "No nariz",
+   "Na língua",
+   "Na garganta"
+  ]
+ },
+ {
+  "p": "Qual doença é transmitida pelo mosquito Aedes aegypti?",
+  "c": "Dengue",
+  "e": [
+   "Malária",
+   "Gripe",
+   "Sarampo",
+   "Doença de Chagas"
+  ]
+ },
+ {
+  "p": "Como se chamam os vasos que saem do coração levando sangue para o corpo?",
+  "c": "Artérias",
+  "e": [
+   "Veias",
+   "Capilares",
+   "Vênulas",
+   "Alvéolos"
+  ]
+ },
+ {
+  "p": "Qual mineral, muito presente no leite, é essencial para ossos e dentes fortes?",
+  "c": "Cálcio",
+  "e": [
+   "Ferro",
+   "Sódio",
+   "Potássio",
+   "Zinco"
+  ]
+ },
+ {
+  "p": "Quantas cavidades (câmaras) tem o coração humano?",
+  "c": "4",
+  "e": [
+   "2",
+   "3",
+   "5",
+   "6"
+  ]
+ },
+ {
+  "p": "Qual órgão do corpo produz a bile, que ajuda a digerir gorduras?",
+  "c": "Fígado",
+  "e": [
+   "Estômago",
+   "Pâncreas",
+   "Rim",
+   "Baço"
+  ]
+ },
+ {
+  "p": "Qual parte do esqueleto protege o cérebro?",
+  "c": "Crânio",
+  "e": [
+   "Costelas",
+   "Bacia",
+   "Coluna vertebral",
+   "Esterno"
+  ]
+ },
+ {
+  "p": "Qual pigmento dá cor à pele e aos cabelos?",
+  "c": "Melanina",
+  "e": [
+   "Queratina",
+   "Colágeno",
+   "Insulina",
+   "Clorofila"
+  ]
+ },
+ {
+  "p": "A vacina BCG, dada ao nascer, protege contra qual doença?",
+  "c": "Tuberculose",
+  "e": [
+   "Sarampo",
+   "Poliomielite",
+   "Hepatite B",
+   "Caxumba"
+  ]
+ },
+ {
+  "p": "Qual é a principal função dos pulmões?",
+  "c": "Trocar gases com o ar",
+  "e": [
+   "Digerir alimentos",
+   "Filtrar o sangue",
+   "Produzir hormônios",
+   "Bombear sangue"
+  ]
+ },
+ {
+  "p": "Qual inseto produz o fio usado para fazer tecidos de seda?",
+  "c": "Bicho-da-seda",
+  "e": [
+   "Abelha",
+   "Besouro",
+   "Gafanhoto",
+   "Libélula"
+  ]
+ },
+ {
+  "p": "Qual osso fica no meio do peito, onde se prendem as costelas?",
+  "c": "Esterno",
+  "e": [
+   "Clavícula",
+   "Úmero",
+   "Escápula",
+   "Sacro"
+  ]
+ },
+ {
+  "p": "Os músculos se ligam aos ossos por meio de quê?",
+  "c": "Tendões",
+  "e": [
+   "Cartilagens",
+   "Nervos",
+   "Veias",
+   "Articulações"
+  ]
+ },
+ {
+  "p": "Qual órgão recebe o alimento e o mistura com o suco gástrico?",
+  "c": "Estômago",
+  "e": [
+   "Esôfago",
+   "Intestino grosso",
+   "Fígado",
+   "Boca"
+  ]
+ },
+ {
+  "p": "A cárie é um problema de saúde que ataca qual parte do corpo?",
+  "c": "Os dentes",
+  "e": [
+   "Os ossos",
+   "As unhas",
+   "Os olhos",
+   "A pele"
+  ]
+ },
+ {
+  "p": "Qual substância verde das folhas capta a luz do sol na fotossíntese?",
+  "c": "Clorofila",
+  "e": [
+   "Hemoglobina",
+   "Celulose",
+   "Insulina",
+   "Amido"
+  ]
+ },
+ {
+  "p": "Qual aparelho o médico usa para ouvir o coração e os pulmões?",
+  "c": "Estetoscópio",
+  "e": [
+   "Microscópio",
+   "Termômetro",
+   "Barômetro",
+   "Cronômetro"
+  ]
+ },
+ {
+  "p": "Quantos dentes de leite tem uma criança, quando todos já nasceram?",
+  "c": "20",
+  "e": [
+   "16",
+   "24",
+   "28",
+   "32"
+  ]
+ },
+ {
+  "p": "Como se chama a transformação da lagarta em borboleta?",
+  "c": "Metamorfose",
+  "e": [
+   "Fotossíntese",
+   "Mutação",
+   "Evolução",
+   "Respiração"
+  ]
+ },
+ {
+  "p": "Qual destes animais carrega os filhotes numa bolsa na barriga?",
+  "c": "Canguru",
+  "e": [
+   "Lêmure",
+   "Tamanduá",
+   "Capivara",
+   "Ornitorrinco"
+  ]
+ },
+ {
+  "p": "Qual é a maior ave do mundo?",
+  "c": "Avestruz",
+  "e": [
+   "Ema",
+   "Emu",
+   "Condor",
+   "Pelicano"
+  ]
+ },
+ {
+  "p": "O que as abelhas fabricam a partir do néctar das flores?",
+  "c": "Mel",
+  "e": [
+   "Própolis",
+   "Seiva",
+   "Pólen",
+   "Resina"
+  ]
+ },
+ {
+  "p": "Que parte da planta absorve água e sais minerais do solo?",
+  "c": "Raiz",
+  "e": [
+   "Folha",
+   "Caule",
+   "Flor",
+   "Fruto"
+  ]
+ },
+ {
+  "p": "Qual destes animais é famoso por mudar de cor para se camuflar?",
+  "c": "Camaleão",
+  "e": [
+   "Jacaré",
+   "Cobra-coral",
+   "Sapo",
+   "Tartaruga"
+  ]
+ },
+ {
+  "p": "Como se chama o animal que come tanto plantas quanto carne?",
+  "c": "Onívoro",
+  "e": [
+   "Herbívoro",
+   "Carnívoro",
+   "Insetívoro",
+   "Decompositor"
+  ]
+ },
+ {
+  "p": "Como se chama a perda de água em forma de vapor pelas folhas?",
+  "c": "Transpiração",
+  "e": [
+   "Fotossíntese",
+   "Germinação",
+   "Polinização",
+   "Fermentação"
+  ]
+ },
+ {
+  "p": "Em qual continente vivem os pinguins-imperadores na natureza?",
+  "c": "Antártida",
+  "e": [
+   "África",
+   "Oceania",
+   "América do Norte",
+   "Ásia"
+  ]
+ },
+ {
+  "p": "Qual animal marinho tem oito braços e solta tinta para se defender?",
+  "c": "Polvo",
+  "e": [
+   "Água-viva",
+   "Estrela-do-mar",
+   "Caranguejo",
+   "Ostra"
+  ]
+ },
+ {
+  "p": "Qual é o maior roedor do mundo, muito comum no Brasil?",
+  "c": "Capivara",
+  "e": [
+   "Paca",
+   "Cutia",
+   "Preá",
+   "Castor"
+  ]
+ },
+ {
+  "p": "Qual animal brasileiro vive pendurado em árvores e se move bem devagar?",
+  "c": "Preguiça",
+  "e": [
+   "Tamanduá",
+   "Tatu",
+   "Quati",
+   "Macaco-prego"
+  ]
+ },
+ {
+  "p": "Como se chama a viagem periódica de aves para regiões mais quentes no inverno?",
+  "c": "Migração",
+  "e": [
+   "Hibernação",
+   "Metamorfose",
+   "Camuflagem",
+   "Predação"
+  ]
+ },
+ {
+  "p": "Quanto é 10% de 350?",
+  "c": "35",
+  "e": [
+   "3,5",
+   "30",
+   "38",
+   "45"
+  ]
+ },
+ {
+  "p": "Qual é o próximo número da sequência 2, 4, 8, 16?",
+  "c": "32",
+  "e": [
+   "24",
+   "30",
+   "34",
+   "36"
+  ]
+ },
+ {
+  "p": "Quanto é 3/4 de 80?",
+  "c": "60",
+  "e": [
+   "45",
+   "50",
+   "64",
+   "70"
+  ]
+ },
+ {
+  "p": "Um quadrado tem lado de 5 cm. Qual é a sua área?",
+  "c": "25 cm²",
+  "e": [
+   "10 cm²",
+   "15 cm²",
+   "20 cm²",
+   "30 cm²"
+  ]
+ },
+ {
+  "p": "Quanto é 9 vezes 7?",
+  "c": "63",
+  "e": [
+   "56",
+   "54",
+   "64",
+   "72"
+  ]
+ },
+ {
+  "p": "Uma dúzia de ovos custa R$ 12,00. Quanto custam 5 ovos?",
+  "c": "R$ 5,00",
+  "e": [
+   "R$ 4,00",
+   "R$ 6,00",
+   "R$ 7,00",
+   "R$ 10,00"
+  ]
+ },
+ {
+  "p": "Quantos minutos há em 2 horas e meia?",
+  "c": "150",
+  "e": [
+   "120",
+   "130",
+   "140",
+   "180"
+  ]
+ },
+ {
+  "p": "Quanto é a metade de 3/4?",
+  "c": "3/8",
+  "e": [
+   "3/2",
+   "1/4",
+   "3/5",
+   "6/4"
+  ]
+ },
+ {
+  "p": "Qual é o perímetro de um retângulo com lados de 8 cm e 3 cm?",
+  "c": "22 cm",
+  "e": [
+   "11 cm",
+   "14 cm",
+   "16 cm",
+   "24 cm"
+  ]
+ },
+ {
+  "p": "Pedro tem o dobro da idade de Ana, que tem 12 anos. Quanto soma a idade dos dois?",
+  "c": "36",
+  "e": [
+   "24",
+   "30",
+   "32",
+   "48"
+  ]
+ },
+ {
+  "p": "Qual é o triplo de 25?",
+  "c": "75",
+  "e": [
+   "50",
+   "65",
+   "70",
+   "85"
+  ]
+ },
+ {
+  "p": "Qual é o símbolo químico do cálcio?",
+  "c": "Ca",
+  "e": [
+   "C",
+   "Cl",
+   "Cu",
+   "K"
+  ]
+ },
+ {
+  "p": "Qual movimento da Terra é responsável pela sucessão do dia e da noite?",
+  "c": "Rotação",
+  "e": [
+   "Translação",
+   "Precessão",
+   "Gravitação",
+   "Refração"
+  ]
+ },
+ {
+  "p": "Qual destes astros tem luz própria?",
+  "c": "Sol",
+  "e": [
+   "Lua",
+   "Vênus",
+   "Marte",
+   "Saturno"
+  ]
+ },
+ {
+  "p": "Dos oito planetas do Sistema Solar, qual é o mais distante do Sol?",
+  "c": "Netuno",
+  "e": [
+   "Urano",
+   "Saturno",
+   "Júpiter",
+   "Mercúrio"
+  ]
+ },
+ {
+  "p": "Qual força nos mantém presos ao chão e faz os objetos caírem?",
+  "c": "Gravidade",
+  "e": [
+   "Atrito",
+   "Magnetismo",
+   "Empuxo",
+   "Inércia"
+  ]
+ },
+ {
+  "p": "Além da água, a ferrugem do ferro precisa de qual gás do ar?",
+  "c": "Oxigênio",
+  "e": [
+   "Nitrogênio",
+   "Hélio",
+   "Hidrogênio",
+   "Gás carbônico"
+  ]
+ },
+ {
+  "p": "Qual instrumento serve para observar astros distantes?",
+  "c": "Telescópio",
+  "e": [
+   "Microscópio",
+   "Periscópio",
+   "Estetoscópio",
+   "Caleidoscópio"
+  ]
+ },
+ {
+  "p": "Qual destas fontes de energia é renovável?",
+  "c": "Eólica (vento)",
+  "e": [
+   "Carvão mineral",
+   "Petróleo",
+   "Gás natural",
+   "Urânio"
+  ]
+ },
+ {
+  "p": "O som precisa de um meio para viajar. Onde ele NÃO se propaga?",
+  "c": "No vácuo",
+  "e": [
+   "Na água",
+   "No ar",
+   "No aço",
+   "Na madeira"
+  ]
+ },
+ {
+  "p": "Qual destes metais é atraído por um ímã?",
+  "c": "Ferro",
+  "e": [
+   "Ouro",
+   "Alumínio",
+   "Cobre",
+   "Prata"
+  ]
+ },
+ {
+  "p": "Qual gás faz as “bolhinhas” do refrigerante?",
+  "c": "Gás carbônico",
+  "e": [
+   "Oxigênio",
+   "Hidrogênio",
+   "Nitrogênio",
+   "Hélio"
+  ]
+ }
+]

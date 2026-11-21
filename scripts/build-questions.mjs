@@ -1,30 +1,36 @@
 // Junta data/src/*.json em questions.json, atribui ids, embaralha com posição equilibrada e valida o banco.
 // Formato de escrita: { "p": pergunta, "c": resposta certa, "e": [4 alternativas erradas] }
-// Uso: node scripts/build-questions.mjs [--strict]
+// Lotes: data/src (ids 1–1000, CONGELADO) e depois data/src2 (ids 1001+). A ordem dos lotes nunca muda,
+// assim as perguntas antigas mantêm o mesmo id (os aparelhos guardam "vistas" por id).
+// Uso: node scripts/build-questions.mjs [--check]   (--check só confere, não grava questions.json)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const SRC = fileURLToPath(new URL('../data/src/', import.meta.url));
+const LOTES = [
+  { dir: fileURLToPath(new URL('../data/src/', import.meta.url)), alvo: { medio: 38, dificil: 50, qi: 37 } }, // 1000
+  { dir: fileURLToPath(new URL('../data/src2/', import.meta.url)), alvo: { medio: 55, dificil: 40, qi: 30 } }, // +1000
+];
+const CHECK = process.argv.includes('--check');
 const OUT = fileURLToPath(new URL('../public/questions.json', import.meta.url));
 const CATS = ['arte', 'historia', 'esportes', 'ciencias', 'geografia', 'geral', 'tecnologia', 'portugues'];
 const TIERS = ['medio', 'dificil', 'qi'];
-const TARGET = { medio: 38, dificil: 50, qi: 37 }; // por categoria => 1000 no total
 const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
 const BAN = /(todas as (anteriores|alternativas|acima)|nenhuma das (anteriores|alternativas|acima)|\b[a-e] e [a-e]\b.*(corretas?|certas?)|ambas|alternativas? [a-e])/i;
 const TEMPORAL = /\b(atualmente|atual |hoje em dia|mais recente|recorde atual|ultimo(a)? (campe|vencedor))/i;
 
 const errors = [], warns = [];
 const all = [];
-for (const cat of CATS) for (const nivel of TIERS) {
-  const f = path.join(SRC, `${cat}-${nivel}.json`);
-  if (!fs.existsSync(f)) { warns.push(`faltando ${cat}-${nivel}.json (alvo ${TARGET[nivel]})`); continue; }
+for (const [li, { dir, alvo }] of LOTES.entries()) for (const cat of CATS) for (const nivel of TIERS) {
+  const TARGET = alvo, lote = li ? `src${li + 1}/` : '';
+  const f = path.join(dir, `${cat}-${nivel}.json`);
+  if (!fs.existsSync(f)) { warns.push(`faltando ${lote}${cat}-${nivel}.json (alvo ${TARGET[nivel]})`); continue; }
   let arr; try { arr = JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { errors.push(`${f}: JSON inválido (${e.message})`); continue; }
   arr.forEach((q, i) => {
     const e = Array.isArray(q.e) ? q.e : [];
-    all.push({ pergunta: q.p, certa: q.c, erradas: e, cat, nivel, _src: `${cat}-${nivel}#${i + 1}` });
+    all.push({ pergunta: q.p, certa: q.c, erradas: e, cat, nivel, _src: `${lote}${cat}-${nivel}#${i + 1}` });
   });
-  if (arr.length !== TARGET[nivel]) warns.push(`${cat}-${nivel}: ${arr.length} perguntas (alvo ${TARGET[nivel]})`);
+  if (arr.length !== TARGET[nivel]) warns.push(`${lote}${cat}-${nivel}: ${arr.length} perguntas (alvo ${TARGET[nivel]})`);
 }
 
 // posição da certa: ciclos embaralhados de A..E (distribuição uniforme); erradas em ordem embaralhada
@@ -69,9 +75,9 @@ for (let i = 0; i < all.length; i++) for (let j = i + 1; j < all.length; j++) {
 }
 
 const out = all.map((q, i) => ({ id: i + 1, cat: q.cat, nivel: q.nivel, pergunta: q.pergunta.trim(), alternativas: q.alternativas.map((a) => a.trim()), correta: q.correta }));
-if (!errors.length) fs.writeFileSync(OUT, JSON.stringify(out));
+if (!errors.length && !CHECK) fs.writeFileSync(OUT, JSON.stringify(out));
 console.log(`${all.length} perguntas | gabarito por posição A-E: ${dist.join('/')} | correta=mais longa: ${(share * 100).toFixed(0)}%`);
 warns.forEach((w) => console.log('aviso:', w));
 errors.forEach((e) => console.log('ERRO:', e));
 if (errors.length) { console.log(`${errors.length} erro(s) — questions.json NÃO gerado.`); process.exit(1); }
-console.log('questions.json gerado.');
+console.log(CHECK ? 'conferido (--check: nada gravado).' : 'questions.json gerado.');

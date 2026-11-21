@@ -11,13 +11,18 @@ import banco from '../public/questions.json';
 const BANCO = banco as Pergunta[];
 
 describe('banco de perguntas', () => {
-  it('tem 1000 perguntas, 5 alternativas e resposta válida', () => {
-    expect(BANCO).toHaveLength(1000);
+  it('tem 2000 perguntas, 5 alternativas e resposta válida', () => {
+    expect(BANCO).toHaveLength(2000);
     for (const q of BANCO) {
       expect(q.alternativas).toHaveLength(5);
       expect(q.correta).toBeGreaterThanOrEqual(0);
       expect(q.correta).toBeLessThan(5);
     }
+  });
+  it('ids 1..2000 em ordem: as 1000 antigas mantêm o id (os aparelhos guardam "vistas" por id)', () => {
+    BANCO.forEach((q, i) => expect(q.id).toBe(i + 1));
+    expect(BANCO[0].pergunta).toBe('Quem pintou a Mona Lisa?');
+    expect(BANCO[999].pergunta).toBe('Quem escreveu "Ensaio sobre a Cegueira"?');
   });
 });
 
@@ -88,8 +93,8 @@ describe('sala: sorteio de perguntas', () => {
   it('nunca repete e esgota o banco inteiro', () => {
     const usadas: Record<string, boolean> = {};
     let cat: string | undefined;
-    for (let i = 0; i < 1000; i++) {
-      const q = proximaPergunta(BANCO, usadas, (i / 1000) * 16, 16, cat);
+    for (let i = 0; i < BANCO.length; i++) {
+      const q = proximaPergunta(BANCO, usadas, (i / BANCO.length) * 16, 16, cat);
       expect(q).not.toBeNull();
       expect(usadas[q!.id]).toBeUndefined();
       usadas[q!.id] = true;
