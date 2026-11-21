@@ -1,0 +1,552 @@
+[
+  {
+    "p": "Qual é a capital do estado de Pernambuco?",
+    "c": "Recife",
+    "e": [
+      "Olinda",
+      "Salvador",
+      "Fortaleza",
+      "Maceió"
+    ]
+  },
+  {
+    "p": "Qual é a capital do Ceará?",
+    "c": "Fortaleza",
+    "e": [
+      "Natal",
+      "Teresina",
+      "São Luís",
+      "Recife"
+    ]
+  },
+  {
+    "p": "Qual é a capital de Santa Catarina?",
+    "c": "Florianópolis",
+    "e": [
+      "Joinville",
+      "Blumenau",
+      "Curitiba",
+      "Porto Alegre"
+    ]
+  },
+  {
+    "p": "Qual é a capital do Paraná?",
+    "c": "Curitiba",
+    "e": [
+      "Londrina",
+      "Maringá",
+      "Florianópolis",
+      "Ponta Grossa"
+    ]
+  },
+  {
+    "p": "Qual é a capital de Goiás?",
+    "c": "Goiânia",
+    "e": [
+      "Anápolis",
+      "Brasília",
+      "Palmas",
+      "Cuiabá"
+    ]
+  },
+  {
+    "p": "Qual é a capital do Mato Grosso do Sul?",
+    "c": "Campo Grande",
+    "e": [
+      "Dourados",
+      "Cuiabá",
+      "Goiânia",
+      "Corumbá"
+    ]
+  },
+  {
+    "p": "Qual é a capital da Paraíba?",
+    "c": "João Pessoa",
+    "e": [
+      "Campina Grande",
+      "Natal",
+      "Recife",
+      "Aracaju"
+    ]
+  },
+  {
+    "p": "Qual é a capital do Maranhão?",
+    "c": "São Luís",
+    "e": [
+      "Imperatriz",
+      "Teresina",
+      "Belém",
+      "Caxias"
+    ]
+  },
+  {
+    "p": "Em qual região do Brasil fica o Pantanal?",
+    "c": "Centro-Oeste",
+    "e": [
+      "Norte",
+      "Nordeste",
+      "Sudeste",
+      "Sul"
+    ]
+  },
+  {
+    "p": "Quantas regiões o Brasil tem, segundo o IBGE?",
+    "c": "Cinco",
+    "e": [
+      "Quatro",
+      "Seis",
+      "Sete",
+      "Três"
+    ]
+  },
+  {
+    "p": "Palmas é a capital de qual estado brasileiro?",
+    "c": "Tocantins",
+    "e": [
+      "Pará",
+      "Maranhão",
+      "Goiás",
+      "Mato Grosso"
+    ]
+  },
+  {
+    "p": "Qual é a capital de Mato Grosso, estado do Pantanal e da soja?",
+    "c": "Cuiabá",
+    "e": [
+      "Várzea Grande",
+      "Campo Grande",
+      "Goiânia",
+      "Rondonópolis"
+    ]
+  },
+  {
+    "p": "Qual é a capital do Espírito Santo?",
+    "c": "Vitória",
+    "e": [
+      "Vila Velha",
+      "Serra",
+      "Cariacica",
+      "Linhares"
+    ]
+  },
+  {
+    "p": "A canção \"Garota de ...\", de Tom Jobim e Vinicius de Moraes, leva o nome de qual praia?",
+    "c": "Ipanema",
+    "e": [
+      "Copacabana",
+      "Leblon",
+      "Flamengo",
+      "Arpoador"
+    ]
+  },
+  {
+    "p": "Em qual cidade fica o Pelourinho, centro histórico de casarões coloridos?",
+    "c": "Salvador",
+    "e": [
+      "Olinda",
+      "Recife",
+      "Ouro Preto",
+      "São Luís"
+    ]
+  },
+  {
+    "p": "Em qual estado fica a cidade histórica de Ouro Preto?",
+    "c": "Minas Gerais",
+    "e": [
+      "Bahia",
+      "Goiás",
+      "Rio de Janeiro",
+      "São Paulo"
+    ]
+  },
+  {
+    "p": "Em qual estado fica Gramado, famosa pelo frio e pelo Natal Luz?",
+    "c": "Rio Grande do Sul",
+    "e": [
+      "Santa Catarina",
+      "Paraná",
+      "São Paulo",
+      "Minas Gerais"
+    ]
+  },
+  {
+    "p": "Em qual estado fica a praia de Jericoacoara?",
+    "c": "Ceará",
+    "e": [
+      "Rio Grande do Norte",
+      "Piauí",
+      "Maranhão",
+      "Bahia"
+    ]
+  },
+  {
+    "p": "Qual rio atravessa o Egito e deságua no Mar Mediterrâneo?",
+    "c": "Nilo",
+    "e": [
+      "Congo",
+      "Níger",
+      "Zambeze",
+      "Jordão"
+    ]
+  },
+  {
+    "p": "Qual rio atravessa a cidade de Roma?",
+    "c": "Tibre",
+    "e": [
+      "Arno",
+      "Pó",
+      "Sena",
+      "Danúbio"
+    ]
+  },
+  {
+    "p": "Qual rio atravessa a capital de Portugal, Lisboa?",
+    "c": "Tejo",
+    "e": [
+      "Douro",
+      "Minho",
+      "Guadiana",
+      "Ebro"
+    ]
+  },
+  {
+    "p": "Qual rio atravessa as cidades de Viena, Budapeste e Belgrado?",
+    "c": "Danúbio",
+    "e": [
+      "Reno",
+      "Elba",
+      "Volga",
+      "Sena"
+    ]
+  },
+  {
+    "p": "Qual é o menor oceano do mundo?",
+    "c": "Glacial Ártico",
+    "e": [
+      "Índico",
+      "Atlântico",
+      "Pacífico",
+      "Antártico"
+    ]
+  },
+  {
+    "p": "Qual é a capital do Reino Unido?",
+    "c": "Londres",
+    "e": [
+      "Manchester",
+      "Liverpool",
+      "Edimburgo",
+      "Dublin"
+    ]
+  },
+  {
+    "p": "Qual é o menor continente em área?",
+    "c": "Oceania",
+    "e": [
+      "Europa",
+      "Antártida",
+      "América do Sul",
+      "África"
+    ]
+  },
+  {
+    "p": "Em qual país fica o Monte Fuji, famoso vulcão nevado?",
+    "c": "Japão",
+    "e": [
+      "China",
+      "Coreia do Sul",
+      "Tailândia",
+      "Filipinas"
+    ]
+  },
+  {
+    "p": "Qual cordilheira atravessa países como Suíça, Áustria e Itália?",
+    "c": "Alpes",
+    "e": [
+      "Pireneus",
+      "Andes",
+      "Himalaia",
+      "Cáucaso"
+    ]
+  },
+  {
+    "p": "Em qual cordilheira fica o Monte Everest?",
+    "c": "Himalaia",
+    "e": [
+      "Andes",
+      "Alpes",
+      "Montanhas Rochosas",
+      "Atlas"
+    ]
+  },
+  {
+    "p": "Qual ilha do Pacífico é famosa por suas enormes estátuas de pedra, os moai?",
+    "c": "Ilha de Páscoa",
+    "e": [
+      "Galápagos",
+      "Taiti",
+      "Havaí",
+      "Madagascar"
+    ]
+  },
+  {
+    "p": "Qual arquipélago é famoso pelas tartarugas gigantes e pelos estudos de Charles Darwin?",
+    "c": "Galápagos",
+    "e": [
+      "Fiji",
+      "Malvinas",
+      "Açores",
+      "Canárias"
+    ]
+  },
+  {
+    "p": "Havana é a capital de qual país caribenho?",
+    "c": "Cuba",
+    "e": [
+      "Jamaica",
+      "Haiti",
+      "República Dominicana",
+      "Bahamas"
+    ]
+  },
+  {
+    "p": "Em qual oceano fica Madagascar, a ilha dos lêmures?",
+    "c": "Índico",
+    "e": [
+      "Atlântico",
+      "Pacífico",
+      "Ártico",
+      "Antártico"
+    ]
+  },
+  {
+    "p": "Em qual país fica o Grand Canyon, enorme cânion no Rio Colorado?",
+    "c": "Estados Unidos",
+    "e": [
+      "México",
+      "Canadá",
+      "Austrália",
+      "África do Sul"
+    ]
+  },
+  {
+    "p": "Qual país tem uma bandeira branca com um círculo vermelho no centro?",
+    "c": "Japão",
+    "e": [
+      "China",
+      "Coreia do Sul",
+      "Índia",
+      "Tailândia"
+    ]
+  },
+  {
+    "p": "Qual país tem uma folha de bordo vermelha na bandeira?",
+    "c": "Canadá",
+    "e": [
+      "Estados Unidos",
+      "Suíça",
+      "Dinamarca",
+      "Áustria"
+    ]
+  },
+  {
+    "p": "A bandeira da Itália tem três faixas: verde, branca e de qual cor?",
+    "c": "Vermelha",
+    "e": [
+      "Azul",
+      "Amarela",
+      "Preta",
+      "Laranja"
+    ]
+  },
+  {
+    "p": "Qual país europeu é famoso pelas tulipas e pelos moinhos de vento?",
+    "c": "Holanda",
+    "e": [
+      "Bélgica",
+      "Dinamarca",
+      "Alemanha",
+      "Suécia"
+    ]
+  },
+  {
+    "p": "Em qual cidade americana fica a Estátua da Liberdade?",
+    "c": "Nova York",
+    "e": [
+      "Washington",
+      "Los Angeles",
+      "Chicago",
+      "Boston"
+    ]
+  },
+  {
+    "p": "Em qual cidade grega fica o Partenon, templo da Antiguidade?",
+    "c": "Atenas",
+    "e": [
+      "Esparta",
+      "Corinto",
+      "Tessalônica",
+      "Olímpia"
+    ]
+  },
+  {
+    "p": "Qual é a capital da Alemanha?",
+    "c": "Berlim",
+    "e": [
+      "Munique",
+      "Frankfurt",
+      "Hamburgo",
+      "Bonn"
+    ]
+  },
+  {
+    "p": "Qual é a capital da Rússia?",
+    "c": "Moscou",
+    "e": [
+      "São Petersburgo",
+      "Kiev",
+      "Minsk",
+      "Novosibirsk"
+    ]
+  },
+  {
+    "p": "Qual é a capital da China?",
+    "c": "Pequim",
+    "e": [
+      "Xangai",
+      "Hong Kong",
+      "Cantão",
+      "Tóquio"
+    ]
+  },
+  {
+    "p": "Qual é a capital do Egito?",
+    "c": "Cairo",
+    "e": [
+      "Alexandria",
+      "Luxor",
+      "Gizé",
+      "Assuã"
+    ]
+  },
+  {
+    "p": "Qual é a capital do Peru?",
+    "c": "Lima",
+    "e": [
+      "Cusco",
+      "Quito",
+      "La Paz",
+      "Bogotá"
+    ]
+  },
+  {
+    "p": "Em qual país fica Machu Picchu, a antiga cidade dos incas?",
+    "c": "Peru",
+    "e": [
+      "Bolívia",
+      "Equador",
+      "Colômbia",
+      "Chile"
+    ]
+  },
+  {
+    "p": "Qual é a capital do Uruguai?",
+    "c": "Montevidéu",
+    "e": [
+      "Punta del Este",
+      "Assunção",
+      "Buenos Aires",
+      "Santiago"
+    ]
+  },
+  {
+    "p": "Qual é a capital da Índia?",
+    "c": "Nova Délhi",
+    "e": [
+      "Mumbai",
+      "Calcutá",
+      "Chennai",
+      "Daca"
+    ]
+  },
+  {
+    "p": "Qual é a capital do Paraguai?",
+    "c": "Assunção",
+    "e": [
+      "Ciudad del Este",
+      "Montevidéu",
+      "La Paz",
+      "Encarnación"
+    ]
+  },
+  {
+    "p": "Qual clima predomina no sertão nordestino, com pouca chuva e muito sol?",
+    "c": "Semiárido",
+    "e": [
+      "Equatorial",
+      "Subtropical",
+      "Temperado",
+      "Polar"
+    ]
+  },
+  {
+    "p": "Qual é o clima da Floresta Amazônica, quente e úmido o ano todo?",
+    "c": "Equatorial",
+    "e": [
+      "Semiárido",
+      "Subtropical",
+      "Temperado",
+      "Desértico"
+    ]
+  },
+  {
+    "p": "Qual linha imaginária divide a Terra em hemisfério Norte e hemisfério Sul?",
+    "c": "Equador",
+    "e": [
+      "Trópico de Câncer",
+      "Trópico de Capricórnio",
+      "Meridiano de Greenwich",
+      "Círculo Polar Ártico"
+    ]
+  },
+  {
+    "p": "Qual meridiano, que passa por Londres, separa o Ocidente do Oriente?",
+    "c": "Greenwich",
+    "e": [
+      "Tordesilhas",
+      "Equador",
+      "Trópico de Câncer",
+      "Linha de Data"
+    ]
+  },
+  {
+    "p": "Em qual ponto cardeal o Sol nasce?",
+    "c": "Leste",
+    "e": [
+      "Oeste",
+      "Norte",
+      "Sul",
+      "Sudoeste"
+    ]
+  },
+  {
+    "p": "Em qual país fica a cidade de Dubai, conhecida por seus arranha-céus?",
+    "c": "Emirados Árabes Unidos",
+    "e": [
+      "Arábia Saudita",
+      "Catar",
+      "Kuwait",
+      "Omã"
+    ]
+  },
+  {
+    "p": "Em qual país fica a cidade de Barcelona, famosa pela Sagrada Família?",
+    "c": "Espanha",
+    "e": [
+      "Portugal",
+      "Itália",
+      "França",
+      "México"
+    ]
+  }
+]

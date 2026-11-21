@@ -1,0 +1,302 @@
+[
+{
+"p": "Por qual vaso o sangue pobre em oxigênio sai do coração rumo aos pulmões?",
+"c": "Artéria pulmonar",
+"e": [
+"Veia pulmonar",
+"Aorta",
+"Veia cava superior",
+"Artéria carótida"
+]
+},
+{
+"p": "Quais células da retina permitem enxergar em locais com pouca luz?",
+"c": "Bastonetes",
+"e": [
+"Cones",
+"Células ganglionares",
+"Células bipolares",
+"Células ciliadas"
+]
+},
+{
+"p": "Qual tecido das plantas leva a seiva rica em açúcares das folhas para o resto do vegetal?",
+"c": "Floema",
+"e": [
+"Xilema",
+"Câmbio",
+"Epiderme",
+"Parênquima"
+]
+},
+{
+"p": "Samambaias pertencem a qual grupo de plantas?",
+"c": "Pteridófitas",
+"e": [
+"Briófitas",
+"Gimnospermas",
+"Angiospermas",
+"Algas"
+]
+},
+{
+"p": "Quanto é 3/4 + 2/3?",
+"c": "17/12",
+"e": [
+"5/7",
+"5/12",
+"13/12",
+"7/6"
+]
+},
+{
+"p": "Qual é o resultado de 8 + 4 × 3 − 6 ÷ 2?",
+"c": "17",
+"e": [
+"15",
+"19",
+"21",
+"30"
+]
+},
+{
+"p": "O triplo de um número é 54. Qual é o quadrado desse número?",
+"c": "324",
+"e": [
+"289",
+"361",
+"256",
+"162"
+]
+},
+{
+"p": "Quantos números primos existem entre 1 e 20?",
+"c": "8",
+"e": [
+"6",
+"7",
+"9",
+"10"
+]
+},
+{
+"p": "Qual planeta tem o dia (uma rotação) mais longo que o seu ano (uma volta no Sol)?",
+"c": "Vênus",
+"e": [
+"Mercúrio",
+"Marte",
+"Júpiter",
+"Urano"
+]
+},
+{
+"p": "Qual fenômeno da luz do Sol explica o céu azul durante o dia?",
+"c": "Espalhamento",
+"e": [
+"Reflexão total",
+"Difração",
+"Polarização",
+"Interferência"
+]
+},
+{
+"p": "Ao dividir um número por 4, o quociente é 7 e o resto é 3. Qual é o número?",
+"c": "31",
+"e": [
+"25",
+"28",
+"34",
+"10"
+]
+},
+{
+"p": "Um trem de 200 m passa por um poste em 10 s. Qual é sua velocidade?",
+"c": "72 km/h",
+"e": [
+"20 km/h",
+"36 km/h",
+"54 km/h",
+"120 km/h"
+]
+},
+{
+"p": "Qual número completa a sequência 2, 6, 12, 20, 30, ...?",
+"c": "42",
+"e": [
+"36",
+"40",
+"44",
+"48"
+]
+},
+{
+"p": "Qual é a energia cinética de um corpo de 2 kg a 3 m/s?",
+"c": "9 J",
+"e": [
+"3 J",
+"6 J",
+"12 J",
+"18 J"
+]
+},
+{
+"p": "Solto do repouso, um objeto cai por 3 s no vácuo (g = 10 m/s²). Quantos metros ele percorre?",
+"c": "45 m",
+"e": [
+"15 m",
+"30 m",
+"60 m",
+"90 m"
+]
+},
+{
+"p": "Um preço sobe 20% e depois cai 20%. Em relação ao original, o preço final é:",
+"c": "4% menor",
+"e": [
+"Igual",
+"2% menor",
+"4% maior",
+"20% menor"
+]
+},
+{
+"p": "Às 3h30, qual é o menor ângulo entre os ponteiros do relógio?",
+"c": "75°",
+"e": [
+"45°",
+"60°",
+"90°",
+"105°"
+]
+},
+{
+"p": "Aproximadamente, qual é a aceleração da gravidade na superfície da Terra?",
+"c": "9,8 m/s²",
+"e": [
+"1,6 m/s²",
+"3,7 m/s²",
+"19,6 m/s²",
+"98 m/s²"
+]
+},
+{
+"p": "Qual liga metálica é formada por cobre e estanho?",
+"c": "Bronze",
+"e": [
+"Latão",
+"Aço",
+"Alumínio",
+"Peltre"
+]
+},
+{
+"p": "Na escala de Mohs, que mede a dureza dos minerais, qual é o mais duro?",
+"c": "Diamante",
+"e": [
+"Quartzo",
+"Topázio",
+"Coríndon",
+"Talco"
+]
+},
+{
+"p": "Como se chama a associação entre um fungo e uma alga, vista em troncos e pedras?",
+"c": "Líquen",
+"e": [
+"Micorriza",
+"Musgo",
+"Coral",
+"Esponja"
+]
+},
+{
+"p": "Qual inseto transmite o protozoário causador da doença de Chagas?",
+"c": "Barbeiro",
+"e": [
+"Pernilongo",
+"Pulga",
+"Mosca-tsé-tsé",
+"Carrapato"
+]
+},
+{
+"p": "Em qual órgão ocorre a maior parte da absorção dos nutrientes dos alimentos?",
+"c": "Intestino delgado",
+"e": [
+"Estômago",
+"Intestino grosso",
+"Esôfago",
+"Fígado"
+]
+},
+{
+"p": "Qual hormônio, produzido à noite pela glândula pineal, ajuda a regular o sono?",
+"c": "Melatonina",
+"e": [
+"Cortisol",
+"Insulina",
+"Tiroxina",
+"Adrenalina"
+]
+},
+{
+"p": "Qual cometa passa perto da Terra a cada cerca de 76 anos?",
+"c": "Halley",
+"e": [
+"Hale-Bopp",
+"Encke",
+"Swift-Tuttle",
+"Hyakutake"
+]
+},
+{
+"p": "Que tipo de ligação química une o sódio e o cloro no sal de cozinha?",
+"c": "Iônica",
+"e": [
+"Covalente",
+"Metálica",
+"Ponte de hidrogênio",
+"Dipolo induzido"
+]
+},
+{
+"p": "Em qual escala de temperatura a água ferve a 212 graus?",
+"c": "Fahrenheit",
+"e": [
+"Celsius",
+"Kelvin",
+"Réaumur",
+"Rankine"
+]
+},
+{
+"p": "Aproximadamente, que porcentagem do ar da atmosfera é oxigênio?",
+"c": "21%",
+"e": [
+"10%",
+"35%",
+"50%",
+"78%"
+]
+},
+{
+"p": "Qual camada da Terra fica entre a crosta e o núcleo?",
+"c": "Manto",
+"e": [
+"Núcleo externo",
+"Atmosfera",
+"Hidrosfera",
+"Biosfera"
+]
+},
+{
+"p": "Como se chama o rastro de luz de uma \"estrela cadente\" no céu?",
+"c": "Meteoro",
+"e": [
+"Meteorito",
+"Cometa",
+"Asteroide",
+"Supernova"
+]
+}
+]
